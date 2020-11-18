@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4341952625656BAF00D600FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341952525656BAF00D600FB /* AppDelegate.swift */; };
+		4341952825656BAF00D600FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341952725656BAF00D600FB /* ContentView.swift */; };
+		4341952B25656BAF00D600FB /* DefiTicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4341952925656BAF00D600FB /* DefiTicker.xcdatamodeld */; };
+		4341952D25656BB300D600FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4341952C25656BB300D600FB /* Assets.xcassets */; };
+		4341953025656BB300D600FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4341952F25656BB300D600FB /* Preview Assets.xcassets */; };
+		4341953325656BB300D600FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4341953125656BB300D600FB /* Main.storyboard */; };
+		4341953F25656BB300D600FB /* DefiTickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341953E25656BB300D600FB /* DefiTickerTests.swift */; };
+		4341954A25656BB300D600FB /* DefiTickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341954925656BB300D600FB /* DefiTickerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4341953B25656BB300D600FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4341951A25656BAF00D600FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4341952125656BAF00D600FB;
+			remoteInfo = DefiTicker;
+		};
+		4341954625656BB300D600FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4341951A25656BAF00D600FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4341952125656BAF00D600FB;
+			remoteInfo = DefiTicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4341952225656BAF00D600FB /* DefiTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DefiTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4341952525656BAF00D600FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4341952725656BAF00D600FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4341952A25656BAF00D600FB /* DefiTicker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefiTicker.xcdatamodel; sourceTree = "<group>"; };
+		4341952C25656BB300D600FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4341952F25656BB300D600FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4341953225656BB300D600FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4341953425656BB300D600FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4341953525656BB300D600FB /* DefiTicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DefiTicker.entitlements; sourceTree = "<group>"; };
+		4341953A25656BB300D600FB /* DefiTickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DefiTickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4341953E25656BB300D600FB /* DefiTickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefiTickerTests.swift; sourceTree = "<group>"; };
+		4341954025656BB300D600FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4341954525656BB300D600FB /* DefiTickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DefiTickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4341954925656BB300D600FB /* DefiTickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefiTickerUITests.swift; sourceTree = "<group>"; };
+		4341954B25656BB300D600FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4341951F25656BAF00D600FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341953725656BB300D600FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341954225656BB300D600FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4341951925656BAF00D600FB = {
+			isa = PBXGroup;
+			children = (
+				4341952425656BAF00D600FB /* DefiTicker */,
+				4341953D25656BB300D600FB /* DefiTickerTests */,
+				4341954825656BB300D600FB /* DefiTickerUITests */,
+				4341952325656BAF00D600FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4341952325656BAF00D600FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4341952225656BAF00D600FB /* DefiTicker.app */,
+				4341953A25656BB300D600FB /* DefiTickerTests.xctest */,
+				4341954525656BB300D600FB /* DefiTickerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4341952425656BAF00D600FB /* DefiTicker */ = {
+			isa = PBXGroup;
+			children = (
+				4341952525656BAF00D600FB /* AppDelegate.swift */,
+				4341952725656BAF00D600FB /* ContentView.swift */,
+				4341952C25656BB300D600FB /* Assets.xcassets */,
+				4341953125656BB300D600FB /* Main.storyboard */,
+				4341953425656BB300D600FB /* Info.plist */,
+				4341953525656BB300D600FB /* DefiTicker.entitlements */,
+				4341952925656BAF00D600FB /* DefiTicker.xcdatamodeld */,
+				4341952E25656BB300D600FB /* Preview Content */,
+			);
+			path = DefiTicker;
+			sourceTree = "<group>";
+		};
+		4341952E25656BB300D600FB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4341952F25656BB300D600FB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4341953D25656BB300D600FB /* DefiTickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4341953E25656BB300D600FB /* DefiTickerTests.swift */,
+				4341954025656BB300D600FB /* Info.plist */,
+			);
+			path = DefiTickerTests;
+			sourceTree = "<group>";
+		};
+		4341954825656BB300D600FB /* DefiTickerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4341954925656BB300D600FB /* DefiTickerUITests.swift */,
+				4341954B25656BB300D600FB /* Info.plist */,
+			);
+			path = DefiTickerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4341952125656BAF00D600FB /* DefiTicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4341954E25656BB300D600FB /* Build configuration list for PBXNativeTarget "DefiTicker" */;
+			buildPhases = (
+				4341951E25656BAF00D600FB /* Sources */,
+				4341951F25656BAF00D600FB /* Frameworks */,
+				4341952025656BAF00D600FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DefiTicker;
+			productName = DefiTicker;
+			productReference = 4341952225656BAF00D600FB /* DefiTicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4341953925656BB300D600FB /* DefiTickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4341955125656BB300D600FB /* Build configuration list for PBXNativeTarget "DefiTickerTests" */;
+			buildPhases = (
+				4341953625656BB300D600FB /* Sources */,
+				4341953725656BB300D600FB /* Frameworks */,
+				4341953825656BB300D600FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4341953C25656BB300D600FB /* PBXTargetDependency */,
+			);
+			name = DefiTickerTests;
+			productName = DefiTickerTests;
+			productReference = 4341953A25656BB300D600FB /* DefiTickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4341954425656BB300D600FB /* DefiTickerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4341955425656BB300D600FB /* Build configuration list for PBXNativeTarget "DefiTickerUITests" */;
+			buildPhases = (
+				4341954125656BB300D600FB /* Sources */,
+				4341954225656BB300D600FB /* Frameworks */,
+				4341954325656BB300D600FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4341954725656BB300D600FB /* PBXTargetDependency */,
+			);
+			name = DefiTickerUITests;
+			productName = DefiTickerUITests;
+			productReference = 4341954525656BB300D600FB /* DefiTickerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4341951A25656BAF00D600FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					4341952125656BAF00D600FB = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					4341953925656BB300D600FB = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 4341952125656BAF00D600FB;
+					};
+					4341954425656BB300D600FB = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 4341952125656BAF00D600FB;
+					};
+				};
+			};
+			buildConfigurationList = 4341951D25656BAF00D600FB /* Build configuration list for PBXProject "DefiTicker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4341951925656BAF00D600FB;
+			productRefGroup = 4341952325656BAF00D600FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4341952125656BAF00D600FB /* DefiTicker */,
+				4341953925656BB300D600FB /* DefiTickerTests */,
+				4341954425656BB300D600FB /* DefiTickerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4341952025656BAF00D600FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4341953325656BB300D600FB /* Main.storyboard in Resources */,
+				4341953025656BB300D600FB /* Preview Assets.xcassets in Resources */,
+				4341952D25656BB300D600FB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341953825656BB300D600FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341954325656BB300D600FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4341951E25656BAF00D600FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4341952825656BAF00D600FB /* ContentView.swift in Sources */,
+				4341952B25656BAF00D600FB /* DefiTicker.xcdatamodeld in Sources */,
+				4341952625656BAF00D600FB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341953625656BB300D600FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4341953F25656BB300D600FB /* DefiTickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341954125656BB300D600FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4341954A25656BB300D600FB /* DefiTickerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4341953C25656BB300D600FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4341952125656BAF00D600FB /* DefiTicker */;
+			targetProxy = 4341953B25656BB300D600FB /* PBXContainerItemProxy */;
+		};
+		4341954725656BB300D600FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4341952125656BAF00D600FB /* DefiTicker */;
+			targetProxy = 4341954625656BB300D600FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4341953125656BB300D600FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4341953225656BB300D600FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4341954C25656BB300D600FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4341954D25656BB300D600FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4341954F25656BB300D600FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DefiTicker/DefiTicker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"DefiTicker/Preview Content\"";
+				DEVELOPMENT_TEAM = QX6C3YZYLD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DefiTicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixc.DefiTicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4341955025656BB300D600FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DefiTicker/DefiTicker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"DefiTicker/Preview Content\"";
+				DEVELOPMENT_TEAM = QX6C3YZYLD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DefiTicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixc.DefiTicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4341955225656BB300D600FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QX6C3YZYLD;
+				INFOPLIST_FILE = DefiTickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixc.DefiTickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DefiTicker.app/Contents/MacOS/DefiTicker";
+			};
+			name = Debug;
+		};
+		4341955325656BB300D600FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QX6C3YZYLD;
+				INFOPLIST_FILE = DefiTickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixc.DefiTickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DefiTicker.app/Contents/MacOS/DefiTicker";
+			};
+			name = Release;
+		};
+		4341955525656BB300D600FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QX6C3YZYLD;
+				INFOPLIST_FILE = DefiTickerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixc.DefiTickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DefiTicker;
+			};
+			name = Debug;
+		};
+		4341955625656BB300D600FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QX6C3YZYLD;
+				INFOPLIST_FILE = DefiTickerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixc.DefiTickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DefiTicker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4341951D25656BAF00D600FB /* Build configuration list for PBXProject "DefiTicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4341954C25656BB300D600FB /* Debug */,
+				4341954D25656BB300D600FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4341954E25656BB300D600FB /* Build configuration list for PBXNativeTarget "DefiTicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4341954F25656BB300D600FB /* Debug */,
+				4341955025656BB300D600FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4341955125656BB300D600FB /* Build configuration list for PBXNativeTarget "DefiTickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4341955225656BB300D600FB /* Debug */,
+				4341955325656BB300D600FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4341955425656BB300D600FB /* Build configuration list for PBXNativeTarget "DefiTickerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4341955525656BB300D600FB /* Debug */,
+				4341955625656BB300D600FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4341952925656BAF00D600FB /* DefiTicker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4341952A25656BAF00D600FB /* DefiTicker.xcdatamodel */,
+			);
+			currentVersion = 4341952A25656BAF00D600FB /* DefiTicker.xcdatamodel */;
+			path = DefiTicker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4341951A25656BAF00D600FB /* Project object */;
+}
