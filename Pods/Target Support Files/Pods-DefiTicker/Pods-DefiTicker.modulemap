@@ -1,0 +1,6 @@
+framework module Pods_DefiTicker {
+  umbrella header "Pods-DefiTicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
