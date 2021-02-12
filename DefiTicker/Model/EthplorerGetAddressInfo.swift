@@ -8,23 +8,23 @@ import Foundation
 import SwiftyJSON
 
 struct Eth {
-    var _balance:Double
-    var _price:Double
-    var _priceDiff:String
-    var _priceDiff7days:String
-    var _marketCap:String
-    var _value:Double
+    var balance:Double
+    var price:Double
+    var priceDiff:String
+    var priceDiff7days:String
+    var marketCap:String
+    var value:Double
 }
 
 struct Token {
-    var _contractAddr:String
-    var _balance:Double
-    var _name:String
-    var _price:Double
-    var _priceDiff:String
-    var _priceDiff7days:String
-    var _marketCap:String
-    var _value:Double
+    var contractAddr:String
+    var balance:Double
+    var name:String
+    var price:Double
+    var priceDiff:String
+    var priceDiff7days:String
+    var marketCap:String
+    var value:Double
 }
 
 class EthplorerGetAddressInfo {
@@ -56,7 +56,7 @@ class EthplorerGetAddressInfo {
         // unit of ethBalance is eth
         let value = (ethPrice * ethBalance)
         self.totalValue += value
-        self._ethModel = Eth(_balance: ethBalance, _price: ethPrice, _priceDiff: ethPriceDiff, _priceDiff7days: ethPriceDiff7days, _marketCap: ethMarketCap, _value: value)
+        self._ethModel = Eth(balance: ethBalance, price: ethPrice, priceDiff: ethPriceDiff, priceDiff7days: ethPriceDiff7days, marketCap: ethMarketCap, value: value)
         
         let tokenList = getAddressInfo["tokens"].arrayValue
         
@@ -73,7 +73,7 @@ class EthplorerGetAddressInfo {
             // 1000000000000000000 wei = 1 eth
             let value = (price * balance) / 1000000000000000000
             self.totalValue += value
-            let token = Token(_contractAddr: contractAddr, _balance: balance, _name: name, _price: price, _priceDiff: priceDiff, _priceDiff7days: priceDiff7days, _marketCap: marketCap, _value: value)
+            let token = Token(contractAddr: contractAddr, balance: balance, name: name, price: price, priceDiff: priceDiff, priceDiff7days: priceDiff7days, marketCap: marketCap, value: value)
             self._tokens.append(token)
         }
     }

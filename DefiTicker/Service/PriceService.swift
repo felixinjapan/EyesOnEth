@@ -16,6 +16,10 @@ class PriceService {
         }
     }
     
+    static func getEthereumPrice(_ success: @escaping () -> Void) -> Void {
+        CoinGeckoAPIService().getSimplePrice(success)
+    }
+    
     static func getGasPrice(_ success: @escaping () -> Void) -> Void {
         EtherscanAPIService().gastracker(success)
     }

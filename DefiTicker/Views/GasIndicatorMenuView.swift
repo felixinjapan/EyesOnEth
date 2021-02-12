@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import os
 
 class GasIndicatorViewModel {
     var closeAction: () -> Void
@@ -18,19 +19,11 @@ class GasIndicatorViewModel {
 
 struct GasIndicatorView: View {
     
-    //    var vm : GasIndicatorViewModel
-    // sheet dismissed using Environment presentation mode
-    @Environment(\.presentationMode) var presentationMode
-    // without private it does not work
-    @State private var gasTracker: EtherscanGastracker?
-    @State private var safeGasPrice: String = "11"
-    @State private var proposeGasPrice: String = "22"
-    @State private var fastGasPrice: String = "33"
+    @State private var safeGasPrice: String = "..."
+    @State private var proposeGasPrice: String = "..."
+    @State private var fastGasPrice: String = "..."
 
     var body: some View {
-//        var safeGasPrice: String = "11"
-//        var proposeGasPrice: String = "22"
-//        var fastGasPrice: String = "33"
         VStack {
             HStack {
                 Text("Gas price in Gwei")
@@ -46,6 +39,7 @@ struct GasIndicatorView: View {
                     
                     Text(self.safeGasPrice)
                         .font(.body)
+                        .scaledToFill()
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.green)
                 }
@@ -57,6 +51,7 @@ struct GasIndicatorView: View {
                     Spacer()
                     Text(self.proposeGasPrice)
                         .font(.body)
+                        .scaledToFill()
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.blue)
                 }
@@ -68,6 +63,7 @@ struct GasIndicatorView: View {
                     Spacer()
                     Text(self.fastGasPrice)
                         .font(.body)
+                        .scaledToFill()
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.red)
                 }
@@ -76,18 +72,18 @@ struct GasIndicatorView: View {
         .frame(width: 140, height: 70)
         .padding()
         .onAppear(){
-            self.getGasPrice()
+            self.updateGasPrice()
         }
     }
     
-    func getGasPrice(){
+    func updateGasPrice(){
         let updateGasPrice: () -> Void = {
             if let tracker = EthereumStatus.shared.estherscanGastracker {
                 DispatchQueue.main.async {
                     self.fastGasPrice = String(tracker.result.fastGasPrice)
                     self.proposeGasPrice = String(tracker.result.proposeGasPrice)
                     self.safeGasPrice = String(tracker.result.safeGasPrice)
-                    print("gas price updated")
+                    os_log("gas price updated", log: OSLog.default, type: .debug)
                 }
             }
         }
@@ -97,7 +93,6 @@ struct GasIndicatorView: View {
 
 struct GasIndicatorView_Previews: PreviewProvider {
     static var previews: some View {
-        let bridge = GasIndicatorViewModel()
         GasIndicatorView()
     }
 }

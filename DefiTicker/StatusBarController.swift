@@ -5,9 +5,9 @@
 //  Created by Chon, Felix | Felix | DCMS on 2020/11/18.
 //
 
-
 import AppKit
 import SwiftUI
+import os
 
 class AppMenu : NSMenuItem {
     open var ethAddress:String?
@@ -29,6 +29,9 @@ class StatusBarController {
 
     var priceUpdateTimer: Timer?
     
+    var gasIndicatorMenuView:GasIndicatorView = GasIndicatorView()
+    var ethStatusMenuView:EthStatusMenuView = EthStatusMenuView()
+    
     init()
     {
         let notificationCenter = NotificationCenter.default
@@ -49,17 +52,11 @@ class StatusBarController {
         // Set the SwiftUI's ContentView to the Popover's ContentViewController
         popover.contentViewController = MainViewController()
         popover.contentSize = NSSize(width: 500, height: 100)
-        //bridge.registerAction = RegisterService.registerAddress
         
         if let statusBarButton = statusItem.button {
-            
-            //TODO calculate the length of balance and resize the statusBar
             statusBarButton.image = #imageLiteral(resourceName: "turtle")
             statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
             statusBarButton.image?.isTemplate = true
-            //statusBarButton.image = #imageLiteral(resourceName: "StatusBarIcon")
-            //statusBarButton.image?.isTemplate = true
-            statusBarButton.action = #selector(printQuote(_:))
         }
         updateData()
         priceUpdateTimer = Timer.scheduledTimer(timeInterval: 7, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
@@ -70,8 +67,7 @@ class StatusBarController {
 
     @objc func updateData(){
         let updateMenuPrice: () -> Void = {
-            let totalValue = UserStatus.shared.getTotalValue()
-            if let button = self.statusItem.button {
+            if let totalValue = UserStatus.shared.getTotalValue(), let button = self.statusItem.button {
                 button.image = nil
                 button.title = "$\(totalValue)"
                 self.statusItem.length = button.title.widthForButton()
@@ -100,7 +96,7 @@ class StatusBarController {
             UserDefaults.standard.setValue(addr, forKey: Constants.activeAddress)
             UserStatus.shared.activeAddress = addr
         }
-        print("active wallet is: \(UserStatus.shared.activeAddress)")
+        os_log("%@", log: .default, type: .debug, UserStatus.shared.activeAddress!)
         sender.state = NSControl.StateValue.on
     }
     
@@ -158,12 +154,20 @@ class StatusBarController {
             let menu  = AppMenu(title: name,  action: #selector(StatusBarController.actionMenu(_:)),  keyEquivalent: "")
             menu.ethAddress = newAddr
             menu.target = self
-            self.appMenu.insertItem(menu, at:4)
+            self.appMenu.insertItem(menu, at:3)
+            if UserStatus.shared.numOfMenus == 0 {
+                self.appMenu.insertItem(NSMenuItem.separator(), at:4)
+            }
+            UserStatus.shared.numOfMenus += 1
         }
     }
     
     @objc func resetMenu(){
         self.appMenu.removeAllItems()
+        UserDefaults.standard.removeObject(forKey: Constants.activeAddress)
+        UserStatus.shared.numOfMenus = 0
+        UserStatus.shared.activeAddress = nil
+        UserStatus.shared.ethplorerGetAddressInfo = nil
         constructMenu()
     }
     
@@ -175,23 +179,22 @@ class StatusBarController {
         self.appMenu.addItem(resetAddresses)
         self.appMenu.addItem(NSMenuItem.separator())
         setAddressMenuItems()
+        setViewMenu(menuitem: ethStatusMenuView, height: 50)
         self.appMenu.addItem(NSMenuItem.separator())
-        setGasIndicatorMenuItem()
+        setViewMenu(menuitem: gasIndicatorMenuView, height: 80)
         self.appMenu.addItem(NSMenuItem.separator())
         self.appMenu.addItem(NSMenuItem(title: "Preference", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "p"))
         self.appMenu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
-        
         statusItem.menu = appMenu
-        
     }
-    func setGasIndicatorMenuItem() {
+
+    private func setViewMenu<T: View>(menuitem view:T, height:UInt){
         let gasMenuItem = NSMenuItem()
-        let contentView = GasIndicatorView()
-        let view = NSHostingView(rootView: contentView)
+        let view = NSHostingView(rootView: view)
         let menuSize = self.appMenu.size
         let x = (menuSize.width) * 0.5
         let y = (menuSize.height) * 0.5
-        view.frame = NSRect(x: x, y: y, width: menuSize.width, height: 80)
+        view.frame = NSRect(x: x, y: y, width: menuSize.width, height: CGFloat(height))
         gasMenuItem.view = view
         self.appMenu.addItem(gasMenuItem)
     }
@@ -208,6 +211,15 @@ class StatusBarController {
                 if let activeAddress = UserDefaults.standard.string(forKey: Constants.activeAddress), eth == activeAddress {
                     menu.state = NSControl.StateValue.on
                 }
+                UserStatus.shared.numOfMenus += 1
+            }
+            self.appMenu.addItem(NSMenuItem.separator())
+        } else {
+            if let statusBarButton = statusItem.button {
+                statusBarButton.title = ""
+                statusBarButton.image = #imageLiteral(resourceName: "turtle")
+                statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
+                statusBarButton.image?.isTemplate = true
             }
         }
     }

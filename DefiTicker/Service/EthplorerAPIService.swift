@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import os
 
 class EthpolorerAPIService {
     
@@ -22,7 +23,7 @@ class EthpolorerAPIService {
                 UserStatus.shared.ethplorerGetAddressInfo = EthplorerGetAddressInfo(getAddressInfo: json)
                 success()
             case .failure(let error):
-                print(error)
+                os_log("%@", log: .default, type: .error, String(describing: error))
             }
         }
     }

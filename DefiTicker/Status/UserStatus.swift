@@ -6,17 +6,19 @@
 //
 
 import Cocoa
+import os
 
 class UserStatus {
+    open var numOfMenus:Int = 0
     open var activeAddress: String?
     open var ethplorerGetAddressInfo: EthplorerGetAddressInfo?
     static let shared:UserStatus = UserStatus()
     
-    func getTotalValue() -> String {
+    func getTotalValue() -> String? {
         if let info = self.ethplorerGetAddressInfo {
-            print("total value is : \(info.totalValue)")
+            os_log("total value is: %G", log: .default, type: .debug, info.totalValue)
             return String(format: "%.0f", info.totalValue)
         }
-        return "0"
+        return nil
     }
 }

@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import os
 
 class EtherscanAPIService {
     
@@ -19,11 +20,11 @@ class EtherscanAPIService {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                EthereumStatus.shared.estherscanGastracker = EtherscanGastracker(gastracker: json)
-                print("gas price was \(EthereumStatus.shared.estherscanGastracker!.result.proposeGasPrice)")
+                let etherStatus = EthereumStatus.shared
+                etherStatus.estherscanGastracker = EtherscanGastracker(gastracker: json)
                 success()
             case .failure(let error):
-                print(error)
+                os_log("%@", log: .default, type: .error, String(describing: error))
             }
         }
     }

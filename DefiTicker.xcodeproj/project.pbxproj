@@ -45,6 +45,15 @@
 		43C633CC25D0612200F40C72 /* EthereumStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633CB25D0612200F40C72 /* EthereumStatus.swift */; };
 		43C633CD25D0612200F40C72 /* EthereumStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633CB25D0612200F40C72 /* EthereumStatus.swift */; };
 		43C633CE25D0612200F40C72 /* EthereumStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633CB25D0612200F40C72 /* EthereumStatus.swift */; };
+		43C633E325D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */; };
+		43C633E425D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */; };
+		43C633E525D2DEAB00F40C72 /* EthStatusMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */; };
+		43C633ED25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633EC25D62A8200F40C72 /* CoinGeckoSimplePrice.swift */; };
+		43C633EE25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633EC25D62A8200F40C72 /* CoinGeckoSimplePrice.swift */; };
+		43C633EF25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633EC25D62A8200F40C72 /* CoinGeckoSimplePrice.swift */; };
+		43C633F725D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */; };
+		43C633F825D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */; };
+		43C633F925D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */; };
 		43F94EEF2577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
 		43F94EF02577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
 		43F94EF12577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
@@ -104,6 +113,9 @@
 		43C633B725D05BD700F40C72 /* EtherscanGastracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtherscanGastracker.swift; sourceTree = "<group>"; };
 		43C633C125D0606C00F40C72 /* EtherscanAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtherscanAPIService.swift; sourceTree = "<group>"; };
 		43C633CB25D0612200F40C72 /* EthereumStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumStatus.swift; sourceTree = "<group>"; };
+		43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthStatusMenuView.swift; sourceTree = "<group>"; };
+		43C633EC25D62A8200F40C72 /* CoinGeckoSimplePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinGeckoSimplePrice.swift; sourceTree = "<group>"; };
+		43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinGeckoAPIService.swift; sourceTree = "<group>"; };
 		43F94EEE2577F82F0042D646 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		43FB77D825C6B26400B8C5BE /* UserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		43FB77E225C6B49900B8C5BE /* PriceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceService.swift; sourceTree = "<group>"; };
@@ -224,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				43C6338D25CF79A600F40C72 /* GasIndicatorMenuView.swift */,
+				43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */,
 				43AE6AC2257D10BF00D1A55C /* RegisterAddressView.swift */,
 			);
 			path = Views;
@@ -232,6 +245,7 @@
 		43C633A425CFFBB700F40C72 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				43C633EC25D62A8200F40C72 /* CoinGeckoSimplePrice.swift */,
 				43C633B725D05BD700F40C72 /* EtherscanGastracker.swift */,
 				43C633A525CFFBD300F40C72 /* EthplorerGetAddressInfo.swift */,
 			);
@@ -241,6 +255,7 @@
 		43F94EED2577F8210042D646 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */,
 				43F94EEE2577F82F0042D646 /* RegisterService.swift */,
 				43C633C125D0606C00F40C72 /* EtherscanAPIService.swift */,
 				43B13F7425C6AFD80051165D /* EthplorerAPIService.swift */,
@@ -525,6 +540,8 @@
 				43F94EEF2577F82F0042D646 /* RegisterService.swift in Sources */,
 				43AE6AC3257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
 				43C633C225D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
+				43C633ED25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
+				43C633F725D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */,
 				43FB77E325C6B49900B8C5BE /* PriceService.swift in Sources */,
 				4341952625656BAF00D600FB /* AppDelegate.swift in Sources */,
 				43C633B825D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
@@ -532,6 +549,7 @@
 				43C633A625CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
 				43050605256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
 				43FB77D925C6B26400B8C5BE /* UserStatus.swift in Sources */,
+				43C633E325D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */,
 				43B13F7525C6AFD80051165D /* EthplorerAPIService.swift in Sources */,
 				43050602256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
 				43AC49B925A305D700916709 /* Constants.swift in Sources */,
@@ -543,16 +561,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C633B925D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
+				43C633F825D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */,
 				43FB77DA25C6B26400B8C5BE /* UserStatus.swift in Sources */,
 				43FB77E425C6B49900B8C5BE /* PriceService.swift in Sources */,
 				43F94EF02577F82F0042D646 /* RegisterService.swift in Sources */,
 				43C633C325D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
+				43C633E425D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */,
 				4341953F25656BB300D600FB /* DefiTickerTests.swift in Sources */,
 				43AE6AC4257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
 				43C633CD25D0612200F40C72 /* EthereumStatus.swift in Sources */,
 				43C633A725CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
 				43050606256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
 				43050603256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
+				43C633EE25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
 				43C6338F25CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
 				4305060D256B62C8001F6D89 /* MainViewController.swift in Sources */,
 			);
@@ -563,16 +584,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C633BA25D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
+				43C633F925D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */,
 				43FB77DB25C6B26400B8C5BE /* UserStatus.swift in Sources */,
 				43FB77E525C6B49900B8C5BE /* PriceService.swift in Sources */,
 				43F94EF12577F82F0042D646 /* RegisterService.swift in Sources */,
 				43C633C425D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
+				43C633E525D2DEAB00F40C72 /* EthStatusMenuView.swift in Sources */,
 				4341954A25656BB300D600FB /* DefiTickerUITests.swift in Sources */,
 				43AE6AC5257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
 				43C633CE25D0612200F40C72 /* EthereumStatus.swift in Sources */,
 				43C633A825CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
 				43050607256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
 				43050604256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
+				43C633EF25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
 				43C6339025CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
 				4305060E256B62C8001F6D89 /* MainViewController.swift in Sources */,
 			);
