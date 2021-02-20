@@ -11,6 +11,7 @@ class RegisterAddressViewModel {
     var closeAction: () -> Void
     var registerAction: (String) -> Void
     init() {
+        print("init")
         self.closeAction = {}
         self.registerAction = {_ in}
     }

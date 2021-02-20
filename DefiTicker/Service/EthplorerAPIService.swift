@@ -10,9 +10,9 @@ import Alamofire
 import SwiftyJSON
 import os
 
-class EthpolorerAPIService {
+class EthplorerAPIService {
     
-    func getAddressInfo(_ address:String, _ success: @escaping () -> Void) {
+    func getAddressInfo(_ address:String, _ success: @escaping (JSON) -> Void) {
         let param = ["apiKey": "EK-aYF35-py3TUdh-ydqEm"]
         let host = "https://api.ethplorer.io/getAddressInfo/\(address)"
         AF.request(host, parameters: param).responseJSON {
@@ -20,8 +20,7 @@ class EthpolorerAPIService {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                UserStatus.shared.ethplorerGetAddressInfo = EthplorerGetAddressInfo(getAddressInfo: json)
-                success()
+                success(json)
             case .failure(let error):
                 os_log("%@", log: .default, type: .error, String(describing: error))
             }

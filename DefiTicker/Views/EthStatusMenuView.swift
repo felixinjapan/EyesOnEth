@@ -7,6 +7,7 @@
 
 import SwiftUI
 import os
+import SwiftyJSON
 
 struct EthStatusMenuView: View {
     
@@ -37,12 +38,12 @@ struct EthStatusMenuView: View {
                         Text("+" + self.priceDiffString)
                             .foregroundColor(.green)
                             .scaledToFill()
-                            .font(.system(size: 9, weight: .light, design: .default))
+                            .font(.system(size: 10, weight: .light, design: .default))
                     } else {
-                        Text("-" + self.priceDiffString)
+                        Text(self.priceDiffString)
                             .foregroundColor(.red)
                             .scaledToFill()
-                            .font(.system(size: 9, weight: .light, design: .default))
+                            .font(.system(size: 10, weight: .light, design: .default))
                     }
 
                 }
@@ -54,12 +55,13 @@ struct EthStatusMenuView: View {
             updateEthereumPrice()
         }
     }
-   
+    
     func updateEthereumPrice(){
-        let updateGasPrice: () -> Void = {
+        let updateGasPrice: (JSON) -> Void = { json in
+            EthereumStatus.shared.coinGeckoSimplePrice = CoinGeckoSimplePrice(simplePrice: json)
             if let coinGeckoSimplePrice = EthereumStatus.shared.coinGeckoSimplePrice {
                 DispatchQueue.main.async {
-                    let ethPrice = String(format: "%.0f", coinGeckoSimplePrice.ethPriceInUSD)
+                    let ethPrice = EthereumUtil.roundUpTotal(coinGeckoSimplePrice.ethPriceInUSD)
                     self.ethPrice = String("$ \(ethPrice)")
                     self.priceDiff = Float(coinGeckoSimplePrice.eth24hrChange)
                     self.priceDiffString = String(format: "%.2f", self.priceDiff) + "%"

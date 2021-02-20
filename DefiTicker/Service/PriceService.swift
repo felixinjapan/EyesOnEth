@@ -6,17 +6,26 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class PriceService {
     
-    static func getCurrentTotalValue(_ success: @escaping () -> Void) -> Void {
+    static func updateActiveAddressPrice(_ success: @escaping (JSON) -> Void) -> Void {
         let currentAddr = UserStatus.shared.activeAddress
         if let addr = currentAddr {
-            EthpolorerAPIService().getAddressInfo(addr, success)
+            EthplorerAPIService().getAddressInfo(addr, success)
         }
     }
     
-    static func getEthereumPrice(_ success: @escaping () -> Void) -> Void {
+    static func updateAddressInfoFromEthplorer(_ address:String, _ success: @escaping (JSON) -> Void) -> Void {
+        EthplorerAPIService().getAddressInfo(address, success)
+    }
+    
+    static func updateTokenPriceFromCoinGecko(_ contracts:[String], _ success: @escaping (Data) -> Void) -> Void {
+        CoinGeckoAPIService().getSimpleTokenPrice(success, contracts)
+    }
+    
+    static func getEthereumPrice(_ success: @escaping (JSON) -> Void) -> Void {
         CoinGeckoAPIService().getSimplePrice(success)
     }
     

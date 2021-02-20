@@ -32,6 +32,8 @@
 	<true/>
 	<key>LSUIElement</key>
 	<true/>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Felix Chon 2020</string>
 </dict>

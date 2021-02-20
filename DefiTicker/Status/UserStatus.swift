@@ -14,10 +14,10 @@ class UserStatus {
     open var ethplorerGetAddressInfo: EthplorerGetAddressInfo?
     static let shared:UserStatus = UserStatus()
     
-    func getTotalValue() -> String? {
+    func getTotalValue(_ missingPrice:Double = 0) -> String? {
         if let info = self.ethplorerGetAddressInfo {
-            os_log("total value is: %G", log: .default, type: .debug, info.totalValue)
-            return String(format: "%.0f", info.totalValue)
+            os_log("total value is: %G, missing : %G", log: .default, type: .debug, info.totalValue + missingPrice,missingPrice)
+            return EthereumUtil.roundUpTotal(info.totalValue+missingPrice)
         }
         return nil
     }

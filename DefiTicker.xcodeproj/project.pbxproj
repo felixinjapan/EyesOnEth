@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D23B0B1A279A1A37F85D306 /* Pods_DefiTickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB77D3C8C0F56329BA62DD5 /* Pods_DefiTickerTests.framework */; };
-		34CD5F66BBF1993535AE491F /* Pods_DefiTicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B240FD22B1C9BD575F03625B /* Pods_DefiTicker.framework */; };
 		43050602256B5BE1001F6D89 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43050600256B5BE1001F6D89 /* EventMonitor.swift */; };
 		43050603256B5BE1001F6D89 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43050600256B5BE1001F6D89 /* EventMonitor.swift */; };
 		43050604256B5BE1001F6D89 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43050600256B5BE1001F6D89 /* EventMonitor.swift */; };
@@ -25,6 +23,9 @@
 		4341953325656BB300D600FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4341953125656BB300D600FB /* Main.storyboard */; };
 		4341953F25656BB300D600FB /* DefiTickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341953E25656BB300D600FB /* DefiTickerTests.swift */; };
 		4341954A25656BB300D600FB /* DefiTickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341954925656BB300D600FB /* DefiTickerUITests.swift */; };
+		43A3348725E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
+		43A3348825E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
+		43A3348925E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
 		43AC49B925A305D700916709 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AC49B825A305D700916709 /* Constants.swift */; };
 		43AE6AC3257D10BF00D1A55C /* RegisterAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE6AC2257D10BF00D1A55C /* RegisterAddressView.swift */; };
 		43AE6AC4257D10BF00D1A55C /* RegisterAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE6AC2257D10BF00D1A55C /* RegisterAddressView.swift */; };
@@ -54,6 +55,45 @@
 		43C633F725D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */; };
 		43C633F825D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */; };
 		43C633F925D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */; };
+		43C8FC8825D682EE00FC6EAF /* DetailViewEth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC8625D682EE00FC6EAF /* DetailViewEth.swift */; };
+		43C8FC8925D682EE00FC6EAF /* DetailViewEth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC8625D682EE00FC6EAF /* DetailViewEth.swift */; };
+		43C8FC8A25D682EE00FC6EAF /* DetailViewEth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC8625D682EE00FC6EAF /* DetailViewEth.swift */; };
+		43C8FC9925D6836400FC6EAF /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9525D6836400FC6EAF /* PrefsView.swift */; };
+		43C8FC9A25D6836400FC6EAF /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9525D6836400FC6EAF /* PrefsView.swift */; };
+		43C8FC9B25D6836400FC6EAF /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9525D6836400FC6EAF /* PrefsView.swift */; };
+		43C8FC9C25D6836400FC6EAF /* NSWindow+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9625D6836400FC6EAF /* NSWindow+Utils.swift */; };
+		43C8FC9D25D6836400FC6EAF /* NSWindow+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9625D6836400FC6EAF /* NSWindow+Utils.swift */; };
+		43C8FC9E25D6836400FC6EAF /* NSWindow+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9625D6836400FC6EAF /* NSWindow+Utils.swift */; };
+		43C8FC9F25D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9725D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift */; };
+		43C8FCA025D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9725D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift */; };
+		43C8FCA125D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9725D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift */; };
+		43C8FCA225D6836400FC6EAF /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9825D6836400FC6EAF /* Prefs.swift */; };
+		43C8FCA325D6836400FC6EAF /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9825D6836400FC6EAF /* Prefs.swift */; };
+		43C8FCA425D6836400FC6EAF /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9825D6836400FC6EAF /* Prefs.swift */; };
+		43C8FCAF25D6839400FC6EAF /* token_preview.json in Resources */ = {isa = PBXBuildFile; fileRef = 43C8FCAC25D6839400FC6EAF /* token_preview.json */; };
+		43C8FCB025D6839400FC6EAF /* token_preview.json in Resources */ = {isa = PBXBuildFile; fileRef = 43C8FCAC25D6839400FC6EAF /* token_preview.json */; };
+		43C8FCB125D6839400FC6EAF /* token_preview.json in Resources */ = {isa = PBXBuildFile; fileRef = 43C8FCAC25D6839400FC6EAF /* token_preview.json */; };
+		43C8FCB225D6839400FC6EAF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCAD25D6839400FC6EAF /* Helper.swift */; };
+		43C8FCB325D6839400FC6EAF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCAD25D6839400FC6EAF /* Helper.swift */; };
+		43C8FCB425D6839400FC6EAF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCAD25D6839400FC6EAF /* Helper.swift */; };
+		43C8FCB525D6839400FC6EAF /* HttpStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCAE25D6839400FC6EAF /* HttpStatus.swift */; };
+		43C8FCB625D6839400FC6EAF /* HttpStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCAE25D6839400FC6EAF /* HttpStatus.swift */; };
+		43C8FCB725D6839400FC6EAF /* HttpStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCAE25D6839400FC6EAF /* HttpStatus.swift */; };
+		43C8FCD425D6920700FC6EAF /* AddressDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCD325D6920700FC6EAF /* AddressDetailView.swift */; };
+		43C8FCD525D6920700FC6EAF /* AddressDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCD325D6920700FC6EAF /* AddressDetailView.swift */; };
+		43C8FCD625D6920700FC6EAF /* AddressDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCD325D6920700FC6EAF /* AddressDetailView.swift */; };
+		43C8FD7B25D6D40E00FC6EAF /* WindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */; };
+		43C8FD7C25D6D40E00FC6EAF /* WindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */; };
+		43C8FD7D25D6D40E00FC6EAF /* WindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */; };
+		43C8FDC625D80C4E00FC6EAF /* EthereumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */; };
+		43C8FDC725D80C4E00FC6EAF /* EthereumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */; };
+		43C8FDC825D80C4E00FC6EAF /* EthereumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */; };
+		43C8FDD025DABD0400FC6EAF /* EthereumSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */; };
+		43C8FDD125DABD0400FC6EAF /* EthereumSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */; };
+		43C8FDD225DABD0400FC6EAF /* EthereumSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */; };
+		43C8FDF025DCB3D300FC6EAF /* DetailViewToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */; };
+		43C8FDF125DCB3D300FC6EAF /* DetailViewToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */; };
+		43C8FDF225DCB3D300FC6EAF /* DetailViewToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */; };
 		43F94EEF2577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
 		43F94EF02577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
 		43F94EF12577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
@@ -63,7 +103,9 @@
 		43FB77E325C6B49900B8C5BE /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB77E225C6B49900B8C5BE /* PriceService.swift */; };
 		43FB77E425C6B49900B8C5BE /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB77E225C6B49900B8C5BE /* PriceService.swift */; };
 		43FB77E525C6B49900B8C5BE /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB77E225C6B49900B8C5BE /* PriceService.swift */; };
-		E9CFA8077D9A78C88E06F4B2 /* Pods_DefiTicker_DefiTickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A65734ACC6ACA7AEE3900E /* Pods_DefiTicker_DefiTickerUITests.framework */; };
+		76D790A8B394709CFEFCD47B /* Pods_DefiTicker_DefiTickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D779FF7D49F3C95F704360 /* Pods_DefiTicker_DefiTickerUITests.framework */; };
+		91E64882808AE089552C1C1F /* Pods_DefiTickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883E88B65FA3AA0AA9896C1E /* Pods_DefiTickerTests.framework */; };
+		F232F4407445FE0C2F6818E7 /* Pods_DefiTicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11874244D999EC5FA253BA8 /* Pods_DefiTicker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,10 +126,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F8527AAFE5AF2E729BF2FC5 /* Pods-DefiTicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefiTicker.release.xcconfig"; path = "Target Support Files/Pods-DefiTicker/Pods-DefiTicker.release.xcconfig"; sourceTree = "<group>"; };
-		25E2546CB25FEC842D7F34E2 /* Pods-DefiTicker-DefiTickerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefiTicker-DefiTickerUITests.debug.xcconfig"; path = "Target Support Files/Pods-DefiTicker-DefiTickerUITests/Pods-DefiTicker-DefiTickerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2CA9CA713FA4035D7A0E76EF /* Pods-DefiTickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefiTickerTests.debug.xcconfig"; path = "Target Support Files/Pods-DefiTickerTests/Pods-DefiTickerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		38C1636EBF6130314FD64B8C /* Pods-DefiTicker-DefiTickerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefiTicker-DefiTickerUITests.release.xcconfig"; path = "Target Support Files/Pods-DefiTicker-DefiTickerUITests/Pods-DefiTicker-DefiTickerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0B96DB1F5DACDBB6B5839268 /* Pods-DefiTicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefiTicker.debug.xcconfig"; path = "Target Support Files/Pods-DefiTicker/Pods-DefiTicker.debug.xcconfig"; sourceTree = "<group>"; };
+		39D779FF7D49F3C95F704360 /* Pods_DefiTicker_DefiTickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DefiTicker_DefiTickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43050600256B5BE1001F6D89 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		43050601256B5BE1001F6D89 /* StatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		4305060B256B62C7001F6D89 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +145,7 @@
 		4341954525656BB300D600FB /* DefiTickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DefiTickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4341954925656BB300D600FB /* DefiTickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefiTickerUITests.swift; sourceTree = "<group>"; };
 		4341954B25656BB300D600FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinGeckoSimpleTokenPrice.swift; sourceTree = "<group>"; };
 		43AC49B825A305D700916709 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		43AE6AC2257D10BF00D1A55C /* RegisterAddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAddressView.swift; sourceTree = "<group>"; };
 		43B13F7425C6AFD80051165D /* EthplorerAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthplorerAPIService.swift; sourceTree = "<group>"; };
@@ -116,14 +157,29 @@
 		43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthStatusMenuView.swift; sourceTree = "<group>"; };
 		43C633EC25D62A8200F40C72 /* CoinGeckoSimplePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinGeckoSimplePrice.swift; sourceTree = "<group>"; };
 		43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinGeckoAPIService.swift; sourceTree = "<group>"; };
+		43C8FC8625D682EE00FC6EAF /* DetailViewEth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewEth.swift; sourceTree = "<group>"; };
+		43C8FC9525D6836400FC6EAF /* PrefsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefsView.swift; sourceTree = "<group>"; };
+		43C8FC9625D6836400FC6EAF /* NSWindow+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSWindow+Utils.swift"; sourceTree = "<group>"; };
+		43C8FC9725D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
+		43C8FC9825D6836400FC6EAF /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
+		43C8FCAC25D6839400FC6EAF /* token_preview.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = token_preview.json; sourceTree = "<group>"; };
+		43C8FCAD25D6839400FC6EAF /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		43C8FCAE25D6839400FC6EAF /* HttpStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpStatus.swift; sourceTree = "<group>"; };
+		43C8FCD325D6920700FC6EAF /* AddressDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressDetailView.swift; sourceTree = "<group>"; };
+		43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowViewController.swift; sourceTree = "<group>"; };
+		43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumUtil.swift; sourceTree = "<group>"; };
+		43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumSetting.swift; sourceTree = "<group>"; };
+		43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewToken.swift; sourceTree = "<group>"; };
 		43F94EEE2577F82F0042D646 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		43FB77D825C6B26400B8C5BE /* UserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		43FB77E225C6B49900B8C5BE /* PriceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceService.swift; sourceTree = "<group>"; };
-		92A65734ACC6ACA7AEE3900E /* Pods_DefiTicker_DefiTickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DefiTicker_DefiTickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AB77D3C8C0F56329BA62DD5 /* Pods_DefiTickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DefiTickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B240FD22B1C9BD575F03625B /* Pods_DefiTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DefiTicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCC66112AEEBD2E54703E5DB /* Pods-DefiTickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefiTickerTests.release.xcconfig"; path = "Target Support Files/Pods-DefiTickerTests/Pods-DefiTickerTests.release.xcconfig"; sourceTree = "<group>"; };
-		FDA6C56E14BB1CEB165B870A /* Pods-DefiTicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefiTicker.debug.xcconfig"; path = "Target Support Files/Pods-DefiTicker/Pods-DefiTicker.debug.xcconfig"; sourceTree = "<group>"; };
+		883E88B65FA3AA0AA9896C1E /* Pods_DefiTickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DefiTickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A4A5A9DFE6B9FC7E7283AF6 /* Pods-DefiTickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefiTickerTests.debug.xcconfig"; path = "Target Support Files/Pods-DefiTickerTests/Pods-DefiTickerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AED760B3B68F608B9A9DA4E3 /* Pods-DefiTicker-DefiTickerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefiTicker-DefiTickerUITests.release.xcconfig"; path = "Target Support Files/Pods-DefiTicker-DefiTickerUITests/Pods-DefiTicker-DefiTickerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B29BE78E3791DD50D04070FE /* Pods-DefiTicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefiTicker.release.xcconfig"; path = "Target Support Files/Pods-DefiTicker/Pods-DefiTicker.release.xcconfig"; sourceTree = "<group>"; };
+		C32FD66707B50E1479F9537B /* Pods-DefiTicker-DefiTickerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefiTicker-DefiTickerUITests.debug.xcconfig"; path = "Target Support Files/Pods-DefiTicker-DefiTickerUITests/Pods-DefiTicker-DefiTickerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F11874244D999EC5FA253BA8 /* Pods_DefiTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DefiTicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43E29D47D5BE6F12229A978 /* Pods-DefiTickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefiTickerTests.release.xcconfig"; path = "Target Support Files/Pods-DefiTickerTests/Pods-DefiTickerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34CD5F66BBF1993535AE491F /* Pods_DefiTicker.framework in Frameworks */,
+				F232F4407445FE0C2F6818E7 /* Pods_DefiTicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D23B0B1A279A1A37F85D306 /* Pods_DefiTickerTests.framework in Frameworks */,
+				91E64882808AE089552C1C1F /* Pods_DefiTickerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9CFA8077D9A78C88E06F4B2 /* Pods_DefiTicker_DefiTickerUITests.framework in Frameworks */,
+				76D790A8B394709CFEFCD47B /* Pods_DefiTicker_DefiTickerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +213,9 @@
 		430505FF256B5BBB001F6D89 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */,
+				43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */,
+				43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */,
 				43050600256B5BE1001F6D89 /* EventMonitor.swift */,
 				43AC49B825A305D700916709 /* Constants.swift */,
 			);
@@ -171,7 +230,7 @@
 				4341954825656BB300D600FB /* DefiTickerUITests */,
 				4341952325656BAF00D600FB /* Products */,
 				75E7A23CEEFE35147F77DD3A /* Pods */,
-				B3706A3B65F4E13E41F3928C /* Frameworks */,
+				748B3D259CCF704A237F7149 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,6 +247,8 @@
 		4341952425656BAF00D600FB /* DefiTicker */ = {
 			isa = PBXGroup;
 			children = (
+				43C8FCAB25D6839400FC6EAF /* Data */,
+				43C8FC9425D6836400FC6EAF /* Prefs */,
 				43C633A425CFFBB700F40C72 /* Model */,
 				43AE6AC1257D10BF00D1A55C /* Views */,
 				4305060B256B62C7001F6D89 /* MainViewController.swift */,
@@ -235,6 +296,9 @@
 		43AE6AC1257D10BF00D1A55C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				43C8FCD325D6920700FC6EAF /* AddressDetailView.swift */,
+				43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */,
+				43C8FC8625D682EE00FC6EAF /* DetailViewEth.swift */,
 				43C6338D25CF79A600F40C72 /* GasIndicatorMenuView.swift */,
 				43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */,
 				43AE6AC2257D10BF00D1A55C /* RegisterAddressView.swift */,
@@ -247,9 +311,33 @@
 			children = (
 				43C633EC25D62A8200F40C72 /* CoinGeckoSimplePrice.swift */,
 				43C633B725D05BD700F40C72 /* EtherscanGastracker.swift */,
+				43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */,
 				43C633A525CFFBD300F40C72 /* EthplorerGetAddressInfo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		43C8FC9425D6836400FC6EAF /* Prefs */ = {
+			isa = PBXGroup;
+			children = (
+				43C8FC9525D6836400FC6EAF /* PrefsView.swift */,
+				43C8FC9625D6836400FC6EAF /* NSWindow+Utils.swift */,
+				43C8FC9725D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift */,
+				43C8FC9825D6836400FC6EAF /* Prefs.swift */,
+			);
+			name = Prefs;
+			path = "../../swiftui-mac/SwiftUI-Mac/Prefs";
+			sourceTree = "<group>";
+		};
+		43C8FCAB25D6839400FC6EAF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				43C8FCAC25D6839400FC6EAF /* token_preview.json */,
+				43C8FCAD25D6839400FC6EAF /* Helper.swift */,
+				43C8FCAE25D6839400FC6EAF /* HttpStatus.swift */,
+			);
+			name = Data;
+			path = "../../swiftui-mac/SwiftUI-Mac/Data";
 			sourceTree = "<group>";
 		};
 		43F94EED2577F8210042D646 /* Service */ = {
@@ -273,27 +361,27 @@
 			path = Status;
 			sourceTree = "<group>";
 		};
+		748B3D259CCF704A237F7149 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F11874244D999EC5FA253BA8 /* Pods_DefiTicker.framework */,
+				39D779FF7D49F3C95F704360 /* Pods_DefiTicker_DefiTickerUITests.framework */,
+				883E88B65FA3AA0AA9896C1E /* Pods_DefiTickerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		75E7A23CEEFE35147F77DD3A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FDA6C56E14BB1CEB165B870A /* Pods-DefiTicker.debug.xcconfig */,
-				0F8527AAFE5AF2E729BF2FC5 /* Pods-DefiTicker.release.xcconfig */,
-				25E2546CB25FEC842D7F34E2 /* Pods-DefiTicker-DefiTickerUITests.debug.xcconfig */,
-				38C1636EBF6130314FD64B8C /* Pods-DefiTicker-DefiTickerUITests.release.xcconfig */,
-				2CA9CA713FA4035D7A0E76EF /* Pods-DefiTickerTests.debug.xcconfig */,
-				DCC66112AEEBD2E54703E5DB /* Pods-DefiTickerTests.release.xcconfig */,
+				0B96DB1F5DACDBB6B5839268 /* Pods-DefiTicker.debug.xcconfig */,
+				B29BE78E3791DD50D04070FE /* Pods-DefiTicker.release.xcconfig */,
+				C32FD66707B50E1479F9537B /* Pods-DefiTicker-DefiTickerUITests.debug.xcconfig */,
+				AED760B3B68F608B9A9DA4E3 /* Pods-DefiTicker-DefiTickerUITests.release.xcconfig */,
+				8A4A5A9DFE6B9FC7E7283AF6 /* Pods-DefiTickerTests.debug.xcconfig */,
+				F43E29D47D5BE6F12229A978 /* Pods-DefiTickerTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		B3706A3B65F4E13E41F3928C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B240FD22B1C9BD575F03625B /* Pods_DefiTicker.framework */,
-				92A65734ACC6ACA7AEE3900E /* Pods_DefiTicker_DefiTickerUITests.framework */,
-				9AB77D3C8C0F56329BA62DD5 /* Pods_DefiTickerTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,11 +391,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4341954E25656BB300D600FB /* Build configuration list for PBXNativeTarget "DefiTicker" */;
 			buildPhases = (
-				CE8E5BBB43BC91856B46A048 /* [CP] Check Pods Manifest.lock */,
+				689050216713652E41680A8E /* [CP] Check Pods Manifest.lock */,
 				4341951E25656BAF00D600FB /* Sources */,
 				4341951F25656BAF00D600FB /* Frameworks */,
 				4341952025656BAF00D600FB /* Resources */,
-				CEF351037C50B193A90E0001 /* [CP] Embed Pods Frameworks */,
+				4E97022EC34625FB4001226F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,7 +410,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4341955125656BB300D600FB /* Build configuration list for PBXNativeTarget "DefiTickerTests" */;
 			buildPhases = (
-				4ACA3908FA70C4D444E411CF /* [CP] Check Pods Manifest.lock */,
+				698F03C690235C4829DAEB08 /* [CP] Check Pods Manifest.lock */,
 				4341953625656BB300D600FB /* Sources */,
 				4341953725656BB300D600FB /* Frameworks */,
 				4341953825656BB300D600FB /* Resources */,
@@ -341,11 +429,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4341955425656BB300D600FB /* Build configuration list for PBXNativeTarget "DefiTickerUITests" */;
 			buildPhases = (
-				5FE30EBF159BFD23539A7501 /* [CP] Check Pods Manifest.lock */,
+				F505759F10AC2AB3DE73ED83 /* [CP] Check Pods Manifest.lock */,
 				4341954125656BB300D600FB /* Sources */,
 				4341954225656BB300D600FB /* Frameworks */,
 				4341954325656BB300D600FB /* Resources */,
-				F1A3B2A11E5BAC91C52C565B /* [CP] Embed Pods Frameworks */,
+				9A77F3BC5EDE3F1050B418D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -364,7 +452,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					4341952125656BAF00D600FB = {
 						CreatedOnToolsVersion = 12.0;
@@ -404,6 +492,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C8FCAF25D6839400FC6EAF /* token_preview.json in Resources */,
 				4341953325656BB300D600FB /* Main.storyboard in Resources */,
 				4341953025656BB300D600FB /* Preview Assets.xcassets in Resources */,
 				4341952D25656BB300D600FB /* Assets.xcassets in Resources */,
@@ -414,6 +503,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C8FCB025D6839400FC6EAF /* token_preview.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,57 +511,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C8FCB125D6839400FC6EAF /* token_preview.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4ACA3908FA70C4D444E411CF /* [CP] Check Pods Manifest.lock */ = {
+		4E97022EC34625FB4001226F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DefiTicker/Pods-DefiTicker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DefiTickerTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-DefiTicker/Pods-DefiTicker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DefiTicker/Pods-DefiTicker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5FE30EBF159BFD23539A7501 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DefiTicker-DefiTickerUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE8E5BBB43BC91856B46A048 /* [CP] Check Pods Manifest.lock */ = {
+		689050216713652E41680A8E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -493,24 +557,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CEF351037C50B193A90E0001 /* [CP] Embed Pods Frameworks */ = {
+		698F03C690235C4829DAEB08 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DefiTicker/Pods-DefiTicker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DefiTicker/Pods-DefiTicker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DefiTickerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DefiTicker/Pods-DefiTicker-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F1A3B2A11E5BAC91C52C565B /* [CP] Embed Pods Frameworks */ = {
+		9A77F3BC5EDE3F1050B418D2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -527,6 +596,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DefiTicker-DefiTickerUITests/Pods-DefiTicker-DefiTickerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F505759F10AC2AB3DE73ED83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DefiTicker-DefiTickerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -534,25 +625,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C8FD7B25D6D40E00FC6EAF /* WindowViewController.swift in Sources */,
 				4341952B25656BAF00D600FB /* DefiTicker.xcdatamodeld in Sources */,
 				43C6338E25CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
+				43C8FC9925D6836400FC6EAF /* PrefsView.swift in Sources */,
 				43C633CC25D0612200F40C72 /* EthereumStatus.swift in Sources */,
 				43F94EEF2577F82F0042D646 /* RegisterService.swift in Sources */,
 				43AE6AC3257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
 				43C633C225D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
 				43C633ED25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
 				43C633F725D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */,
+				43A3348725E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */,
 				43FB77E325C6B49900B8C5BE /* PriceService.swift in Sources */,
+				43C8FC9F25D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift in Sources */,
 				4341952625656BAF00D600FB /* AppDelegate.swift in Sources */,
+				43C8FC9C25D6836400FC6EAF /* NSWindow+Utils.swift in Sources */,
 				43C633B825D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
 				4305060C256B62C8001F6D89 /* MainViewController.swift in Sources */,
 				43C633A625CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
+				43C8FCB525D6839400FC6EAF /* HttpStatus.swift in Sources */,
+				43C8FC8825D682EE00FC6EAF /* DetailViewEth.swift in Sources */,
 				43050605256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
 				43FB77D925C6B26400B8C5BE /* UserStatus.swift in Sources */,
 				43C633E325D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */,
+				43C8FDF025DCB3D300FC6EAF /* DetailViewToken.swift in Sources */,
 				43B13F7525C6AFD80051165D /* EthplorerAPIService.swift in Sources */,
+				43C8FCA225D6836400FC6EAF /* Prefs.swift in Sources */,
+				43C8FCB225D6839400FC6EAF /* Helper.swift in Sources */,
+				43C8FDD025DABD0400FC6EAF /* EthereumSetting.swift in Sources */,
 				43050602256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
 				43AC49B925A305D700916709 /* Constants.swift in Sources */,
+				43C8FCD425D6920700FC6EAF /* AddressDetailView.swift in Sources */,
+				43C8FDC625D80C4E00FC6EAF /* EthereumUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,22 +664,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C8FCA325D6836400FC6EAF /* Prefs.swift in Sources */,
 				43C633B925D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
+				43C8FC9A25D6836400FC6EAF /* PrefsView.swift in Sources */,
+				43C8FDF125DCB3D300FC6EAF /* DetailViewToken.swift in Sources */,
 				43C633F825D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */,
+				43C8FDC725D80C4E00FC6EAF /* EthereumUtil.swift in Sources */,
+				43C8FC8925D682EE00FC6EAF /* DetailViewEth.swift in Sources */,
+				43C8FD7C25D6D40E00FC6EAF /* WindowViewController.swift in Sources */,
 				43FB77DA25C6B26400B8C5BE /* UserStatus.swift in Sources */,
 				43FB77E425C6B49900B8C5BE /* PriceService.swift in Sources */,
 				43F94EF02577F82F0042D646 /* RegisterService.swift in Sources */,
 				43C633C325D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
+				43C8FC9D25D6836400FC6EAF /* NSWindow+Utils.swift in Sources */,
 				43C633E425D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */,
 				4341953F25656BB300D600FB /* DefiTickerTests.swift in Sources */,
+				43A3348825E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */,
 				43AE6AC4257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
 				43C633CD25D0612200F40C72 /* EthereumStatus.swift in Sources */,
+				43C8FCD525D6920700FC6EAF /* AddressDetailView.swift in Sources */,
 				43C633A725CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
 				43050606256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
+				43C8FDD125DABD0400FC6EAF /* EthereumSetting.swift in Sources */,
 				43050603256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
+				43C8FCA025D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift in Sources */,
 				43C633EE25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
+				43C8FCB325D6839400FC6EAF /* Helper.swift in Sources */,
 				43C6338F25CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
 				4305060D256B62C8001F6D89 /* MainViewController.swift in Sources */,
+				43C8FCB625D6839400FC6EAF /* HttpStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,22 +700,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C8FCA425D6836400FC6EAF /* Prefs.swift in Sources */,
 				43C633BA25D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
+				43C8FC9B25D6836400FC6EAF /* PrefsView.swift in Sources */,
+				43C8FDF225DCB3D300FC6EAF /* DetailViewToken.swift in Sources */,
 				43C633F925D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */,
+				43C8FDC825D80C4E00FC6EAF /* EthereumUtil.swift in Sources */,
+				43C8FC8A25D682EE00FC6EAF /* DetailViewEth.swift in Sources */,
+				43C8FD7D25D6D40E00FC6EAF /* WindowViewController.swift in Sources */,
 				43FB77DB25C6B26400B8C5BE /* UserStatus.swift in Sources */,
 				43FB77E525C6B49900B8C5BE /* PriceService.swift in Sources */,
 				43F94EF12577F82F0042D646 /* RegisterService.swift in Sources */,
 				43C633C425D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
+				43C8FC9E25D6836400FC6EAF /* NSWindow+Utils.swift in Sources */,
 				43C633E525D2DEAB00F40C72 /* EthStatusMenuView.swift in Sources */,
 				4341954A25656BB300D600FB /* DefiTickerUITests.swift in Sources */,
+				43A3348925E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */,
 				43AE6AC5257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
 				43C633CE25D0612200F40C72 /* EthereumStatus.swift in Sources */,
+				43C8FCD625D6920700FC6EAF /* AddressDetailView.swift in Sources */,
 				43C633A825CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
 				43050607256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
+				43C8FDD225DABD0400FC6EAF /* EthereumSetting.swift in Sources */,
 				43050604256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
+				43C8FCA125D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift in Sources */,
 				43C633EF25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
+				43C8FCB425D6839400FC6EAF /* Helper.swift in Sources */,
 				43C6339025CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
 				4305060E256B62C8001F6D89 /* MainViewController.swift in Sources */,
+				43C8FCB725D6839400FC6EAF /* HttpStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,11 +876,12 @@
 		};
 		4341954F25656BB300D600FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDA6C56E14BB1CEB165B870A /* Pods-DefiTicker.debug.xcconfig */;
+			baseConfigurationReference = 0B96DB1F5DACDBB6B5839268 /* Pods-DefiTicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DefiTicker/DefiTicker.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DefiTicker/Preview Content\"";
@@ -771,11 +902,12 @@
 		};
 		4341955025656BB300D600FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F8527AAFE5AF2E729BF2FC5 /* Pods-DefiTicker.release.xcconfig */;
+			baseConfigurationReference = B29BE78E3791DD50D04070FE /* Pods-DefiTicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DefiTicker/DefiTicker.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DefiTicker/Preview Content\"";
@@ -796,7 +928,7 @@
 		};
 		4341955225656BB300D600FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CA9CA713FA4035D7A0E76EF /* Pods-DefiTickerTests.debug.xcconfig */;
+			baseConfigurationReference = 8A4A5A9DFE6B9FC7E7283AF6 /* Pods-DefiTickerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -819,7 +951,7 @@
 		};
 		4341955325656BB300D600FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCC66112AEEBD2E54703E5DB /* Pods-DefiTickerTests.release.xcconfig */;
+			baseConfigurationReference = F43E29D47D5BE6F12229A978 /* Pods-DefiTickerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -842,7 +974,7 @@
 		};
 		4341955525656BB300D600FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25E2546CB25FEC842D7F34E2 /* Pods-DefiTicker-DefiTickerUITests.debug.xcconfig */;
+			baseConfigurationReference = C32FD66707B50E1479F9537B /* Pods-DefiTicker-DefiTickerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -863,7 +995,7 @@
 		};
 		4341955625656BB300D600FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38C1636EBF6130314FD64B8C /* Pods-DefiTicker-DefiTickerUITests.release.xcconfig */;
+			baseConfigurationReference = AED760B3B68F608B9A9DA4E3 /* Pods-DefiTicker-DefiTickerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

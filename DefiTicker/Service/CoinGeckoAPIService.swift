@@ -12,7 +12,7 @@ import os
 
 class CoinGeckoAPIService {
     
-    func getSimplePrice(_ success: @escaping () -> Void) {
+    func getSimplePrice(_ success: @escaping (JSON) -> Void) {
         let param = ["ids": "ethereum", "vs_currencies":"usd","include_24hr_change":"true","include_24hr_vol":"true"]
         let host = "https://api.coingecko.com/api/v3/simple/price"
         AF.request(host, parameters: param).responseJSON {
@@ -20,8 +20,22 @@ class CoinGeckoAPIService {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                EthereumStatus.shared.coinGeckoSimplePrice = CoinGeckoSimplePrice(simplePrice: json)
-                success()
+                success(json)
+            case .failure(let error):
+                os_log("%@", log: .default, type: .error, String(describing: error))
+            }
+        }
+    }
+    
+    func getSimpleTokenPrice(_ success: @escaping (Data) -> Void, _ contracts: [String]) {
+        var param = ["vs_currencies":"usd"]
+        param["contract_addresses"] = contracts.joined(separator: ",")
+        let host = "https://api.coingecko.com/api/v3/simple/token_price/ethereum"
+        AF.request(host, parameters: param).responseData {
+            response in
+            switch response.result {
+            case .success(let value):
+                success(value)
             case .failure(let error):
                 os_log("%@", log: .default, type: .error, String(describing: error))
             }
