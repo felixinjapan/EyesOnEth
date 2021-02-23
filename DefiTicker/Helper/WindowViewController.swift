@@ -9,12 +9,7 @@ import Cocoa
 import AppKit
 import SwiftUI
 
-class WindowViewController: NSWindowController {
-    let prefs = Prefs()
-    
-    override func loadWindow() {
-    }
-    
+class WindowViewController: NSWindowController {    
     init<T: View>(_ uiview:T) {
         // Create the window and set the content view.
         let window = NSWindow(
@@ -24,7 +19,7 @@ class WindowViewController: NSWindowController {
         window.center()
         window.titleVisibility = .hidden
         window.tabbingMode = .disallowed
-        window.contentView = NSHostingView(rootView: uiview.environmentObject(prefs))
+        window.contentView = NSHostingView(rootView: uiview)
         window.makeKeyAndOrderFront(nil)
         super.init(window: window)
     }

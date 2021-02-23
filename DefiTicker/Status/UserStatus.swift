@@ -17,7 +17,8 @@ class UserStatus {
     func getTotalValue(_ missingPrice:Double = 0) -> String? {
         if let info = self.ethplorerGetAddressInfo {
             os_log("total value is: %G, missing : %G", log: .default, type: .debug, info.totalValue + missingPrice,missingPrice)
-            return EthereumUtil.roundUpTotal(info.totalValue+missingPrice)
+            let total = EthereumUtil.roundUpTotal(info.totalValue+missingPrice)
+            return EthereumUtil.formattedWithSeparator(total)
         }
         return nil
     }

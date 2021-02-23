@@ -44,6 +44,15 @@ class StatusBarController {
     
     
     
+    fileprivate func showImageStatusBar() {
+        if let statusBarButton = statusItem.button {
+            statusBarButton.title = ""
+            statusBarButton.image = #imageLiteral(resourceName: "turtle")
+            statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
+            statusBarButton.image?.isTemplate = true
+        }
+    }
+    
     init()
     {
         let notificationCenter = NotificationCenter.default
@@ -65,11 +74,7 @@ class StatusBarController {
         popover.contentViewController = MainViewController()
         popover.contentSize = NSSize(width: 500, height: 100)
         
-        if let statusBarButton = statusItem.button {
-            statusBarButton.image = #imageLiteral(resourceName: "turtle")
-            statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
-            statusBarButton.image?.isTemplate = true
-        }
+        showImageStatusBar()
         updateData()
         priceUpdateTimer = Timer.scheduledTimer(timeInterval: 7, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
         
@@ -85,17 +90,28 @@ class StatusBarController {
         }
     }
     
+    fileprivate func removeActiveAddress() {
+        UserStatus.shared.activeAddress = nil
+        UserDefaults.standard.removeObject(forKey: Constants.activeAddress)
+        self.showImageStatusBar()
+    }
+    
     @objc func updateData(){
         let updateMenuPrice: (JSON) -> Void = {json in
             UserStatus.shared.ethplorerGetAddressInfo = EthplorerGetAddressInfo(getAddressInfo: json)
             var missingTotal:Double = 0
             if let dict = UserStatus.shared.ethplorerGetAddressInfo?.priceFalseKV, dict.count > 0 {
                 os_log("some coins price were missing. count: %d", dict.count)
+                if dict.count > Constants.maxContractAddressCoinGecko {
+                    self.removeActiveAddress()
+                    let alertViewUnsupportedAddress =  WindowViewController(Alert(msg: "This address has too many\n tokens that has no price data"))
+                    alertViewUnsupportedAddress.showWindow(self)
+                }
                 PriceService.updateTokenPriceFromCoinGecko(Array(dict.keys)){
                     data in
                     let simpleToken = CoinGeckoSimpleTokenPrice(data: data)
                     simpleToken.array.forEach { priceInfo in
-                        if let bal = dict[priceInfo.key], bal > 0{
+                        if let bal = dict[priceInfo.key], bal > 0 {
                             missingTotal += priceInfo.value.usd * bal
                         }
                     }
@@ -137,9 +153,17 @@ class StatusBarController {
     }
     
     @objc func actionAddressDetail(_ sender: SubMenuItem){
-        let addressDetailView = WindowViewController(AddressDetailView().environmentObject(sender.setting!))
+        let addressDetailView = WindowViewController(TokenListView().environmentObject(sender.setting!))
         addressDetailView.showWindow(sender)
         NSApplication.shared.activate(ignoringOtherApps: true)
+    }
+   
+    @objc func actionCopyToClipboard(_ sender: SubMenuItem){
+        if let address = sender.setting?.address {
+            let board = NSPasteboard.general
+            board.clearContents()
+            board.setString(address, forType: .string)
+        }
     }
     
     @objc func actionPreference(_ sender: AppMenuItem){
@@ -191,8 +215,9 @@ class StatusBarController {
             var subMenu = SubMenu()
             subMenu.ethAddress = newAddr
             subMenu = getDetailSubMenu(subMenu)
-            menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSite.etherscan)
-            menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSite.ethplorer)
+            subMenu = getCopyClipboardSubMenu(subMenu)
+            menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteSubmenu.etherscan)
+            menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteSubmenu.ethplorer)
             self.appMenu.insertItem(menu, at:3)
             if UserStatus.shared.numOfMenus == 0 {
                 self.appMenu.insertItem(NSMenuItem.separator(), at:4)
@@ -254,22 +279,18 @@ class StatusBarController {
                 var subMenu = SubMenu()
                 subMenu.ethAddress = eth
                 subMenu = getDetailSubMenu(subMenu)
-                menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSite.etherscan)
-                menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSite.ethplorer)
+                subMenu = getCopyClipboardSubMenu(subMenu)
+                menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteSubmenu.etherscan)
+                menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteSubmenu.ethplorer)
                 UserStatus.shared.numOfMenus += 1
             }
             self.appMenu.addItem(NSMenuItem.separator())
         } else {
-            if let statusBarButton = statusItem.button {
-                statusBarButton.title = ""
-                statusBarButton.image = #imageLiteral(resourceName: "turtle")
-                statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
-                statusBarButton.image?.isTemplate = true
-            }
+            showImageStatusBar()
         }
     }
     
-    func getExternalLinkSubMenu(_ subMenu: SubMenu, type: ExternalSite) -> SubMenu {
+    func getExternalLinkSubMenu(_ subMenu: SubMenu, type: ExternalSiteSubmenu) -> SubMenu {
         let externalLinkMenu = SubMenuItem(title: "Check on \(type.rawValue)",  action: #selector(StatusBarController.openUrl(_:)),  keyEquivalent: "")
         if let format = Constants.externalServiceUrl[type.rawValue] {
             let link = String(format: format, subMenu.ethAddress!)
@@ -290,6 +311,16 @@ class StatusBarController {
         return subMenu
     }
     
+    func getCopyClipboardSubMenu(_ subMenu: SubMenu) -> SubMenu {
+        let copyClipboardMenu  = SubMenuItem(title: "Copy this address to clipboard",  action: #selector(StatusBarController.actionCopyToClipboard(_:)),  keyEquivalent: "")
+        copyClipboardMenu.target = self
+        let setting = EthereumSetting()
+        setting.address = subMenu.ethAddress!
+        copyClipboardMenu.setting = setting
+        subMenu.addItem(copyClipboardMenu)
+        return subMenu
+    }
+    
     @objc func openUrl(_ sender: SubMenuItem){
         if let link = sender.link {
             NSWorkspace.shared.open(link)
@@ -301,6 +332,6 @@ extension String {
     func widthForButton() -> CGFloat {
         let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: nil, context: nil)
-        return ceil(boundingBox.width + 20)
+        return ceil(boundingBox.width + 22)
     }
 }

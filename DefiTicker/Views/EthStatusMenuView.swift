@@ -34,18 +34,10 @@ struct EthStatusMenuView: View {
                         .font(.system(size: 17, weight: .light, design: .default))
                 }
                 VStack{
-                    if(self.priceDiff > 0){
-                        Text("+" + self.priceDiffString)
-                            .foregroundColor(.green)
-                            .scaledToFill()
-                            .font(.system(size: 10, weight: .light, design: .default))
-                    } else {
-                        Text(self.priceDiffString)
-                            .foregroundColor(.red)
-                            .scaledToFill()
-                            .font(.system(size: 10, weight: .light, design: .default))
-                    }
-
+                    Text(self.priceDiffString)
+                        .foregroundColor(.red)
+                        .scaledToFill()
+                        .font(.system(size: 10, weight: .light, design: .default))
                 }
             }
         }
@@ -64,7 +56,7 @@ struct EthStatusMenuView: View {
                     let ethPrice = EthereumUtil.roundUpTotal(coinGeckoSimplePrice.ethPriceInUSD)
                     self.ethPrice = String("$ \(ethPrice)")
                     self.priceDiff = Float(coinGeckoSimplePrice.eth24hrChange)
-                    self.priceDiffString = String(format: "%.2f", self.priceDiff) + "%"
+                    self.priceDiffString = EthereumUtil.tokenPriceDiffString(self.priceDiff)
                     os_log("eth price was %f, diff was %@", log: OSLog.default, type: .debug, self.ethPrice, self.priceDiff)
                 }
             }

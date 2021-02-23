@@ -11,28 +11,46 @@ import AppKit
 import SwiftyJSON
 import os
 
-struct AddressDetailView: View {
+struct TokenListView: View {
     @EnvironmentObject var settings: EthereumSetting
     @State private var info: EthplorerGetAddressInfo?
     @State private var tokenPriceInfo: CoinGeckoSimpleTokenPrice?
+    
+    fileprivate func isValidToken(_ tokenInfo: Token) -> Bool {
+        if tokenInfo.symbol.isEmpty || tokenInfo.name.isEmpty {
+            return false
+        }
+        if let falsePriceList = self.info?.priceFalseKV {
+            if falsePriceList[tokenInfo.contractAddr] != nil, self.tokenPriceInfo?.array[tokenInfo.contractAddr] == nil {
+                return false
+            }
+        }
+        return true
+    }
     
     var body: some View {
         NavigationView {
             List {
                 if let info = self.info, let tokenPriceInfo = self.tokenPriceInfo {
-                    Section(header: Header(totalValue: info.totalValue, activeAddress: settings.address)) {
+                    Section(header: Header(totalValue: getTotalBalance(info.totalValue), activeAddress: settings.address)) {
                         NavigationLink(destination: DetailViewEth(eth: info.ethModel)) {
                             TableRowViewEthereum(eth: info.ethModel)
                         }
+                        
                         ForEach(info.tokens) { tokenInfo in
-                            NavigationLink(destination: DetailViewToken(token: tokenInfo)) {
-                                TableRowViewToken(info: tokenInfo, subInfo: tokenPriceInfo)
+                            if isValidToken(tokenInfo) {
+                                NavigationLink(destination: DetailViewToken(token: tokenInfo, subInfo: self.tokenPriceInfo)) {
+                                    TableRowViewToken(info: tokenInfo, subInfo: tokenPriceInfo)
+                                }
                             }
                         }
                     }.collapsible(false)
+                } else {
+                    Text("Loading...")
+                    LoadingAnimation()
                 }
             }
-            .frame(minWidth: 250, maxWidth: 350)
+            .frame(width: 250, height: 300)
         }
         .listStyle(SidebarListStyle())
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -53,11 +71,23 @@ struct AddressDetailView: View {
         }
         PriceService.updateAddressInfoFromEthplorer(address, updateMenuPrice)
     }
+    
+    func getTotalBalance(_ balance:Double) -> Double {
+        var missingBalance:Double = 0
+        if let token = self.tokenPriceInfo?.array, let info = self.info {
+            info.priceFalseKV.forEach { falsePrice in
+                if let price = token[falsePrice.key]?.usd {
+                    missingBalance += price * falsePrice.value
+                }
+            }
+        }
+        return missingBalance + balance
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        AddressDetailView().environmentObject(EthereumSetting())
+        TokenListView().environmentObject(EthereumSetting())
     }
 }
 
@@ -100,10 +130,13 @@ struct Header: View {
                     NSCursor.pop()
                 }
             Spacer()
-            Text("balance: $\(EthereumUtil.roundUpTotal(self.totalValue ?? 0))")
-                .layoutPriority(1)
+            if let total = self.totalValue, let rt = EthereumUtil.roundUpTotal(total){
+                Text("total: $\(EthereumUtil.formattedWithSeparator(rt)!)")
+                    .layoutPriority(1)
+            }
         }
     }
+
 }
 
 struct TableRowViewEthereum: View {
@@ -120,7 +153,7 @@ struct TableRowViewEthereum: View {
                 .frame(width: 60)
                 .font(.headline)
                 .foregroundColor(.secondary)
-            Spacer().frame(width:40)
+            Spacer().frame(width:20)
             Text("Ethereum")
                 .truncationMode(.tail)
         }
@@ -133,30 +166,43 @@ struct TableRowViewToken: View {
     @State private var icon: NSImage?
     
     var body: some View {
-        HStack(spacing: 20) {
+        HStack(spacing: 0) {
+            if let icon = self.icon {
+                Image(nsImage: icon)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width:20, height: 20)
+            } else {
+                Spacer().frame(width:20)
+            }
+            
             Text(info.symbol)
                 .frame(width: 60)
                 .font(.headline)
                 .foregroundColor(.secondary)
             
+            Spacer().frame(width:20)
+            
             Text(info.name)
                 .truncationMode(.tail)
-            
             Spacer()
+        }.onAppear(){
+            if info.image.isEmpty == false, let url = URL(string: Constants.baseImageUrlEthPlorer + info.image) {
+                getIconImage(url: url)
+            }
         }
     }
     
-    //    func getIconImage() {
-    //     let url =
-    //        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-    //            if let error = error {
-    //                print(error)
-    //            } else if let data = data {
-    //                DispatchQueue.main.async {
-    //                    self.icon = NSImage(data: data)
-    //                }
-    //            }
-    //        }
-    //        task.resume()
-    //    }
+    func getIconImage(url:URL) {
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print(error)
+            } else if let data = data {
+                DispatchQueue.main.async {
+                    self.icon = NSImage(data: data)
+                }
+            }
+        }
+        task.resume()
+    }
 }

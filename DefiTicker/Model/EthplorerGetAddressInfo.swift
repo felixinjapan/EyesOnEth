@@ -7,9 +7,8 @@
 import Foundation
 import SwiftyJSON
 
-struct Eth:Identifiable, Codable{
+struct Eth:Identifiable, Codable {
     var id = UUID()
-    
     var balance:Double
     var price:Double
     var priceDiff:String
@@ -20,17 +19,24 @@ struct Eth:Identifiable, Codable{
 
 struct Token:Identifiable, Codable {
     var id = UUID()
-    
     var contractAddr:String
     var symbol:String
     var balance:Double
     var name:String
     var price:Double
-    var priceDiff:String
-    var priceDiff7days:String
-    var marketCapUsd:String
+    var priceDiff:Float
+    var priceDiff7days:Float
+    var marketCapUsd:Double
     var value:Double
     var decimals:Double
+    var image:String
+
+    var twitter:String
+    var website:String
+    var reddit:String
+    var coingecko:String
+    var telegram:String
+    var facebook:String
 }
 
 class EthplorerGetAddressInfo {
@@ -87,14 +93,23 @@ class EthplorerGetAddressInfo {
             if price == 0 {
                 _priceFalseList[contractAddr] = balance
             }
-            let priceDiff = tokenInfo["price"]["diff"].stringValue
-            let priceDiff7days = tokenInfo["price"]["diff7d"].stringValue
-            let marketCap = tokenInfo["price"]["marketCapUsd"].stringValue
+            let priceDiff = tokenInfo["price"]["diff"].floatValue
+            let priceDiff7days = tokenInfo["price"]["diff7d"].floatValue
+            let marketCap = tokenInfo["price"]["marketCapUsd"].doubleValue
             let symbol = tokenInfo["symbol"].stringValue
+            let image = tokenInfo["image"].stringValue
+            
+            let twitter = tokenInfo["twitter"].stringValue
+            let website = tokenInfo["website"].stringValue
+            let telegram = tokenInfo["telegram"].stringValue
+            let facebook = tokenInfo["facebook"].stringValue
+            let coingecko = tokenInfo["coingecko"].stringValue
+            let reddit = tokenInfo["reddit"].stringValue
+            
             // unit of ethBalance is wei
             let value = (price * balance)
             self.totalValue += value
-            let token = Token(contractAddr: contractAddr, symbol : symbol, balance: balance, name: name, price: price, priceDiff: priceDiff, priceDiff7days: priceDiff7days, marketCapUsd: marketCap, value: value, decimals: decimals)
+            let token = Token(contractAddr: contractAddr, symbol : symbol, balance: balance, name: name, price: price, priceDiff: priceDiff, priceDiff7days: priceDiff7days, marketCapUsd: marketCap, value: value, decimals: decimals, image: image, twitter: twitter, website: website, reddit: reddit, coingecko: coingecko, telegram: telegram, facebook: facebook)
             self._tokens.append(token)
             self._contractAddressList.append(contractAddr)
         }

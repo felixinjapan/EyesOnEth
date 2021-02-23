@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "logo+twitter+twitter+logo+icon-1320195967937423316.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "logo+twitter+twitter+logo+icon-1320195967937423317.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "logo+twitter+twitter+logo+icon-1320195967937423318.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

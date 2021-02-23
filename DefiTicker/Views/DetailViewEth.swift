@@ -10,79 +10,51 @@ import SwiftUI
 
 struct DetailViewEth: View {
     let eth: Eth
-    
-    @State private var catImage: NSImage?
-    @State private var imageIsFlipped = false
-    
+        
     var body: some View {
-        VStack {
-            Text("balance:\(eth.balance)")
-                .font(.system(size: 10))
-            Text("market capital:\(eth.marketCap)")
-                .font(.system(size: 10))
-            Text("price:\(eth.price)")
-                .font(.system(size: 10))
-            Text("priceDiff:\(eth.priceDiff)")
-                .font(.system(size: 10))
-            Text("price7daysDiff:\(eth.priceDiff7days)")
-                .font(.system(size: 10))
-            
-            if catImage != nil {
-                CatImageView(catImage: catImage!, imageIsFlipped: imageIsFlipped)
-            } else {
+        VStack() {
+            HStack(alignment: .top){
+                HStack {
+                    CircleImage(image: NSImage(imageLiteralResourceName: "ethereum2"))
+                        .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    Text("Ethereum")
+                        .font(.headline)
+                        .aspectRatio(contentMode: .fit)
+                        .multilineTextAlignment(.leading)
+                        .foregroundColor(.primary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }.padding()
                 Spacer()
-                Text("Loading...")
-                    .font(.headline)
+                VStack(alignment: .trailing) {
+                    Text("$ \(eth.price)")
+                        .font(.headline)
+                    Text("1d: \(eth.priceDiff)")
+                        .font(.caption)
+                    Text("7d: \(eth.priceDiff7days)")
+                        .font(.caption)
+                }.padding()
             }
+            Divider()
+            HStack {
+                VStack(alignment:.leading) {
+                    Text("Value: $ \(EthereumUtil.tokenPriceForDetailView(eth.value))")
+                        .font(.body)
+                    Text("Token Balance: \(eth.balance)")
+                        .font(.body)
+                }.padding()
+                Spacer()
+            }
+            Divider()
+            
             Spacer()
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-        .onAppear {
-            //self.getCatImage()
-        }
+        .frame(width: 400, height: 300)
     }
-    
-//    func getCatImage() {
-//        let url = ""
-//        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-//            if let error = error {
-//                print(error)
-//            } else if let data = data {
-//                DispatchQueue.main.async {
-//                    self.catImage = NSImage(data: data)
-//                }
-//            }
-//        }
-//        task.resume()
-//    }
-    
 }
 
-//struct DetailView_Previews: PreviewProvider {
+//struct DetailViewEth_Previews: PreviewProvider {
 //    static var previews: some View {
-//        DetailView(getAddressInfo: EthplorerGetAddressInfo(getAddressInfo: JSON(nil))).environmentObject(Prefs())
+//        DetailViewEth(eth: Eth()
 //    }
 //}
 
-struct CatImageView: View {
-    @EnvironmentObject var prefs: Prefs
-    
-    let catImage: NSImage
-    let imageIsFlipped: Bool
-    
-    var body: some View {
-        Image(nsImage: catImage)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .rotation3DEffect(Angle(degrees: imageIsFlipped ? 180 : 0),
-                              axis: (x: 0, y: 1, z: 0))
-            .animation(.default)
-            .overlay(
-                Text(prefs.showCopyright ? "Copyright © https://http.cat" : "")
-                    .padding(6)
-                    .font(.caption)
-                    .foregroundColor(.white)
-                    .shadow(radius: 5)
-                ,alignment: .bottomTrailing)
-    }
-}
