@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Alert: View {
+struct AlertView: View {
     
     var msg : String
 
@@ -41,6 +41,6 @@ struct Alert: View {
 
 struct Alert_Previews: PreviewProvider {
     static var previews: some View {
-        Alert(msg: "this is the preview.djdlkfjlfjdlk\nthis is the preview.\nthis is the preview.")
+        AlertView(msg: "this is the preview.djdlkfjlfjdlk\nthis is the preview.\nthis is the preview.")
     }
 }

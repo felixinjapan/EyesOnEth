@@ -28,27 +28,108 @@ struct DetailViewEth: View {
                 VStack(alignment: .trailing) {
                     Text("$ \(eth.price)")
                         .font(.headline)
-                    Text("1d: \(eth.priceDiff)")
+                    Text("1d: \(EthereumUtil.tokenPriceDiffString(eth.priceDiff))")
                         .font(.caption)
-                    Text("7d: \(eth.priceDiff7days)")
+                    Text("7d: \(EthereumUtil.tokenPriceDiffString(eth.priceDiff7days))")
                         .font(.caption)
                 }.padding()
             }
             Divider()
             HStack {
-                VStack(alignment:.leading) {
-                    Text("Value: $ \(EthereumUtil.tokenPriceForDetailView(eth.value))")
+                VStack() {
+                    Text("Value:").font(.caption).foregroundColor(.secondary)
+                    Text("$ \(EthereumUtil.tokenPriceForDetailView(eth.value))")
                         .font(.body)
-                    Text("Token Balance: \(eth.balance)")
-                        .font(.body)
+                    Spacer()
                 }.padding()
                 Spacer()
-            }
+                Divider()
+                VStack() {
+                    Text("Token Balance:").font(.caption)
+                        .foregroundColor(.secondary)
+                    Text("\(eth.balance)")
+                        .font(.body)
+                    Spacer()
+                }.padding()
+                Spacer()
+            }.padding()
+            Spacer()
             Divider()
-            
+            HStack {
+                if let url = EthereumUtil.getExternalLink(target: "https://ethereum.org/", type: ExternalSite.website) {
+                    CircleImage(image: NSImage(imageLiteralResourceName: "website"))
+                        .frame(width: 50, height: 50, alignment: .center)
+                        .onTapGesture {
+                            NSWorkspace.shared.open(url)
+                        }
+                        .onHover(perform: { hovering in
+                            if hovering {
+                                NSCursor.pointingHand.push()
+                            } else {
+                                NSCursor.pop()
+                            }
+                        })
+                }
+                if let url = EthereumUtil.getExternalLink(target: "ethereum", type: ExternalSite.coingecko) {
+                    CircleImage(image: NSImage(imageLiteralResourceName: "coingecko"))
+                        .frame(width: 50, height: 50, alignment: .center)
+                        .onTapGesture {
+                            NSWorkspace.shared.open(url)
+                        }
+                        .onHover(perform: { hovering in
+                            if hovering {
+                                NSCursor.pointingHand.push()
+                            } else {
+                                NSCursor.pop()
+                            }
+                        })
+                }
+                if let url = EthereumUtil.getExternalLink(target: "ethereumproject", type: ExternalSite.facebook) {
+                    CircleImage(image: NSImage(imageLiteralResourceName: "facebook"))
+                        .frame(width: 50, height: 50, alignment: .center)
+                        .onTapGesture {
+                            NSWorkspace.shared.open(url)
+                        }
+                        .onHover(perform: { hovering in
+                            if hovering {
+                                NSCursor.pointingHand.push()
+                            } else {
+                                NSCursor.pop()
+                            }
+                        })
+                }
+                if let url = EthereumUtil.getExternalLink(target: "ethereum", type: ExternalSite.twitter) {
+                    CircleImage(image: NSImage(imageLiteralResourceName: "twitter"))
+                        .frame(width: 50, height: 50, alignment: .center)
+                        .onTapGesture {
+                            NSWorkspace.shared.open(url)
+                        }
+                        .onHover(perform: { hovering in
+                            if hovering {
+                                NSCursor.pointingHand.push()
+                            } else {
+                                NSCursor.pop()
+                            }
+                        })
+                }
+                if let url = EthereumUtil.getExternalLink(target: "ethereum", type: ExternalSite.reddit) {
+                    CircleImage(image: NSImage(imageLiteralResourceName: "reddit"))
+                        .frame(width: 50, height: 50, alignment: .center)
+                        .onTapGesture {
+                            NSWorkspace.shared.open(url)
+                        }
+                        .onHover(perform: { hovering in
+                            if hovering {
+                                NSCursor.pointingHand.push()
+                            } else {
+                                NSCursor.pop()
+                            }
+                        })
+                }
+            }.padding()
             Spacer()
         }
-        .frame(width: 400, height: 300)
+        .frame(width: 420, height: 330)
     }
 }
 

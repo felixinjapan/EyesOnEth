@@ -13,6 +13,7 @@ struct DetailViewToken: View {
     let subInfo: CoinGeckoSimpleTokenPrice?
     @State private var tokenPrice:String?
     @State private var priceDiff:String?
+    @State private var tokenValue:String?
     @State private var priceDiff7days:String?
     @State var icon:NSImage?
     
@@ -47,57 +48,118 @@ struct DetailViewToken: View {
                 }.padding()
             }
             Divider()
-            HStack {
-                VStack(alignment:.leading) {
-                    Text("Value: $ \(EthereumUtil.tokenPriceForDetailView(token.value))")
-                        .font(.body)
-                    Text("Token Balance: \(token.balance)")
-                        .font(.body)
+            if let tokenValue = self.tokenValue {
+                HStack {
+                    VStack() {
+                        Text("Value:").font(.caption).foregroundColor(.secondary)
+                        Text("$ \(tokenValue)")
+                            .font(.body)
+                        Spacer()
+                    }.padding()
+                    Spacer()
+                    Divider()
+                    VStack() {
+                        Text("Token Balance:").font(.caption)
+                            .foregroundColor(.secondary)
+                        Text("\(token.balance)")
+                            .font(.body)
+                        Spacer()
+                    }.padding()
+                    Spacer()
                 }.padding()
                 Spacer()
+                
             }
             Divider()
             HStack {
-                
-                if !token.coingecko.isEmpty, let url = URL(string: token.coingecko) {
+                if let url = EthereumUtil.getExternalLink(target: token.website, type: ExternalSite.website) {
+                    CircleImage(image: NSImage(imageLiteralResourceName: "website"))
+                        .frame(width: 50, height: 50, alignment: .center)
+                        .onTapGesture {
+                            NSWorkspace.shared.open(url)
+                        }
+                        .onHover(perform: { hovering in
+                            if hovering {
+                                NSCursor.pointingHand.push()
+                            } else {
+                                NSCursor.pop()
+                            }
+                        })
+                }
+                if let url = EthereumUtil.getExternalLink(target: token.coingecko, type: ExternalSite.coingecko) {
                     CircleImage(image: NSImage(imageLiteralResourceName: "coingecko"))
-                        .frame(width: 50, height: 50, alignment: .center).padding()
+                        .frame(width: 50, height: 50, alignment: .center)
                         .onTapGesture {
                             NSWorkspace.shared.open(url)
                         }
+                        .onHover(perform: { hovering in
+                            if hovering {
+                                NSCursor.pointingHand.push()
+                            } else {
+                                NSCursor.pop()
+                            }
+                        })
                 }
-                if !token.facebook.isEmpty, let url = URL(string: token.facebook) {
+                if let url = EthereumUtil.getExternalLink(target: token.facebook, type: ExternalSite.facebook) {
                     CircleImage(image: NSImage(imageLiteralResourceName: "facebook"))
-                        .frame(width: 50, height: 50, alignment: .center).padding()
+                        .frame(width: 50, height: 50, alignment: .center)
                         .onTapGesture {
                             NSWorkspace.shared.open(url)
                         }
+                        .onHover(perform: { hovering in
+                            if hovering {
+                                NSCursor.pointingHand.push()
+                            } else {
+                                NSCursor.pop()
+                            }
+                        })
                 }
-                if !token.twitter.isEmpty, let url = URL(string: token.twitter) {
+                if let url = EthereumUtil.getExternalLink(target: token.twitter, type: ExternalSite.twitter) {
                     CircleImage(image: NSImage(imageLiteralResourceName: "twitter"))
-                        .frame(width: 50, height: 50, alignment: .center).padding()
+                        .frame(width: 50, height: 50, alignment: .center)
                         .onTapGesture {
                             NSWorkspace.shared.open(url)
                         }
+                        .onHover(perform: { hovering in
+                            if hovering {
+                                NSCursor.pointingHand.push()
+                            } else {
+                                NSCursor.pop()
+                            }
+                        })
                 }
-                if !token.reddit.isEmpty, let url = URL(string: token.reddit) {
+                if let url = EthereumUtil.getExternalLink(target: token.reddit, type: ExternalSite.reddit) {
                     CircleImage(image: NSImage(imageLiteralResourceName: "reddit"))
-                        .frame(width: 50, height: 50, alignment: .center).padding()
+                        .frame(width: 50, height: 50, alignment: .center)
                         .onTapGesture {
                             NSWorkspace.shared.open(url)
                         }
+                        .onHover(perform: { hovering in
+                            if hovering {
+                                NSCursor.pointingHand.push()
+                            } else {
+                                NSCursor.pop()
+                            }
+                        })
                 }
-                if !token.telegram.isEmpty, let url = URL(string: token.telegram) {
+                if let url = EthereumUtil.getExternalLink(target: token.telegram, type: ExternalSite.telegram) {
                     CircleImage(image: NSImage(imageLiteralResourceName: "telegram"))
-                        .frame(width: 50, height: 50, alignment: .center).padding()
+                        .frame(width: 50, height: 50, alignment: .center)
                         .onTapGesture {
                             NSWorkspace.shared.open(url)
                         }
+                        .onHover(perform: { hovering in
+                            if hovering {
+                                NSCursor.pointingHand.push()
+                            } else {
+                                NSCursor.pop()
+                            }
+                        })
                 }
             }.padding()
             Spacer()
         }
-        .frame(width: 400, height: 300)
+        .frame(width: 420, height: 330)
         .onAppear(){
             getTokenPrice()
             if token.image.isEmpty == false, let url = URL(string: Constants.baseImageUrlEthPlorer + token.image) {
@@ -122,10 +184,13 @@ struct DetailViewToken: View {
     func getTokenPrice() {
         if token.price > 0 {
             self.tokenPrice = EthereumUtil.tokenPriceForDetailView(token.price)
+            self.tokenValue = EthereumUtil.tokenPriceForDetailView(token.value)
         } else {
             if let subInfo = subInfo?.array[token.contractAddr] {
                 self.tokenPrice = EthereumUtil.tokenPriceForDetailView(subInfo.usd)
+                self.tokenValue = EthereumUtil.tokenPriceForDetailView(subInfo.usd*token.balance)
             } else {
+                self.tokenValue = EthereumUtil.tokenPriceForDetailView(token.value)
                 self.tokenPrice = "N/A"
             }
         }

@@ -14,14 +14,15 @@ struct EthStatusMenuView: View {
     @State private var ethPrice: String = "-"
     @State private var priceDiff: Float = 0
     @State private var priceDiffString: String = "-"
+    @State private var priceDiffColor: Color = Color.white
     
     var body: some View {
         VStack {
-            HStack {
+            HStack(alignment:.center) {
                 Text("Ether price")
                     .font(.system(size: 9, weight: .light, design: .default))
             }
-            HStack {
+            HStack(alignment:.center) {
                 VStack{
                     Image("ethereum2")
                         .resizable()
@@ -35,7 +36,7 @@ struct EthStatusMenuView: View {
                 }
                 VStack{
                     Text(self.priceDiffString)
-                        .foregroundColor(.red)
+                        .foregroundColor(self.priceDiffColor)
                         .scaledToFill()
                         .font(.system(size: 10, weight: .light, design: .default))
                 }
@@ -55,6 +56,11 @@ struct EthStatusMenuView: View {
                 DispatchQueue.main.async {
                     let ethPrice = EthereumUtil.roundUpTotal(coinGeckoSimplePrice.ethPriceInUSD)
                     self.ethPrice = String("$ \(ethPrice)")
+                    if coinGeckoSimplePrice.eth24hrChange > 0 {
+                        self.priceDiffColor = Color.green
+                    } else {
+                        self.priceDiffColor = Color.red
+                    }
                     self.priceDiff = Float(coinGeckoSimplePrice.eth24hrChange)
                     self.priceDiffString = EthereumUtil.tokenPriceDiffString(self.priceDiff)
                     os_log("eth price was %f, diff was %@", log: OSLog.default, type: .debug, self.ethPrice, self.priceDiff)

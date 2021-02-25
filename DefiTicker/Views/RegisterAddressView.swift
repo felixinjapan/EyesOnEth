@@ -36,7 +36,7 @@ struct RegisterAddressView: View {
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                     .multilineTextAlignment(.center)
             }
-            TextField("Enter your address or .eth name", text: $enteredText)
+            TextField("Enter your eth address", text: $enteredText)
                 .padding()
             
             HStack {

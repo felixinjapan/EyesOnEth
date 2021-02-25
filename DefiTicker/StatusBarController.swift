@@ -36,7 +36,7 @@ class StatusBarController {
     
     let registerNewAddress  = NSMenuItem(title: "Add new address",  action: #selector(StatusBarController.actionMenuAddNewAddress(_:)),  keyEquivalent: "")
     let resetAddresses  = NSMenuItem(title: "reset",  action: #selector(StatusBarController.actionResetAddress(_:)),  keyEquivalent: "")
-    let preference = NSMenuItem(title: "Preference", action: #selector(StatusBarController.actionPreference(_:)), keyEquivalent: "p")
+//    let preference = NSMenuItem(title: "Preference", action: #selector(StatusBarController.actionPreference(_:)), keyEquivalent: "p")
     var priceUpdateTimer: Timer?
     
     var gasIndicatorMenuView:GasIndicatorView = GasIndicatorView()
@@ -45,9 +45,11 @@ class StatusBarController {
     
     
     fileprivate func showImageStatusBar() {
+        
         if let statusBarButton = statusItem.button {
             statusBarButton.title = ""
             statusBarButton.image = #imageLiteral(resourceName: "turtle")
+            self.statusItem.length = statusBarButton.title.widthForButton()
             statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
             statusBarButton.image?.isTemplate = true
         }
@@ -62,11 +64,7 @@ class StatusBarController {
                          selector:#selector(self.addNewAddressMenu),
                          name: .addNewAddressMenu,
                          object: nil)
-        notificationCenter
-            .addObserver(self,
-                         selector:#selector(self.resetMenu),
-                         name: .resetMenu,
-                         object: nil)
+
         bridge.closeAction = {
             self.popover.close()
         }
@@ -104,7 +102,7 @@ class StatusBarController {
                 os_log("some coins price were missing. count: %d", dict.count)
                 if dict.count > Constants.maxContractAddressCoinGecko {
                     self.removeActiveAddress()
-                    let alertViewUnsupportedAddress =  WindowViewController(Alert(msg: "This address has too many\n tokens that has no price data"))
+                    let alertViewUnsupportedAddress =  WindowViewController(AlertView(msg: "This address has too many\n tokens that has no price data"))
                     alertViewUnsupportedAddress.showWindow(self)
                 }
                 PriceService.updateTokenPriceFromCoinGecko(Array(dict.keys)){
@@ -172,7 +170,14 @@ class StatusBarController {
     }
     
     @objc func actionResetAddress(_ sender: NSMenuItem){
-        RegisterService.reset()
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: Constants.ethAddressKey)
+        self.appMenu.removeAllItems()
+        UserDefaults.standard.removeObject(forKey: Constants.activeAddress)
+        UserStatus.shared.numOfMenus = 0
+        UserStatus.shared.activeAddress = nil
+        UserStatus.shared.ethplorerGetAddressInfo = nil
+        constructMenu()
     }
     
     @objc func actionMenu(_ sender: AppMenuItem) {
@@ -226,19 +231,10 @@ class StatusBarController {
         }
     }
     
-    @objc func resetMenu(){
-        self.appMenu.removeAllItems()
-        UserDefaults.standard.removeObject(forKey: Constants.activeAddress)
-        UserStatus.shared.numOfMenus = 0
-        UserStatus.shared.activeAddress = nil
-        UserStatus.shared.ethplorerGetAddressInfo = nil
-        constructMenu()
-    }
-    
     func constructMenu() {
         registerNewAddress.target = self
         resetAddresses.target = self
-        preference.target = self
+//        preference.target = self
         
         self.appMenu.addItem(registerNewAddress)
         self.appMenu.addItem(resetAddresses)
@@ -248,7 +244,7 @@ class StatusBarController {
         self.appMenu.addItem(NSMenuItem.separator())
         setViewMenu(menuitem: gasIndicatorMenuView, height: 80)
         self.appMenu.addItem(NSMenuItem.separator())
-        self.appMenu.addItem(preference)
+//        self.appMenu.addItem(preference)
         self.appMenu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         statusItem.menu = appMenu
     }
@@ -292,7 +288,7 @@ class StatusBarController {
     
     func getExternalLinkSubMenu(_ subMenu: SubMenu, type: ExternalSiteSubmenu) -> SubMenu {
         let externalLinkMenu = SubMenuItem(title: "Check on \(type.rawValue)",  action: #selector(StatusBarController.openUrl(_:)),  keyEquivalent: "")
-        if let format = Constants.externalServiceUrl[type.rawValue] {
+        if let format = Constants.externalTokenUrl[type.rawValue] {
             let link = String(format: format, subMenu.ethAddress!)
             externalLinkMenu.link = URL(string: link)
             externalLinkMenu.target = self

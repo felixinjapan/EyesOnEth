@@ -52,7 +52,7 @@ class EthereumUtil: NSWindowController {
         if target.isEmpty {
             return nil
         }
-        if let format = Constants.externalServiceUrl[type.rawValue] {
+        if let format = Constants.externalTokenUrl[type.rawValue] {
             let link = String(format: format, target)
             
             if let url = URL(string: link) {

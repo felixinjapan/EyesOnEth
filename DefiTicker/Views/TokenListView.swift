@@ -50,7 +50,7 @@ struct TokenListView: View {
                     LoadingAnimation()
                 }
             }
-            .frame(width: 250, height: 300)
+            .frame(width: 270, height: 330)
         }
         .listStyle(SidebarListStyle())
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -91,23 +91,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct SectionHeaderView: View {
-    let section: HttpSection
-    
-    var body: some View {
-        HStack(spacing: 20) {
-            Text(section.headerCode)
-                .layoutPriority(1)
-            
-            Text(section.headerText)
-                .lineLimit(1)
-                .truncationMode(.tail)
-            
-            Spacer()
-        }
-    }
-}
-
 struct Header: View {
     var totalValue:Double?
     var activeAddress:String?
@@ -136,7 +119,7 @@ struct Header: View {
             }
         }
     }
-
+    
 }
 
 struct TableRowViewEthereum: View {
@@ -169,9 +152,9 @@ struct TableRowViewToken: View {
         HStack(spacing: 0) {
             if let icon = self.icon {
                 Image(nsImage: icon)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width:20, height: 20)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width:20, height: 20)
             } else {
                 Spacer().frame(width:20)
             }

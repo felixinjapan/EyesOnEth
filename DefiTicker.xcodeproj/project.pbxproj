@@ -26,9 +26,9 @@
 		43A3348725E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
 		43A3348825E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
 		43A3348925E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
-		43A334BE25E339A20041C0EB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334BD25E339A20041C0EB /* Alert.swift */; };
-		43A334BF25E339A20041C0EB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334BD25E339A20041C0EB /* Alert.swift */; };
-		43A334C025E339A20041C0EB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334BD25E339A20041C0EB /* Alert.swift */; };
+		43A334BE25E339A20041C0EB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334BD25E339A20041C0EB /* AlertView.swift */; };
+		43A334BF25E339A20041C0EB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334BD25E339A20041C0EB /* AlertView.swift */; };
+		43A334C025E339A20041C0EB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334BD25E339A20041C0EB /* AlertView.swift */; };
 		43A334C825E3930B0041C0EB /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334C725E3930B0041C0EB /* LoadingAnimation.swift */; };
 		43A334C925E3930B0041C0EB /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334C725E3930B0041C0EB /* LoadingAnimation.swift */; };
 		43A334CA25E3930B0041C0EB /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334C725E3930B0041C0EB /* LoadingAnimation.swift */; };
@@ -79,15 +79,6 @@
 		43C8FCA225D6836400FC6EAF /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9825D6836400FC6EAF /* Prefs.swift */; };
 		43C8FCA325D6836400FC6EAF /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9825D6836400FC6EAF /* Prefs.swift */; };
 		43C8FCA425D6836400FC6EAF /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC9825D6836400FC6EAF /* Prefs.swift */; };
-		43C8FCAF25D6839400FC6EAF /* token_preview.json in Resources */ = {isa = PBXBuildFile; fileRef = 43C8FCAC25D6839400FC6EAF /* token_preview.json */; };
-		43C8FCB025D6839400FC6EAF /* token_preview.json in Resources */ = {isa = PBXBuildFile; fileRef = 43C8FCAC25D6839400FC6EAF /* token_preview.json */; };
-		43C8FCB125D6839400FC6EAF /* token_preview.json in Resources */ = {isa = PBXBuildFile; fileRef = 43C8FCAC25D6839400FC6EAF /* token_preview.json */; };
-		43C8FCB225D6839400FC6EAF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCAD25D6839400FC6EAF /* Helper.swift */; };
-		43C8FCB325D6839400FC6EAF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCAD25D6839400FC6EAF /* Helper.swift */; };
-		43C8FCB425D6839400FC6EAF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCAD25D6839400FC6EAF /* Helper.swift */; };
-		43C8FCB525D6839400FC6EAF /* HttpStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCAE25D6839400FC6EAF /* HttpStatus.swift */; };
-		43C8FCB625D6839400FC6EAF /* HttpStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCAE25D6839400FC6EAF /* HttpStatus.swift */; };
-		43C8FCB725D6839400FC6EAF /* HttpStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCAE25D6839400FC6EAF /* HttpStatus.swift */; };
 		43C8FCD425D6920700FC6EAF /* TokenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCD325D6920700FC6EAF /* TokenListView.swift */; };
 		43C8FCD525D6920700FC6EAF /* TokenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCD325D6920700FC6EAF /* TokenListView.swift */; };
 		43C8FCD625D6920700FC6EAF /* TokenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCD325D6920700FC6EAF /* TokenListView.swift */; };
@@ -103,6 +94,12 @@
 		43C8FDF025DCB3D300FC6EAF /* DetailViewToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */; };
 		43C8FDF125DCB3D300FC6EAF /* DetailViewToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */; };
 		43C8FDF225DCB3D300FC6EAF /* DetailViewToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */; };
+		43F6AFF325E809AC00B8971A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6AFF025E809AB00B8971A /* Helper.swift */; };
+		43F6AFF425E809AC00B8971A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6AFF025E809AB00B8971A /* Helper.swift */; };
+		43F6AFF525E809AC00B8971A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6AFF025E809AB00B8971A /* Helper.swift */; };
+		43F6AFF925E809AC00B8971A /* httpcodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F6AFF225E809AC00B8971A /* httpcodes.json */; };
+		43F6AFFA25E809AC00B8971A /* httpcodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F6AFF225E809AC00B8971A /* httpcodes.json */; };
+		43F6AFFB25E809AC00B8971A /* httpcodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F6AFF225E809AC00B8971A /* httpcodes.json */; };
 		43F94EEF2577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
 		43F94EF02577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
 		43F94EF12577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
@@ -155,7 +152,7 @@
 		4341954925656BB300D600FB /* DefiTickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefiTickerUITests.swift; sourceTree = "<group>"; };
 		4341954B25656BB300D600FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinGeckoSimpleTokenPrice.swift; sourceTree = "<group>"; };
-		43A334BD25E339A20041C0EB /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		43A334BD25E339A20041C0EB /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		43A334C725E3930B0041C0EB /* LoadingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
 		43A334E025E4D50F0041C0EB /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		43AC49B825A305D700916709 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -174,14 +171,13 @@
 		43C8FC9625D6836400FC6EAF /* NSWindow+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSWindow+Utils.swift"; sourceTree = "<group>"; };
 		43C8FC9725D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
 		43C8FC9825D6836400FC6EAF /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
-		43C8FCAC25D6839400FC6EAF /* token_preview.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = token_preview.json; sourceTree = "<group>"; };
-		43C8FCAD25D6839400FC6EAF /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		43C8FCAE25D6839400FC6EAF /* HttpStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpStatus.swift; sourceTree = "<group>"; };
 		43C8FCD325D6920700FC6EAF /* TokenListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenListView.swift; sourceTree = "<group>"; };
 		43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowViewController.swift; sourceTree = "<group>"; };
 		43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumUtil.swift; sourceTree = "<group>"; };
 		43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumSetting.swift; sourceTree = "<group>"; };
 		43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewToken.swift; sourceTree = "<group>"; };
+		43F6AFF025E809AB00B8971A /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		43F6AFF225E809AC00B8971A /* httpcodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = httpcodes.json; sourceTree = "<group>"; };
 		43F94EEE2577F82F0042D646 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		43FB77D825C6B26400B8C5BE /* UserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		43FB77E225C6B49900B8C5BE /* PriceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceService.swift; sourceTree = "<group>"; };
@@ -227,6 +223,8 @@
 			children = (
 				43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */,
 				43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */,
+				43F6AFF025E809AB00B8971A /* Helper.swift */,
+				43F6AFF225E809AC00B8971A /* httpcodes.json */,
 				43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */,
 				43050600256B5BE1001F6D89 /* EventMonitor.swift */,
 				43AC49B825A305D700916709 /* Constants.swift */,
@@ -259,7 +257,6 @@
 		4341952425656BAF00D600FB /* DefiTicker */ = {
 			isa = PBXGroup;
 			children = (
-				43C8FCAB25D6839400FC6EAF /* Data */,
 				43C8FC9425D6836400FC6EAF /* Prefs */,
 				43C633A425CFFBB700F40C72 /* Model */,
 				43AE6AC1257D10BF00D1A55C /* Views */,
@@ -312,7 +309,7 @@
 				43C8FCD325D6920700FC6EAF /* TokenListView.swift */,
 				43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */,
 				43A334C725E3930B0041C0EB /* LoadingAnimation.swift */,
-				43A334BD25E339A20041C0EB /* Alert.swift */,
+				43A334BD25E339A20041C0EB /* AlertView.swift */,
 				43C8FC8625D682EE00FC6EAF /* DetailViewEth.swift */,
 				43C6338D25CF79A600F40C72 /* GasIndicatorMenuView.swift */,
 				43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */,
@@ -342,17 +339,6 @@
 			);
 			name = Prefs;
 			path = "../../swiftui-mac/SwiftUI-Mac/Prefs";
-			sourceTree = "<group>";
-		};
-		43C8FCAB25D6839400FC6EAF /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				43C8FCAC25D6839400FC6EAF /* token_preview.json */,
-				43C8FCAD25D6839400FC6EAF /* Helper.swift */,
-				43C8FCAE25D6839400FC6EAF /* HttpStatus.swift */,
-			);
-			name = Data;
-			path = "../../swiftui-mac/SwiftUI-Mac/Data";
 			sourceTree = "<group>";
 		};
 		43F94EED2577F8210042D646 /* Service */ = {
@@ -507,7 +493,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43C8FCAF25D6839400FC6EAF /* token_preview.json in Resources */,
+				43F6AFF925E809AC00B8971A /* httpcodes.json in Resources */,
 				4341953325656BB300D600FB /* Main.storyboard in Resources */,
 				4341953025656BB300D600FB /* Preview Assets.xcassets in Resources */,
 				4341952D25656BB300D600FB /* Assets.xcassets in Resources */,
@@ -518,7 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43C8FCB025D6839400FC6EAF /* token_preview.json in Resources */,
+				43F6AFFA25E809AC00B8971A /* httpcodes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +512,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43C8FCB125D6839400FC6EAF /* token_preview.json in Resources */,
+				43F6AFFB25E809AC00B8971A /* httpcodes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +644,6 @@
 				43C633B825D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
 				4305060C256B62C8001F6D89 /* MainViewController.swift in Sources */,
 				43C633A625CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
-				43C8FCB525D6839400FC6EAF /* HttpStatus.swift in Sources */,
 				43C8FC8825D682EE00FC6EAF /* DetailViewEth.swift in Sources */,
 				43050605256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
 				43FB77D925C6B26400B8C5BE /* UserStatus.swift in Sources */,
@@ -666,13 +651,13 @@
 				43A334E125E4D5100041C0EB /* CircleImage.swift in Sources */,
 				43C8FDF025DCB3D300FC6EAF /* DetailViewToken.swift in Sources */,
 				43B13F7525C6AFD80051165D /* EthplorerAPIService.swift in Sources */,
+				43F6AFF325E809AC00B8971A /* Helper.swift in Sources */,
 				43C8FCA225D6836400FC6EAF /* Prefs.swift in Sources */,
-				43C8FCB225D6839400FC6EAF /* Helper.swift in Sources */,
 				43A334C825E3930B0041C0EB /* LoadingAnimation.swift in Sources */,
 				43C8FDD025DABD0400FC6EAF /* EthereumSetting.swift in Sources */,
 				43050602256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
 				43AC49B925A305D700916709 /* Constants.swift in Sources */,
-				43A334BE25E339A20041C0EB /* Alert.swift in Sources */,
+				43A334BE25E339A20041C0EB /* AlertView.swift in Sources */,
 				43C8FCD425D6920700FC6EAF /* TokenListView.swift in Sources */,
 				43C8FDC625D80C4E00FC6EAF /* EthereumUtil.swift in Sources */,
 			);
@@ -696,13 +681,14 @@
 				43F94EF02577F82F0042D646 /* RegisterService.swift in Sources */,
 				43C633C325D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
 				43C8FC9D25D6836400FC6EAF /* NSWindow+Utils.swift in Sources */,
+				43F6AFF425E809AC00B8971A /* Helper.swift in Sources */,
 				43A334C925E3930B0041C0EB /* LoadingAnimation.swift in Sources */,
 				43C633E425D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */,
 				4341953F25656BB300D600FB /* DefiTickerTests.swift in Sources */,
 				43A3348825E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */,
 				43AE6AC4257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
 				43C633CD25D0612200F40C72 /* EthereumStatus.swift in Sources */,
-				43A334BF25E339A20041C0EB /* Alert.swift in Sources */,
+				43A334BF25E339A20041C0EB /* AlertView.swift in Sources */,
 				43C8FCD525D6920700FC6EAF /* TokenListView.swift in Sources */,
 				43C633A725CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
 				43050606256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
@@ -710,10 +696,8 @@
 				43050603256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
 				43C8FCA025D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift in Sources */,
 				43C633EE25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
-				43C8FCB325D6839400FC6EAF /* Helper.swift in Sources */,
 				43C6338F25CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
 				4305060D256B62C8001F6D89 /* MainViewController.swift in Sources */,
-				43C8FCB625D6839400FC6EAF /* HttpStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,13 +719,14 @@
 				43F94EF12577F82F0042D646 /* RegisterService.swift in Sources */,
 				43C633C425D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
 				43C8FC9E25D6836400FC6EAF /* NSWindow+Utils.swift in Sources */,
+				43F6AFF525E809AC00B8971A /* Helper.swift in Sources */,
 				43A334CA25E3930B0041C0EB /* LoadingAnimation.swift in Sources */,
 				43C633E525D2DEAB00F40C72 /* EthStatusMenuView.swift in Sources */,
 				4341954A25656BB300D600FB /* DefiTickerUITests.swift in Sources */,
 				43A3348925E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */,
 				43AE6AC5257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
 				43C633CE25D0612200F40C72 /* EthereumStatus.swift in Sources */,
-				43A334C025E339A20041C0EB /* Alert.swift in Sources */,
+				43A334C025E339A20041C0EB /* AlertView.swift in Sources */,
 				43C8FCD625D6920700FC6EAF /* TokenListView.swift in Sources */,
 				43C633A825CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
 				43050607256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
@@ -749,10 +734,8 @@
 				43050604256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
 				43C8FCA125D6836400FC6EAF /* UserDefaultsPropertyWrapper.swift in Sources */,
 				43C633EF25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
-				43C8FCB425D6839400FC6EAF /* Helper.swift in Sources */,
 				43C6339025CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
 				4305060E256B62C8001F6D89 /* MainViewController.swift in Sources */,
-				43C8FCB725D6839400FC6EAF /* HttpStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

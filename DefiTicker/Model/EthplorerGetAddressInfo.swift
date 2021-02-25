@@ -11,8 +11,8 @@ struct Eth:Identifiable, Codable {
     var id = UUID()
     var balance:Double
     var price:Double
-    var priceDiff:String
-    var priceDiff7days:String
+    var priceDiff:Float
+    var priceDiff7days:Float
     var marketCap:String
     var value:Double
 }
@@ -73,8 +73,8 @@ class EthplorerGetAddressInfo {
         let eth = getAddressInfo["ETH"]
         let ethBalance = eth["balance"].doubleValue
         let ethPrice = eth["price"]["rate"].doubleValue
-        let ethPriceDiff = eth["price"]["diff"].stringValue
-        let ethPriceDiff7days = eth["price"]["diff7d"].stringValue
+        let ethPriceDiff = eth["price"]["diff"].floatValue
+        let ethPriceDiff7days = eth["price"]["diff7d"].floatValue
         let ethMarketCap = eth["price"]["marketCapUsd"].stringValue
         // unit of ethBalance is eth
         let value = (ethPrice * ethBalance)

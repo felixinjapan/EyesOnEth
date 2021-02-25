@@ -25,12 +25,12 @@ struct GasIndicatorView: View {
 
     var body: some View {
         VStack {
-            HStack {
+            HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
                 Text("Gas price in Gwei")
                 .font(.system(size: 9, weight: .light, design: .default))
             
             }
-            HStack {
+            HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
                 Spacer().frame(width:13)
                 VStack{
                     Image("turtle")
@@ -43,7 +43,7 @@ struct GasIndicatorView: View {
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.green)
                 }
-                Spacer().frame(width:13)
+                Spacer().frame(width:15)
                 VStack{
                     Image("rabbit")
                         .resizable()
@@ -55,7 +55,7 @@ struct GasIndicatorView: View {
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.blue)
                 }
-                Spacer().frame(width:13)
+                Spacer().frame(width:15)
                 VStack{
                     Image("dove")
                         .resizable()

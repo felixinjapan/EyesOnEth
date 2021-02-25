@@ -14,22 +14,23 @@ struct Constants {
     static let activeAddress = "activeAddress"
     static let maxContractAddressCoinGecko = 186
     
-//    static let tokenExternalWebs = [
-//        "coingecko",
-//        "reddit",
-//        "twitter",
-//        "telegram",
-//        "facebook",
-//    ]
+    static let externalEthUrl: Dictionary = [
+        "coingecko": "https://www.coingecko.com/coins/ethereum",
+        "reddit": "https://www.reddit.com/r/ethereum",
+        "twitter": "https://twitter.com/ethereum",
+        "facebook": "https://www.facebook.com/ethereumproject/",
+        "website": "https://ethereum.org/",
+    ]
     
-    static let externalServiceUrl: Dictionary = [
+    static let externalTokenUrl: Dictionary = [
         "etherscan": "https://etherscan.io/address/%@",
         "ethplorer": "https://ethplorer.io/address/%@",
         "coingecko": "https://www.coingecko.com/coins/%@",
         "reddit": "https://www.reddit.com/r/%@",
         "twitter": "https://twitter.com/%@",
-        "telegram": "https://t.me/%@",
-        "facebook": "https://www.facebook.com/%@"
+        "telegram": "%@",
+        "facebook": "https://www.facebook.com/%@",
+        "website": "%@",
     ]
 }
 
@@ -44,4 +45,5 @@ enum ExternalSite: String, CaseIterable {
     case coingecko = "coingecko"
     case facebook = "facebook"
     case telegram = "telegram"
+    case website = "website"
 }
