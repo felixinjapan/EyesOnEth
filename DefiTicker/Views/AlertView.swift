@@ -11,13 +11,13 @@ import SwiftUI
 struct AlertView: View {
     
     var msg : String
-    @State private var alertIsShowing = false
+    @State private var alertIsShowing = true
 
     var body: some View {
-        VStack {
+        HStack {
         }.alert(isPresented: $alertIsShowing) {
             Alert(title: Text("Alert"),
-                  message: Text("This is an alert!"),
+                  message: Text(self.msg),
                   dismissButton: .default(Text("OK")))
         }
     }

@@ -104,6 +104,7 @@ class StatusBarController {
                     self.removeActiveAddress()
                     let alertViewUnsupportedAddress =  WindowViewController(AlertView(msg: "This address has too many\n tokens that has no price data"))
                     alertViewUnsupportedAddress.showWindow(self)
+                    return 
                 }
                 PriceService.updateTokenPriceFromCoinGecko(Array(dict.keys)){
                     data in
@@ -212,23 +213,26 @@ class StatusBarController {
     }
     
     @objc func addNewAddressMenu(notificationCenter:NSNotification) {
-        if let newAddr = notificationCenter.object as? String {
-            let name = EthereumUtil.getAbbreviateAddress(newAddr)
-            let menu  = AppMenuItem(title: name,  action: #selector(StatusBarController.actionMenu(_:)),  keyEquivalent: "")
-            menu.ethAddress = newAddr
-            menu.target = self
-            var subMenu = SubMenu()
-            subMenu.ethAddress = newAddr
-            subMenu = getDetailSubMenu(subMenu)
-            subMenu = getCopyClipboardSubMenu(subMenu)
-            menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteSubmenu.etherscan)
-            menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteSubmenu.ethplorer)
-            self.appMenu.insertItem(menu, at:3)
-            if UserStatus.shared.numOfMenus == 0 {
-                self.appMenu.insertItem(NSMenuItem.separator(), at:4)
-            }
-            UserStatus.shared.numOfMenus += 1
-        }
+//        if let newAddr = notificationCenter.object as? String {
+//            let name = EthereumUtil.getAbbreviateAddress(newAddr)
+//            let menu  = AppMenuItem(title: name,  action: #selector(StatusBarController.actionMenu(_:)),  keyEquivalent: "")
+//            menu.ethAddress = newAddr
+//            menu.target = self
+//            var subMenu = SubMenu()
+//            subMenu.ethAddress = newAddr
+//            subMenu = getDetailSubMenu(subMenu)
+//            subMenu = getCopyClipboardSubMenu(subMenu)
+//            menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteSubmenu.etherscan)
+//            menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteSubmenu.ethplorer)
+//            self.appMenu.insertItem(menu, at:3)
+//            if UserStatus.shared.numOfMenus == 0 {
+//                self.appMenu.insertItem(NSMenuItem.separator(), at:4)
+//            }
+//            UserStatus.shared.numOfMenus += 1
+//        }
+        UserStatus.shared.numOfMenus += 1
+        self.appMenu.removeAllItems()
+        constructMenu()
     }
     
     func constructMenu() {
@@ -255,6 +259,7 @@ class StatusBarController {
         let menuSize = self.appMenu.size
         let x = (menuSize.width) * 0.5
         let y = (menuSize.height) * 0.5
+        os_log("Coordinate x: %f, y: %f, width: %f", x,y,menuSize.width)
         view.frame = NSRect(x: x, y: y, width: menuSize.width, height: CGFloat(height))
         gasMenuItem.view = view
         self.appMenu.addItem(gasMenuItem)
