@@ -45,7 +45,14 @@ struct EthStatusMenuView: View {
         .frame(width: 140, height: 40)
         .padding()
         .onAppear(){
-            updateEthereumPrice()
+            if let checker = UserStatus.shared.ethPriceViewIntervalChecker {
+                if checker() {
+                    self.updateEthereumPrice()
+                }
+            } else {
+                UserStatus.shared.ethPriceViewIntervalChecker = EthereumUtil.getIntervalChecker(forInterval: 10)
+                self.updateEthereumPrice()
+            }
         }
     }
     

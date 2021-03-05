@@ -72,7 +72,14 @@ struct GasIndicatorView: View {
         .frame(width: 140, height: 70)
         .padding()
         .onAppear(){
-            self.updateGasPrice()
+            if let checker = UserStatus.shared.gasPriceViewIntervalChecker {
+                if checker() {
+                    self.updateGasPrice()
+                }
+            } else {
+                UserStatus.shared.gasPriceViewIntervalChecker = EthereumUtil.getIntervalChecker(forInterval: 15)
+                self.updateGasPrice()
+            }
         }
     }
     

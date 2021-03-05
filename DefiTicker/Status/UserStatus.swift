@@ -10,8 +10,12 @@ import os
 
 class UserStatus {
     open var numOfMenus:Int = 0
+    open var gasPriceViewIntervalChecker : (() -> Bool)?
+    open var ethPriceViewIntervalChecker : (() -> Bool)?
     open var activeAddress: String?
     open var ethplorerGetAddressInfo: EthplorerGetAddressInfo?
+    public let prefs = Prefs()
+    
     static let shared:UserStatus = UserStatus()
     
     func getTotalValue(_ missingPrice:Double = 0) -> String? {

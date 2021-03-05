@@ -11,6 +11,8 @@ struct Constants {
     
     static let baseImageUrlEthPlorer = "https://ethplorer.io/"
     static let ethAddressKey = "ethAddressKey"
+    static let tickerInterval = "tickerInterval"
+    static let ethplorerApiKey = "ethplorerApiKey"
     static let activeAddress = "activeAddress"
     static let maxContractAddressCoinGecko = 116
     

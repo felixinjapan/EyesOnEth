@@ -14,6 +14,7 @@ class EthplorerAPIService {
     
     func getAddressInfo(_ address:String, _ success: @escaping (JSON) -> Void) {
         let param = ["apiKey": "EK-aYF35-py3TUdh-ydqEm"]
+        //let param = ["apiKey": UserStatus.shared.prefs.ethplorerApiKey]
         let host = "https://api.ethplorer.io/getAddressInfo/\(address)"
         AF.request(host, parameters: param).responseJSON {
             response in

@@ -10,6 +10,23 @@ import AppKit
 import SwiftUI
 
 class EthereumUtil: NSWindowController {
+    
+    static func getIntervalChecker(forInterval time: Int) -> () -> Bool {
+        var startTime = Date()
+        func isTime() -> Bool {
+            let now = Date()
+            let timePast = now.timeIntervalSince(startTime)
+            if Int(timePast) > time {
+                //reset the startTime
+                startTime = Date()
+                return true
+            } else {
+                return false
+            }
+        }
+        return isTime
+    }
+    
     static func getAbbreviateAddress(_ ethAddr: String) -> String {
         let prefix = ethAddr.prefix(6)
         let suffix = ethAddr.suffix(4)

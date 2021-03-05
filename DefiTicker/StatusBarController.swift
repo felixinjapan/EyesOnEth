@@ -30,13 +30,13 @@ class StatusBarController {
     var popover = NSPopover.init()
     // Create the SwiftUI view that provides the window contents.
     lazy var bridge = RegisterAddressViewModel()
-    lazy var preferenceView =  WindowViewController(PrefsView(prefs: Prefs()))
+    var prefsView: PrefsView?
     
     var appMenu = NSMenu()
     
     let registerNewAddress  = NSMenuItem(title: "Add new address",  action: #selector(StatusBarController.actionMenuAddNewAddress(_:)),  keyEquivalent: "")
     let resetAddresses  = NSMenuItem(title: "reset",  action: #selector(StatusBarController.actionResetAddress(_:)),  keyEquivalent: "")
-//    let preference = NSMenuItem(title: "Preference", action: #selector(StatusBarController.actionPreference(_:)), keyEquivalent: "p")
+    let preference = NSMenuItem(title: "Preference", action: #selector(StatusBarController.actionPreference(_:)), keyEquivalent: "p")
     var priceUpdateTimer: Timer?
     
     var gasIndicatorMenuView:GasIndicatorView = GasIndicatorView()
@@ -74,7 +74,7 @@ class StatusBarController {
         
         showImageStatusBar()
         updateData()
-        priceUpdateTimer = Timer.scheduledTimer(timeInterval: 7, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
+        priceUpdateTimer = Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
         
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown], handler: mouseEventHandler)
         constructMenu()
@@ -166,8 +166,11 @@ class StatusBarController {
     }
     
     @objc func actionPreference(_ sender: AppMenuItem){
-        preferenceView.showWindow(sender)
-        NSApplication.shared.activate(ignoringOtherApps: true)
+        if let prefsView = self.prefsView, prefsView.prefsWindowDelegate.windowIsOpen {
+            prefsView.window.makeKeyAndOrderFront(self)
+        } else {
+            prefsView = PrefsView(prefs: UserStatus.shared.prefs)
+        }
     }
     
     @objc func actionResetAddress(_ sender: NSMenuItem){
@@ -213,23 +216,6 @@ class StatusBarController {
     }
     
     @objc func addNewAddressMenu(notificationCenter:NSNotification) {
-//        if let newAddr = notificationCenter.object as? String {
-//            let name = EthereumUtil.getAbbreviateAddress(newAddr)
-//            let menu  = AppMenuItem(title: name,  action: #selector(StatusBarController.actionMenu(_:)),  keyEquivalent: "")
-//            menu.ethAddress = newAddr
-//            menu.target = self
-//            var subMenu = SubMenu()
-//            subMenu.ethAddress = newAddr
-//            subMenu = getDetailSubMenu(subMenu)
-//            subMenu = getCopyClipboardSubMenu(subMenu)
-//            menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteSubmenu.etherscan)
-//            menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteSubmenu.ethplorer)
-//            self.appMenu.insertItem(menu, at:3)
-//            if UserStatus.shared.numOfMenus == 0 {
-//                self.appMenu.insertItem(NSMenuItem.separator(), at:4)
-//            }
-//            UserStatus.shared.numOfMenus += 1
-//        }
         UserStatus.shared.numOfMenus += 1
         self.appMenu.removeAllItems()
         constructMenu()
@@ -238,7 +224,7 @@ class StatusBarController {
     func constructMenu() {
         registerNewAddress.target = self
         resetAddresses.target = self
-//        preference.target = self
+        preference.target = self
         
         self.appMenu.addItem(registerNewAddress)
         self.appMenu.addItem(resetAddresses)
@@ -248,7 +234,7 @@ class StatusBarController {
         self.appMenu.addItem(NSMenuItem.separator())
         setViewMenu(menuitem: gasIndicatorMenuView, height: 80)
         self.appMenu.addItem(NSMenuItem.separator())
-//        self.appMenu.addItem(preference)
+        self.appMenu.addItem(preference)
         self.appMenu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         statusItem.menu = appMenu
     }
@@ -331,8 +317,9 @@ class StatusBarController {
 
 extension String {
     func widthForButton() -> CGFloat {
+        let buttonMargin = CGFloat(22)
         let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: nil, context: nil)
-        return ceil(boundingBox.width + 22)
+        return ceil(boundingBox.width + buttonMargin)
     }
 }
