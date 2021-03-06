@@ -1,0 +1,6 @@
+framework module Pods_EyesOnEth {
+  umbrella header "Pods-EyesOnEth-umbrella.h"
+
+  export *
+  module * { export * }
+}

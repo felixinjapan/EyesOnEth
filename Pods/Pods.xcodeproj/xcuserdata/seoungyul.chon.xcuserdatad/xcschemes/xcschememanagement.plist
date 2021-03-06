@@ -25,21 +25,21 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>Pods-DefiTicker-DefiTickerUITests.xcscheme</key>
+		<key>Pods-EyesOnEth-EyesOnEthUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>Pods-DefiTicker.xcscheme</key>
+		<key>Pods-EyesOnEth.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>Pods-DefiTickerTests.xcscheme</key>
+		<key>Pods-EyesOnEthTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

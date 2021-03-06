@@ -1,0 +1,1079 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43050602256B5BE1001F6D89 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43050600256B5BE1001F6D89 /* EventMonitor.swift */; };
+		43050603256B5BE1001F6D89 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43050600256B5BE1001F6D89 /* EventMonitor.swift */; };
+		43050604256B5BE1001F6D89 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43050600256B5BE1001F6D89 /* EventMonitor.swift */; };
+		43050605256B5BE1001F6D89 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43050601256B5BE1001F6D89 /* StatusBarController.swift */; };
+		43050606256B5BE1001F6D89 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43050601256B5BE1001F6D89 /* StatusBarController.swift */; };
+		43050607256B5BE1001F6D89 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43050601256B5BE1001F6D89 /* StatusBarController.swift */; };
+		4305060C256B62C8001F6D89 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305060B256B62C7001F6D89 /* MainViewController.swift */; };
+		4305060D256B62C8001F6D89 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305060B256B62C7001F6D89 /* MainViewController.swift */; };
+		4305060E256B62C8001F6D89 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305060B256B62C7001F6D89 /* MainViewController.swift */; };
+		4310FD6825F2DE4C000A1BFC /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6425F2DE4C000A1BFC /* PrefsView.swift */; };
+		4310FD6925F2DE4C000A1BFC /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6425F2DE4C000A1BFC /* PrefsView.swift */; };
+		4310FD6A25F2DE4C000A1BFC /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6425F2DE4C000A1BFC /* PrefsView.swift */; };
+		4310FD6B25F2DE4C000A1BFC /* NSWindow+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6525F2DE4C000A1BFC /* NSWindow+Utils.swift */; };
+		4310FD6C25F2DE4C000A1BFC /* NSWindow+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6525F2DE4C000A1BFC /* NSWindow+Utils.swift */; };
+		4310FD6D25F2DE4C000A1BFC /* NSWindow+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6525F2DE4C000A1BFC /* NSWindow+Utils.swift */; };
+		4310FD6E25F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6625F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift */; };
+		4310FD6F25F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6625F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift */; };
+		4310FD7025F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6625F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift */; };
+		4310FD7125F2DE4C000A1BFC /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6725F2DE4C000A1BFC /* Prefs.swift */; };
+		4310FD7225F2DE4C000A1BFC /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6725F2DE4C000A1BFC /* Prefs.swift */; };
+		4310FD7325F2DE4C000A1BFC /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6725F2DE4C000A1BFC /* Prefs.swift */; };
+		4341952625656BAF00D600FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341952525656BAF00D600FB /* AppDelegate.swift */; };
+		4341952B25656BAF00D600FB /* DefiTicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4341952925656BAF00D600FB /* DefiTicker.xcdatamodeld */; };
+		4341952D25656BB300D600FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4341952C25656BB300D600FB /* Assets.xcassets */; };
+		4341953025656BB300D600FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4341952F25656BB300D600FB /* Preview Assets.xcassets */; };
+		4341953325656BB300D600FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4341953125656BB300D600FB /* Main.storyboard */; };
+		4341953F25656BB300D600FB /* EyesOnEthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341953E25656BB300D600FB /* EyesOnEthTests.swift */; };
+		4341954A25656BB300D600FB /* EyesOnEthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341954925656BB300D600FB /* EyesOnEthUITests.swift */; };
+		43A3348725E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
+		43A3348825E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
+		43A3348925E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
+		43A334BE25E339A20041C0EB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334BD25E339A20041C0EB /* AlertView.swift */; };
+		43A334BF25E339A20041C0EB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334BD25E339A20041C0EB /* AlertView.swift */; };
+		43A334C025E339A20041C0EB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334BD25E339A20041C0EB /* AlertView.swift */; };
+		43A334C825E3930B0041C0EB /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334C725E3930B0041C0EB /* LoadingAnimation.swift */; };
+		43A334C925E3930B0041C0EB /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334C725E3930B0041C0EB /* LoadingAnimation.swift */; };
+		43A334CA25E3930B0041C0EB /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334C725E3930B0041C0EB /* LoadingAnimation.swift */; };
+		43A334E125E4D5100041C0EB /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334E025E4D50F0041C0EB /* CircleImage.swift */; };
+		43A334E225E4D5100041C0EB /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334E025E4D50F0041C0EB /* CircleImage.swift */; };
+		43A334E325E4D5100041C0EB /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A334E025E4D50F0041C0EB /* CircleImage.swift */; };
+		43AC49B925A305D700916709 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AC49B825A305D700916709 /* Constants.swift */; };
+		43AE6AC3257D10BF00D1A55C /* RegisterAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE6AC2257D10BF00D1A55C /* RegisterAddressView.swift */; };
+		43AE6AC4257D10BF00D1A55C /* RegisterAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE6AC2257D10BF00D1A55C /* RegisterAddressView.swift */; };
+		43AE6AC5257D10BF00D1A55C /* RegisterAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE6AC2257D10BF00D1A55C /* RegisterAddressView.swift */; };
+		43B13F7525C6AFD80051165D /* EthplorerAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B13F7425C6AFD80051165D /* EthplorerAPIService.swift */; };
+		43C6338E25CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C6338D25CF79A600F40C72 /* GasIndicatorMenuView.swift */; };
+		43C6338F25CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C6338D25CF79A600F40C72 /* GasIndicatorMenuView.swift */; };
+		43C6339025CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C6338D25CF79A600F40C72 /* GasIndicatorMenuView.swift */; };
+		43C633A625CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633A525CFFBD300F40C72 /* EthplorerGetAddressInfo.swift */; };
+		43C633A725CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633A525CFFBD300F40C72 /* EthplorerGetAddressInfo.swift */; };
+		43C633A825CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633A525CFFBD300F40C72 /* EthplorerGetAddressInfo.swift */; };
+		43C633B825D05BD700F40C72 /* EtherscanGastracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633B725D05BD700F40C72 /* EtherscanGastracker.swift */; };
+		43C633B925D05BD700F40C72 /* EtherscanGastracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633B725D05BD700F40C72 /* EtherscanGastracker.swift */; };
+		43C633BA25D05BD700F40C72 /* EtherscanGastracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633B725D05BD700F40C72 /* EtherscanGastracker.swift */; };
+		43C633C225D0606C00F40C72 /* EtherscanAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633C125D0606C00F40C72 /* EtherscanAPIService.swift */; };
+		43C633C325D0606C00F40C72 /* EtherscanAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633C125D0606C00F40C72 /* EtherscanAPIService.swift */; };
+		43C633C425D0606C00F40C72 /* EtherscanAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633C125D0606C00F40C72 /* EtherscanAPIService.swift */; };
+		43C633CC25D0612200F40C72 /* EthereumStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633CB25D0612200F40C72 /* EthereumStatus.swift */; };
+		43C633CD25D0612200F40C72 /* EthereumStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633CB25D0612200F40C72 /* EthereumStatus.swift */; };
+		43C633CE25D0612200F40C72 /* EthereumStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633CB25D0612200F40C72 /* EthereumStatus.swift */; };
+		43C633E325D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */; };
+		43C633E425D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */; };
+		43C633E525D2DEAB00F40C72 /* EthStatusMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */; };
+		43C633ED25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633EC25D62A8200F40C72 /* CoinGeckoSimplePrice.swift */; };
+		43C633EE25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633EC25D62A8200F40C72 /* CoinGeckoSimplePrice.swift */; };
+		43C633EF25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633EC25D62A8200F40C72 /* CoinGeckoSimplePrice.swift */; };
+		43C633F725D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */; };
+		43C633F825D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */; };
+		43C633F925D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */; };
+		43C8FC8825D682EE00FC6EAF /* DetailViewEth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC8625D682EE00FC6EAF /* DetailViewEth.swift */; };
+		43C8FC8925D682EE00FC6EAF /* DetailViewEth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC8625D682EE00FC6EAF /* DetailViewEth.swift */; };
+		43C8FC8A25D682EE00FC6EAF /* DetailViewEth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FC8625D682EE00FC6EAF /* DetailViewEth.swift */; };
+		43C8FCD425D6920700FC6EAF /* TokenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCD325D6920700FC6EAF /* TokenListView.swift */; };
+		43C8FCD525D6920700FC6EAF /* TokenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCD325D6920700FC6EAF /* TokenListView.swift */; };
+		43C8FCD625D6920700FC6EAF /* TokenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FCD325D6920700FC6EAF /* TokenListView.swift */; };
+		43C8FD7B25D6D40E00FC6EAF /* WindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */; };
+		43C8FD7C25D6D40E00FC6EAF /* WindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */; };
+		43C8FD7D25D6D40E00FC6EAF /* WindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */; };
+		43C8FDC625D80C4E00FC6EAF /* EthereumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */; };
+		43C8FDC725D80C4E00FC6EAF /* EthereumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */; };
+		43C8FDC825D80C4E00FC6EAF /* EthereumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */; };
+		43C8FDD025DABD0400FC6EAF /* EthereumSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */; };
+		43C8FDD125DABD0400FC6EAF /* EthereumSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */; };
+		43C8FDD225DABD0400FC6EAF /* EthereumSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */; };
+		43C8FDF025DCB3D300FC6EAF /* DetailViewToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */; };
+		43C8FDF125DCB3D300FC6EAF /* DetailViewToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */; };
+		43C8FDF225DCB3D300FC6EAF /* DetailViewToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */; };
+		43F6AFF325E809AC00B8971A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6AFF025E809AB00B8971A /* Helper.swift */; };
+		43F6AFF425E809AC00B8971A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6AFF025E809AB00B8971A /* Helper.swift */; };
+		43F6AFF525E809AC00B8971A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6AFF025E809AB00B8971A /* Helper.swift */; };
+		43F6AFF925E809AC00B8971A /* httpcodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F6AFF225E809AC00B8971A /* httpcodes.json */; };
+		43F6AFFA25E809AC00B8971A /* httpcodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F6AFF225E809AC00B8971A /* httpcodes.json */; };
+		43F6AFFB25E809AC00B8971A /* httpcodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F6AFF225E809AC00B8971A /* httpcodes.json */; };
+		43F94EEF2577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
+		43F94EF02577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
+		43F94EF12577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
+		43FB77D925C6B26400B8C5BE /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB77D825C6B26400B8C5BE /* UserStatus.swift */; };
+		43FB77DA25C6B26400B8C5BE /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB77D825C6B26400B8C5BE /* UserStatus.swift */; };
+		43FB77DB25C6B26400B8C5BE /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB77D825C6B26400B8C5BE /* UserStatus.swift */; };
+		43FB77E325C6B49900B8C5BE /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB77E225C6B49900B8C5BE /* PriceService.swift */; };
+		43FB77E425C6B49900B8C5BE /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB77E225C6B49900B8C5BE /* PriceService.swift */; };
+		43FB77E525C6B49900B8C5BE /* PriceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB77E225C6B49900B8C5BE /* PriceService.swift */; };
+		48DDC03D7E26E698F9DE9098 /* Pods_EyesOnEth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A7FF6E9D0F509B8A1A4185 /* Pods_EyesOnEth.framework */; };
+		99395CD443A97EF0536F26AE /* Pods_EyesOnEthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612BDD08CDBAF9942548E35C /* Pods_EyesOnEthTests.framework */; };
+		A0DE08860753F6FB8C5C6178 /* Pods_EyesOnEth_EyesOnEthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 094416AEAAAAD76415A52D2B /* Pods_EyesOnEth_EyesOnEthUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4341953B25656BB300D600FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4341951A25656BAF00D600FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4341952125656BAF00D600FB;
+			remoteInfo = DefiTicker;
+		};
+		4341954625656BB300D600FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4341951A25656BAF00D600FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4341952125656BAF00D600FB;
+			remoteInfo = DefiTicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05AE15D555009735E6ABA7AF /* Pods-EyesOnEth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyesOnEth.debug.xcconfig"; path = "Target Support Files/Pods-EyesOnEth/Pods-EyesOnEth.debug.xcconfig"; sourceTree = "<group>"; };
+		094416AEAAAAD76415A52D2B /* Pods_EyesOnEth_EyesOnEthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EyesOnEth_EyesOnEthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A3F71B7A4F1CBB21A2CCE4 /* Pods-EyesOnEth-EyesOnEthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyesOnEth-EyesOnEthUITests.debug.xcconfig"; path = "Target Support Files/Pods-EyesOnEth-EyesOnEthUITests/Pods-EyesOnEth-EyesOnEthUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		43050600256B5BE1001F6D89 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		43050601256B5BE1001F6D89 /* StatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		4305060B256B62C7001F6D89 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4310FD5625F2D9A9000A1BFC /* EyesOnEth.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = EyesOnEth.entitlements; sourceTree = "<group>"; };
+		4310FD6425F2DE4C000A1BFC /* PrefsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefsView.swift; sourceTree = "<group>"; };
+		4310FD6525F2DE4C000A1BFC /* NSWindow+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSWindow+Utils.swift"; sourceTree = "<group>"; };
+		4310FD6625F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
+		4310FD6725F2DE4C000A1BFC /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
+		4341952225656BAF00D600FB /* EyesOnEth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyesOnEth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4341952525656BAF00D600FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4341952A25656BAF00D600FB /* DefiTicker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefiTicker.xcdatamodel; sourceTree = "<group>"; };
+		4341952C25656BB300D600FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4341952F25656BB300D600FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4341953225656BB300D600FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4341953425656BB300D600FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4341953A25656BB300D600FB /* EyesOnEthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyesOnEthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4341953E25656BB300D600FB /* EyesOnEthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyesOnEthTests.swift; sourceTree = "<group>"; };
+		4341954025656BB300D600FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4341954525656BB300D600FB /* EyesOnEthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyesOnEthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4341954925656BB300D600FB /* EyesOnEthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyesOnEthUITests.swift; sourceTree = "<group>"; };
+		4341954B25656BB300D600FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinGeckoSimpleTokenPrice.swift; sourceTree = "<group>"; };
+		43A334BD25E339A20041C0EB /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		43A334C725E3930B0041C0EB /* LoadingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
+		43A334E025E4D50F0041C0EB /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		43AC49B825A305D700916709 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		43AE6AC2257D10BF00D1A55C /* RegisterAddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAddressView.swift; sourceTree = "<group>"; };
+		43B13F7425C6AFD80051165D /* EthplorerAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthplorerAPIService.swift; sourceTree = "<group>"; };
+		43C6338D25CF79A600F40C72 /* GasIndicatorMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasIndicatorMenuView.swift; sourceTree = "<group>"; };
+		43C633A525CFFBD300F40C72 /* EthplorerGetAddressInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthplorerGetAddressInfo.swift; sourceTree = "<group>"; };
+		43C633B725D05BD700F40C72 /* EtherscanGastracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtherscanGastracker.swift; sourceTree = "<group>"; };
+		43C633C125D0606C00F40C72 /* EtherscanAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtherscanAPIService.swift; sourceTree = "<group>"; };
+		43C633CB25D0612200F40C72 /* EthereumStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumStatus.swift; sourceTree = "<group>"; };
+		43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthStatusMenuView.swift; sourceTree = "<group>"; };
+		43C633EC25D62A8200F40C72 /* CoinGeckoSimplePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinGeckoSimplePrice.swift; sourceTree = "<group>"; };
+		43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinGeckoAPIService.swift; sourceTree = "<group>"; };
+		43C8FC8625D682EE00FC6EAF /* DetailViewEth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewEth.swift; sourceTree = "<group>"; };
+		43C8FCD325D6920700FC6EAF /* TokenListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenListView.swift; sourceTree = "<group>"; };
+		43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowViewController.swift; sourceTree = "<group>"; };
+		43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumUtil.swift; sourceTree = "<group>"; };
+		43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumSetting.swift; sourceTree = "<group>"; };
+		43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewToken.swift; sourceTree = "<group>"; };
+		43F6AFF025E809AB00B8971A /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		43F6AFF225E809AC00B8971A /* httpcodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = httpcodes.json; sourceTree = "<group>"; };
+		43F94EEE2577F82F0042D646 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		43FB77D825C6B26400B8C5BE /* UserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
+		43FB77E225C6B49900B8C5BE /* PriceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceService.swift; sourceTree = "<group>"; };
+		612BDD08CDBAF9942548E35C /* Pods_EyesOnEthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EyesOnEthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67A7FF6E9D0F509B8A1A4185 /* Pods_EyesOnEth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EyesOnEth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B12C983E4C583455FCC4178 /* Pods-EyesOnEth-EyesOnEthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyesOnEth-EyesOnEthUITests.release.xcconfig"; path = "Target Support Files/Pods-EyesOnEth-EyesOnEthUITests/Pods-EyesOnEth-EyesOnEthUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A6717489F34AD52941A434AD /* Pods-EyesOnEthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyesOnEthTests.release.xcconfig"; path = "Target Support Files/Pods-EyesOnEthTests/Pods-EyesOnEthTests.release.xcconfig"; sourceTree = "<group>"; };
+		D5BE377181B921F15ADF13DC /* Pods-EyesOnEth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyesOnEth.release.xcconfig"; path = "Target Support Files/Pods-EyesOnEth/Pods-EyesOnEth.release.xcconfig"; sourceTree = "<group>"; };
+		F79D215558B6506FBF95BD07 /* Pods-EyesOnEthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyesOnEthTests.debug.xcconfig"; path = "Target Support Files/Pods-EyesOnEthTests/Pods-EyesOnEthTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4341951F25656BAF00D600FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48DDC03D7E26E698F9DE9098 /* Pods_EyesOnEth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341953725656BB300D600FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99395CD443A97EF0536F26AE /* Pods_EyesOnEthTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341954225656BB300D600FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0DE08860753F6FB8C5C6178 /* Pods_EyesOnEth_EyesOnEthUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		430505FF256B5BBB001F6D89 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */,
+				43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */,
+				43F6AFF025E809AB00B8971A /* Helper.swift */,
+				43F6AFF225E809AC00B8971A /* httpcodes.json */,
+				43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */,
+				43050600256B5BE1001F6D89 /* EventMonitor.swift */,
+				43AC49B825A305D700916709 /* Constants.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		4310FD6325F2DE4C000A1BFC /* Prefs */ = {
+			isa = PBXGroup;
+			children = (
+				4310FD6425F2DE4C000A1BFC /* PrefsView.swift */,
+				4310FD6525F2DE4C000A1BFC /* NSWindow+Utils.swift */,
+				4310FD6625F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift */,
+				4310FD6725F2DE4C000A1BFC /* Prefs.swift */,
+			);
+			name = Prefs;
+			path = ../../../Documents/EyesOnEth/Prefs;
+			sourceTree = "<group>";
+		};
+		4341951925656BAF00D600FB = {
+			isa = PBXGroup;
+			children = (
+				4341952425656BAF00D600FB /* EyesOnEth */,
+				4341953D25656BB300D600FB /* EyesOnEthTests */,
+				4341954825656BB300D600FB /* EyesOnEthUITests */,
+				4341952325656BAF00D600FB /* Products */,
+				75E7A23CEEFE35147F77DD3A /* Pods */,
+				BDC498BFAD2E281908A3CD6D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4341952325656BAF00D600FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4341952225656BAF00D600FB /* EyesOnEth.app */,
+				4341953A25656BB300D600FB /* EyesOnEthTests.xctest */,
+				4341954525656BB300D600FB /* EyesOnEthUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4341952425656BAF00D600FB /* EyesOnEth */ = {
+			isa = PBXGroup;
+			children = (
+				4310FD6325F2DE4C000A1BFC /* Prefs */,
+				43C633A425CFFBB700F40C72 /* Model */,
+				43AE6AC1257D10BF00D1A55C /* Views */,
+				4305060B256B62C7001F6D89 /* MainViewController.swift */,
+				43FB77D725C6B26400B8C5BE /* Status */,
+				43F94EED2577F8210042D646 /* Service */,
+				430505FF256B5BBB001F6D89 /* Helper */,
+				4341952525656BAF00D600FB /* AppDelegate.swift */,
+				43050601256B5BE1001F6D89 /* StatusBarController.swift */,
+				4341952C25656BB300D600FB /* Assets.xcassets */,
+				4341953125656BB300D600FB /* Main.storyboard */,
+				4341953425656BB300D600FB /* Info.plist */,
+				4310FD5625F2D9A9000A1BFC /* EyesOnEth.entitlements */,
+				4341952925656BAF00D600FB /* DefiTicker.xcdatamodeld */,
+				4341952E25656BB300D600FB /* Preview Content */,
+			);
+			path = EyesOnEth;
+			sourceTree = "<group>";
+		};
+		4341952E25656BB300D600FB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4341952F25656BB300D600FB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4341953D25656BB300D600FB /* EyesOnEthTests */ = {
+			isa = PBXGroup;
+			children = (
+				4341953E25656BB300D600FB /* EyesOnEthTests.swift */,
+				4341954025656BB300D600FB /* Info.plist */,
+			);
+			path = EyesOnEthTests;
+			sourceTree = "<group>";
+		};
+		4341954825656BB300D600FB /* EyesOnEthUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4341954925656BB300D600FB /* EyesOnEthUITests.swift */,
+				4341954B25656BB300D600FB /* Info.plist */,
+			);
+			path = EyesOnEthUITests;
+			sourceTree = "<group>";
+		};
+		43AE6AC1257D10BF00D1A55C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43A334E025E4D50F0041C0EB /* CircleImage.swift */,
+				43C8FCD325D6920700FC6EAF /* TokenListView.swift */,
+				43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */,
+				43A334C725E3930B0041C0EB /* LoadingAnimation.swift */,
+				43A334BD25E339A20041C0EB /* AlertView.swift */,
+				43C8FC8625D682EE00FC6EAF /* DetailViewEth.swift */,
+				43C6338D25CF79A600F40C72 /* GasIndicatorMenuView.swift */,
+				43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */,
+				43AE6AC2257D10BF00D1A55C /* RegisterAddressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		43C633A425CFFBB700F40C72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43C633EC25D62A8200F40C72 /* CoinGeckoSimplePrice.swift */,
+				43C633B725D05BD700F40C72 /* EtherscanGastracker.swift */,
+				43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */,
+				43C633A525CFFBD300F40C72 /* EthplorerGetAddressInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		43F94EED2577F8210042D646 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				43C633F625D62C0300F40C72 /* CoinGeckoAPIService.swift */,
+				43F94EEE2577F82F0042D646 /* RegisterService.swift */,
+				43C633C125D0606C00F40C72 /* EtherscanAPIService.swift */,
+				43B13F7425C6AFD80051165D /* EthplorerAPIService.swift */,
+				43FB77E225C6B49900B8C5BE /* PriceService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		43FB77D725C6B26400B8C5BE /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				43FB77D825C6B26400B8C5BE /* UserStatus.swift */,
+				43C633CB25D0612200F40C72 /* EthereumStatus.swift */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		75E7A23CEEFE35147F77DD3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05AE15D555009735E6ABA7AF /* Pods-EyesOnEth.debug.xcconfig */,
+				D5BE377181B921F15ADF13DC /* Pods-EyesOnEth.release.xcconfig */,
+				42A3F71B7A4F1CBB21A2CCE4 /* Pods-EyesOnEth-EyesOnEthUITests.debug.xcconfig */,
+				7B12C983E4C583455FCC4178 /* Pods-EyesOnEth-EyesOnEthUITests.release.xcconfig */,
+				F79D215558B6506FBF95BD07 /* Pods-EyesOnEthTests.debug.xcconfig */,
+				A6717489F34AD52941A434AD /* Pods-EyesOnEthTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BDC498BFAD2E281908A3CD6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67A7FF6E9D0F509B8A1A4185 /* Pods_EyesOnEth.framework */,
+				094416AEAAAAD76415A52D2B /* Pods_EyesOnEth_EyesOnEthUITests.framework */,
+				612BDD08CDBAF9942548E35C /* Pods_EyesOnEthTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4341952125656BAF00D600FB /* EyesOnEth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4341954E25656BB300D600FB /* Build configuration list for PBXNativeTarget "EyesOnEth" */;
+			buildPhases = (
+				F072262D87ECB29CB60A6183 /* [CP] Check Pods Manifest.lock */,
+				4341951E25656BAF00D600FB /* Sources */,
+				4341951F25656BAF00D600FB /* Frameworks */,
+				4341952025656BAF00D600FB /* Resources */,
+				4D5844A01F9288F4092C9158 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EyesOnEth;
+			productName = DefiTicker;
+			productReference = 4341952225656BAF00D600FB /* EyesOnEth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4341953925656BB300D600FB /* EyesOnEthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4341955125656BB300D600FB /* Build configuration list for PBXNativeTarget "EyesOnEthTests" */;
+			buildPhases = (
+				90016CBE4BDD951724FAF89F /* [CP] Check Pods Manifest.lock */,
+				4341953625656BB300D600FB /* Sources */,
+				4341953725656BB300D600FB /* Frameworks */,
+				4341953825656BB300D600FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4341953C25656BB300D600FB /* PBXTargetDependency */,
+			);
+			name = EyesOnEthTests;
+			productName = DefiTickerTests;
+			productReference = 4341953A25656BB300D600FB /* EyesOnEthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4341954425656BB300D600FB /* EyesOnEthUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4341955425656BB300D600FB /* Build configuration list for PBXNativeTarget "EyesOnEthUITests" */;
+			buildPhases = (
+				B02CFFD0CAF36BBDF0897754 /* [CP] Check Pods Manifest.lock */,
+				4341954125656BB300D600FB /* Sources */,
+				4341954225656BB300D600FB /* Frameworks */,
+				4341954325656BB300D600FB /* Resources */,
+				83A7A2A6BDBD071C550F1396 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4341954725656BB300D600FB /* PBXTargetDependency */,
+			);
+			name = EyesOnEthUITests;
+			productName = DefiTickerUITests;
+			productReference = 4341954525656BB300D600FB /* EyesOnEthUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4341951A25656BAF00D600FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					4341952125656BAF00D600FB = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					4341953925656BB300D600FB = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 4341952125656BAF00D600FB;
+					};
+					4341954425656BB300D600FB = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 4341952125656BAF00D600FB;
+					};
+				};
+			};
+			buildConfigurationList = 4341951D25656BAF00D600FB /* Build configuration list for PBXProject "EyesOnEth" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4341951925656BAF00D600FB;
+			productRefGroup = 4341952325656BAF00D600FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4341952125656BAF00D600FB /* EyesOnEth */,
+				4341953925656BB300D600FB /* EyesOnEthTests */,
+				4341954425656BB300D600FB /* EyesOnEthUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4341952025656BAF00D600FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43F6AFF925E809AC00B8971A /* httpcodes.json in Resources */,
+				4341953325656BB300D600FB /* Main.storyboard in Resources */,
+				4341953025656BB300D600FB /* Preview Assets.xcassets in Resources */,
+				4341952D25656BB300D600FB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341953825656BB300D600FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43F6AFFA25E809AC00B8971A /* httpcodes.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341954325656BB300D600FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43F6AFFB25E809AC00B8971A /* httpcodes.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D5844A01F9288F4092C9158 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EyesOnEth/Pods-EyesOnEth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EyesOnEth/Pods-EyesOnEth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EyesOnEth/Pods-EyesOnEth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83A7A2A6BDBD071C550F1396 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EyesOnEth-EyesOnEthUITests/Pods-EyesOnEth-EyesOnEthUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EyesOnEth-EyesOnEthUITests/Pods-EyesOnEth-EyesOnEthUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EyesOnEth-EyesOnEthUITests/Pods-EyesOnEth-EyesOnEthUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90016CBE4BDD951724FAF89F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EyesOnEthTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B02CFFD0CAF36BBDF0897754 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EyesOnEth-EyesOnEthUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F072262D87ECB29CB60A6183 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EyesOnEth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4341951E25656BAF00D600FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43C8FD7B25D6D40E00FC6EAF /* WindowViewController.swift in Sources */,
+				4341952B25656BAF00D600FB /* DefiTicker.xcdatamodeld in Sources */,
+				43C6338E25CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
+				4310FD6825F2DE4C000A1BFC /* PrefsView.swift in Sources */,
+				4310FD6B25F2DE4C000A1BFC /* NSWindow+Utils.swift in Sources */,
+				43C633CC25D0612200F40C72 /* EthereumStatus.swift in Sources */,
+				43F94EEF2577F82F0042D646 /* RegisterService.swift in Sources */,
+				43AE6AC3257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
+				43C633C225D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
+				43C633ED25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
+				43C633F725D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */,
+				43A3348725E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */,
+				43FB77E325C6B49900B8C5BE /* PriceService.swift in Sources */,
+				4341952625656BAF00D600FB /* AppDelegate.swift in Sources */,
+				43C633B825D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
+				4305060C256B62C8001F6D89 /* MainViewController.swift in Sources */,
+				43C633A625CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
+				43C8FC8825D682EE00FC6EAF /* DetailViewEth.swift in Sources */,
+				43050605256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
+				43FB77D925C6B26400B8C5BE /* UserStatus.swift in Sources */,
+				4310FD6E25F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift in Sources */,
+				43C633E325D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */,
+				43A334E125E4D5100041C0EB /* CircleImage.swift in Sources */,
+				43C8FDF025DCB3D300FC6EAF /* DetailViewToken.swift in Sources */,
+				43B13F7525C6AFD80051165D /* EthplorerAPIService.swift in Sources */,
+				43F6AFF325E809AC00B8971A /* Helper.swift in Sources */,
+				43A334C825E3930B0041C0EB /* LoadingAnimation.swift in Sources */,
+				43C8FDD025DABD0400FC6EAF /* EthereumSetting.swift in Sources */,
+				4310FD7125F2DE4C000A1BFC /* Prefs.swift in Sources */,
+				43050602256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
+				43AC49B925A305D700916709 /* Constants.swift in Sources */,
+				43A334BE25E339A20041C0EB /* AlertView.swift in Sources */,
+				43C8FCD425D6920700FC6EAF /* TokenListView.swift in Sources */,
+				43C8FDC625D80C4E00FC6EAF /* EthereumUtil.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341953625656BB300D600FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43A334E225E4D5100041C0EB /* CircleImage.swift in Sources */,
+				43C633B925D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
+				43C8FDF125DCB3D300FC6EAF /* DetailViewToken.swift in Sources */,
+				43C633F825D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */,
+				43C8FDC725D80C4E00FC6EAF /* EthereumUtil.swift in Sources */,
+				43C8FC8925D682EE00FC6EAF /* DetailViewEth.swift in Sources */,
+				4310FD6C25F2DE4C000A1BFC /* NSWindow+Utils.swift in Sources */,
+				43C8FD7C25D6D40E00FC6EAF /* WindowViewController.swift in Sources */,
+				43FB77DA25C6B26400B8C5BE /* UserStatus.swift in Sources */,
+				43FB77E425C6B49900B8C5BE /* PriceService.swift in Sources */,
+				43F94EF02577F82F0042D646 /* RegisterService.swift in Sources */,
+				43C633C325D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
+				43F6AFF425E809AC00B8971A /* Helper.swift in Sources */,
+				43A334C925E3930B0041C0EB /* LoadingAnimation.swift in Sources */,
+				43C633E425D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */,
+				4341953F25656BB300D600FB /* EyesOnEthTests.swift in Sources */,
+				43A3348825E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */,
+				43AE6AC4257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
+				4310FD6925F2DE4C000A1BFC /* PrefsView.swift in Sources */,
+				43C633CD25D0612200F40C72 /* EthereumStatus.swift in Sources */,
+				4310FD7225F2DE4C000A1BFC /* Prefs.swift in Sources */,
+				43A334BF25E339A20041C0EB /* AlertView.swift in Sources */,
+				43C8FCD525D6920700FC6EAF /* TokenListView.swift in Sources */,
+				43C633A725CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
+				4310FD6F25F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift in Sources */,
+				43050606256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
+				43C8FDD125DABD0400FC6EAF /* EthereumSetting.swift in Sources */,
+				43050603256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
+				43C633EE25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
+				43C6338F25CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
+				4305060D256B62C8001F6D89 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341954125656BB300D600FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43A334E325E4D5100041C0EB /* CircleImage.swift in Sources */,
+				43C633BA25D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
+				43C8FDF225DCB3D300FC6EAF /* DetailViewToken.swift in Sources */,
+				43C633F925D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */,
+				43C8FDC825D80C4E00FC6EAF /* EthereumUtil.swift in Sources */,
+				43C8FC8A25D682EE00FC6EAF /* DetailViewEth.swift in Sources */,
+				4310FD6D25F2DE4C000A1BFC /* NSWindow+Utils.swift in Sources */,
+				43C8FD7D25D6D40E00FC6EAF /* WindowViewController.swift in Sources */,
+				43FB77DB25C6B26400B8C5BE /* UserStatus.swift in Sources */,
+				43FB77E525C6B49900B8C5BE /* PriceService.swift in Sources */,
+				43F94EF12577F82F0042D646 /* RegisterService.swift in Sources */,
+				43C633C425D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
+				43F6AFF525E809AC00B8971A /* Helper.swift in Sources */,
+				43A334CA25E3930B0041C0EB /* LoadingAnimation.swift in Sources */,
+				43C633E525D2DEAB00F40C72 /* EthStatusMenuView.swift in Sources */,
+				4341954A25656BB300D600FB /* EyesOnEthUITests.swift in Sources */,
+				43A3348925E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */,
+				43AE6AC5257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
+				4310FD6A25F2DE4C000A1BFC /* PrefsView.swift in Sources */,
+				43C633CE25D0612200F40C72 /* EthereumStatus.swift in Sources */,
+				4310FD7325F2DE4C000A1BFC /* Prefs.swift in Sources */,
+				43A334C025E339A20041C0EB /* AlertView.swift in Sources */,
+				43C8FCD625D6920700FC6EAF /* TokenListView.swift in Sources */,
+				43C633A825CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
+				4310FD7025F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift in Sources */,
+				43050607256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
+				43C8FDD225DABD0400FC6EAF /* EthereumSetting.swift in Sources */,
+				43050604256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
+				43C633EF25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
+				43C6339025CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
+				4305060E256B62C8001F6D89 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4341953C25656BB300D600FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4341952125656BAF00D600FB /* EyesOnEth */;
+			targetProxy = 4341953B25656BB300D600FB /* PBXContainerItemProxy */;
+		};
+		4341954725656BB300D600FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4341952125656BAF00D600FB /* EyesOnEth */;
+			targetProxy = 4341954625656BB300D600FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4341953125656BB300D600FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4341953225656BB300D600FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4341954C25656BB300D600FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4341954D25656BB300D600FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4341954F25656BB300D600FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05AE15D555009735E6ABA7AF /* Pods-EyesOnEth.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EyesOnEth/EyesOnEth.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"EyesOnEth/Preview Content\"";
+				DEVELOPMENT_TEAM = QX6C3YZYLD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = EyesOnEth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixc.EyesOnEth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4341955025656BB300D600FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5BE377181B921F15ADF13DC /* Pods-EyesOnEth.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EyesOnEth/EyesOnEth.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"EyesOnEth/Preview Content\"";
+				DEVELOPMENT_TEAM = QX6C3YZYLD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = EyesOnEth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixc.EyesOnEth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4341955225656BB300D600FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F79D215558B6506FBF95BD07 /* Pods-EyesOnEthTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QX6C3YZYLD;
+				INFOPLIST_FILE = EyesOnEthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixc.EyesOnEthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EyesOnEth.app/Contents/MacOS/EyesOnEth";
+			};
+			name = Debug;
+		};
+		4341955325656BB300D600FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6717489F34AD52941A434AD /* Pods-EyesOnEthTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QX6C3YZYLD;
+				INFOPLIST_FILE = EyesOnEthTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixc.EyesOnEthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EyesOnEth.app/Contents/MacOS/EyesOnEth";
+			};
+			name = Release;
+		};
+		4341955525656BB300D600FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42A3F71B7A4F1CBB21A2CCE4 /* Pods-EyesOnEth-EyesOnEthUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QX6C3YZYLD;
+				INFOPLIST_FILE = EyesOnEthUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixc.EyesOnEthUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DefiTicker;
+			};
+			name = Debug;
+		};
+		4341955625656BB300D600FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B12C983E4C583455FCC4178 /* Pods-EyesOnEth-EyesOnEthUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QX6C3YZYLD;
+				INFOPLIST_FILE = EyesOnEthUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixc.EyesOnEthUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DefiTicker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4341951D25656BAF00D600FB /* Build configuration list for PBXProject "EyesOnEth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4341954C25656BB300D600FB /* Debug */,
+				4341954D25656BB300D600FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4341954E25656BB300D600FB /* Build configuration list for PBXNativeTarget "EyesOnEth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4341954F25656BB300D600FB /* Debug */,
+				4341955025656BB300D600FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4341955125656BB300D600FB /* Build configuration list for PBXNativeTarget "EyesOnEthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4341955225656BB300D600FB /* Debug */,
+				4341955325656BB300D600FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4341955425656BB300D600FB /* Build configuration list for PBXNativeTarget "EyesOnEthUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4341955525656BB300D600FB /* Debug */,
+				4341955625656BB300D600FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4341952925656BAF00D600FB /* DefiTicker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4341952A25656BAF00D600FB /* DefiTicker.xcdatamodel */,
+			);
+			currentVersion = 4341952A25656BAF00D600FB /* DefiTicker.xcdatamodel */;
+			path = DefiTicker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4341951A25656BAF00D600FB /* Project object */;
+}
