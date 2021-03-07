@@ -11,12 +11,12 @@ struct Constants {
     
     static let baseImageUrlEthPlorer = "https://ethplorer.io/"
     static let ethAddressKey = "ethAddressKey"
-    static let tickerInterval = "tickerInterval"
     static let ethplorerApiKey = "ethplorerApiKey"
     static let activeAddress = "activeAddress"
     static let maxContractAddressCoinGecko = 116
     static let gasPriceViewInterval = 15
     static let ethPriceViewInterval = 10
+    static let tickerInterval:TimeInterval = 10
     
     static let externalEthUrl: Dictionary = [
         "coingecko": "https://www.coingecko.com/coins/ethereum",

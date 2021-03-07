@@ -16,18 +16,6 @@
 		4305060C256B62C8001F6D89 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305060B256B62C7001F6D89 /* MainViewController.swift */; };
 		4305060D256B62C8001F6D89 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305060B256B62C7001F6D89 /* MainViewController.swift */; };
 		4305060E256B62C8001F6D89 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305060B256B62C7001F6D89 /* MainViewController.swift */; };
-		4310FD6825F2DE4C000A1BFC /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6425F2DE4C000A1BFC /* PrefsView.swift */; };
-		4310FD6925F2DE4C000A1BFC /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6425F2DE4C000A1BFC /* PrefsView.swift */; };
-		4310FD6A25F2DE4C000A1BFC /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6425F2DE4C000A1BFC /* PrefsView.swift */; };
-		4310FD6B25F2DE4C000A1BFC /* NSWindow+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6525F2DE4C000A1BFC /* NSWindow+Utils.swift */; };
-		4310FD6C25F2DE4C000A1BFC /* NSWindow+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6525F2DE4C000A1BFC /* NSWindow+Utils.swift */; };
-		4310FD6D25F2DE4C000A1BFC /* NSWindow+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6525F2DE4C000A1BFC /* NSWindow+Utils.swift */; };
-		4310FD6E25F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6625F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift */; };
-		4310FD6F25F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6625F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift */; };
-		4310FD7025F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6625F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift */; };
-		4310FD7125F2DE4C000A1BFC /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6725F2DE4C000A1BFC /* Prefs.swift */; };
-		4310FD7225F2DE4C000A1BFC /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6725F2DE4C000A1BFC /* Prefs.swift */; };
-		4310FD7325F2DE4C000A1BFC /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310FD6725F2DE4C000A1BFC /* Prefs.swift */; };
 		4341952625656BAF00D600FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341952525656BAF00D600FB /* AppDelegate.swift */; };
 		4341952B25656BAF00D600FB /* DefiTicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4341952925656BAF00D600FB /* DefiTicker.xcdatamodeld */; };
 		4341952D25656BB300D600FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4341952C25656BB300D600FB /* Assets.xcassets */; };
@@ -35,6 +23,18 @@
 		4341953325656BB300D600FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4341953125656BB300D600FB /* Main.storyboard */; };
 		4341953F25656BB300D600FB /* EyesOnEthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341953E25656BB300D600FB /* EyesOnEthTests.swift */; };
 		4341954A25656BB300D600FB /* EyesOnEthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341954925656BB300D600FB /* EyesOnEthUITests.swift */; };
+		434F478525F4263A00D64DE5 /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F478425F4263900D64DE5 /* ToolTipView.swift */; };
+		434F478625F4263A00D64DE5 /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F478425F4263900D64DE5 /* ToolTipView.swift */; };
+		434F478725F4263A00D64DE5 /* ToolTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F478425F4263900D64DE5 /* ToolTipView.swift */; };
+		434F47B225F42DA500D64DE5 /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47B125F42DA500D64DE5 /* PrefsView.swift */; };
+		434F47B325F42DA500D64DE5 /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47B125F42DA500D64DE5 /* PrefsView.swift */; };
+		434F47B425F42DA500D64DE5 /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47B125F42DA500D64DE5 /* PrefsView.swift */; };
+		434F47B925F42DB700D64DE5 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47B825F42DB700D64DE5 /* Prefs.swift */; };
+		434F47BA25F42DB700D64DE5 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47B825F42DB700D64DE5 /* Prefs.swift */; };
+		434F47BB25F42DB700D64DE5 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47B825F42DB700D64DE5 /* Prefs.swift */; };
+		434F47C625F4327000D64DE5 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47C525F4326F00D64DE5 /* Notification.swift */; };
+		434F47C725F4327000D64DE5 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47C525F4326F00D64DE5 /* Notification.swift */; };
+		434F47C825F4327000D64DE5 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47C525F4326F00D64DE5 /* Notification.swift */; };
 		43A3348725E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
 		43A3348825E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
 		43A3348925E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
@@ -94,12 +94,9 @@
 		43C8FDF025DCB3D300FC6EAF /* DetailViewToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */; };
 		43C8FDF125DCB3D300FC6EAF /* DetailViewToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */; };
 		43C8FDF225DCB3D300FC6EAF /* DetailViewToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */; };
-		43F6AFF325E809AC00B8971A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6AFF025E809AB00B8971A /* Helper.swift */; };
-		43F6AFF425E809AC00B8971A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6AFF025E809AB00B8971A /* Helper.swift */; };
-		43F6AFF525E809AC00B8971A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6AFF025E809AB00B8971A /* Helper.swift */; };
-		43F6AFF925E809AC00B8971A /* httpcodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F6AFF225E809AC00B8971A /* httpcodes.json */; };
-		43F6AFFA25E809AC00B8971A /* httpcodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F6AFF225E809AC00B8971A /* httpcodes.json */; };
-		43F6AFFB25E809AC00B8971A /* httpcodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F6AFF225E809AC00B8971A /* httpcodes.json */; };
+		43F6AFF325E809AC00B8971A /* DecodingUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6AFF025E809AB00B8971A /* DecodingUtil.swift */; };
+		43F6AFF425E809AC00B8971A /* DecodingUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6AFF025E809AB00B8971A /* DecodingUtil.swift */; };
+		43F6AFF525E809AC00B8971A /* DecodingUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6AFF025E809AB00B8971A /* DecodingUtil.swift */; };
 		43F94EEF2577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
 		43F94EF02577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
 		43F94EF12577F82F0042D646 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94EEE2577F82F0042D646 /* RegisterService.swift */; };
@@ -139,10 +136,6 @@
 		43050601256B5BE1001F6D89 /* StatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		4305060B256B62C7001F6D89 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4310FD5625F2D9A9000A1BFC /* EyesOnEth.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = EyesOnEth.entitlements; sourceTree = "<group>"; };
-		4310FD6425F2DE4C000A1BFC /* PrefsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefsView.swift; sourceTree = "<group>"; };
-		4310FD6525F2DE4C000A1BFC /* NSWindow+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSWindow+Utils.swift"; sourceTree = "<group>"; };
-		4310FD6625F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
-		4310FD6725F2DE4C000A1BFC /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 		4341952225656BAF00D600FB /* EyesOnEth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyesOnEth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4341952525656BAF00D600FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4341952A25656BAF00D600FB /* DefiTicker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefiTicker.xcdatamodel; sourceTree = "<group>"; };
@@ -156,6 +149,10 @@
 		4341954525656BB300D600FB /* EyesOnEthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyesOnEthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4341954925656BB300D600FB /* EyesOnEthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyesOnEthUITests.swift; sourceTree = "<group>"; };
 		4341954B25656BB300D600FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		434F478425F4263900D64DE5 /* ToolTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolTipView.swift; sourceTree = "<group>"; };
+		434F47B125F42DA500D64DE5 /* PrefsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefsView.swift; sourceTree = "<group>"; };
+		434F47B825F42DB700D64DE5 /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
+		434F47C525F4326F00D64DE5 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinGeckoSimpleTokenPrice.swift; sourceTree = "<group>"; };
 		43A334BD25E339A20041C0EB /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		43A334C725E3930B0041C0EB /* LoadingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
@@ -177,8 +174,7 @@
 		43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumUtil.swift; sourceTree = "<group>"; };
 		43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumSetting.swift; sourceTree = "<group>"; };
 		43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewToken.swift; sourceTree = "<group>"; };
-		43F6AFF025E809AB00B8971A /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		43F6AFF225E809AC00B8971A /* httpcodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = httpcodes.json; sourceTree = "<group>"; };
+		43F6AFF025E809AB00B8971A /* DecodingUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodingUtil.swift; sourceTree = "<group>"; };
 		43F94EEE2577F82F0042D646 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		43FB77D825C6B26400B8C5BE /* UserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		43FB77E225C6B49900B8C5BE /* PriceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceService.swift; sourceTree = "<group>"; };
@@ -222,26 +218,15 @@
 			isa = PBXGroup;
 			children = (
 				43C8FDC525D80C4E00FC6EAF /* EthereumUtil.swift */,
+				434F47C525F4326F00D64DE5 /* Notification.swift */,
 				43C8FDCF25DABD0400FC6EAF /* EthereumSetting.swift */,
-				43F6AFF025E809AB00B8971A /* Helper.swift */,
-				43F6AFF225E809AC00B8971A /* httpcodes.json */,
+				43F6AFF025E809AB00B8971A /* DecodingUtil.swift */,
+				434F47B825F42DB700D64DE5 /* Prefs.swift */,
 				43C8FD7A25D6D40E00FC6EAF /* WindowViewController.swift */,
 				43050600256B5BE1001F6D89 /* EventMonitor.swift */,
 				43AC49B825A305D700916709 /* Constants.swift */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		4310FD6325F2DE4C000A1BFC /* Prefs */ = {
-			isa = PBXGroup;
-			children = (
-				4310FD6425F2DE4C000A1BFC /* PrefsView.swift */,
-				4310FD6525F2DE4C000A1BFC /* NSWindow+Utils.swift */,
-				4310FD6625F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift */,
-				4310FD6725F2DE4C000A1BFC /* Prefs.swift */,
-			);
-			name = Prefs;
-			path = ../../../Documents/EyesOnEth/Prefs;
 			sourceTree = "<group>";
 		};
 		4341951925656BAF00D600FB = {
@@ -269,7 +254,6 @@
 		4341952425656BAF00D600FB /* EyesOnEth */ = {
 			isa = PBXGroup;
 			children = (
-				4310FD6325F2DE4C000A1BFC /* Prefs */,
 				43C633A425CFFBB700F40C72 /* Model */,
 				43AE6AC1257D10BF00D1A55C /* Views */,
 				4305060B256B62C7001F6D89 /* MainViewController.swift */,
@@ -318,7 +302,9 @@
 			isa = PBXGroup;
 			children = (
 				43A334E025E4D50F0041C0EB /* CircleImage.swift */,
+				434F47B125F42DA500D64DE5 /* PrefsView.swift */,
 				43C8FCD325D6920700FC6EAF /* TokenListView.swift */,
+				434F478425F4263900D64DE5 /* ToolTipView.swift */,
 				43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */,
 				43A334C725E3930B0041C0EB /* LoadingAnimation.swift */,
 				43A334BD25E339A20041C0EB /* AlertView.swift */,
@@ -493,7 +479,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43F6AFF925E809AC00B8971A /* httpcodes.json in Resources */,
 				4341953325656BB300D600FB /* Main.storyboard in Resources */,
 				4341953025656BB300D600FB /* Preview Assets.xcassets in Resources */,
 				4341952D25656BB300D600FB /* Assets.xcassets in Resources */,
@@ -504,7 +489,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43F6AFFA25E809AC00B8971A /* httpcodes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +496,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43F6AFFB25E809AC00B8971A /* httpcodes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,13 +609,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434F47B925F42DB700D64DE5 /* Prefs.swift in Sources */,
 				43C8FD7B25D6D40E00FC6EAF /* WindowViewController.swift in Sources */,
 				4341952B25656BAF00D600FB /* DefiTicker.xcdatamodeld in Sources */,
 				43C6338E25CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
-				4310FD6825F2DE4C000A1BFC /* PrefsView.swift in Sources */,
-				4310FD6B25F2DE4C000A1BFC /* NSWindow+Utils.swift in Sources */,
 				43C633CC25D0612200F40C72 /* EthereumStatus.swift in Sources */,
 				43F94EEF2577F82F0042D646 /* RegisterService.swift in Sources */,
+				434F47B225F42DA500D64DE5 /* PrefsView.swift in Sources */,
 				43AE6AC3257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
 				43C633C225D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
 				43C633ED25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
@@ -642,19 +625,19 @@
 				4341952625656BAF00D600FB /* AppDelegate.swift in Sources */,
 				43C633B825D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
 				4305060C256B62C8001F6D89 /* MainViewController.swift in Sources */,
+				434F47C625F4327000D64DE5 /* Notification.swift in Sources */,
 				43C633A625CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
+				434F478525F4263A00D64DE5 /* ToolTipView.swift in Sources */,
 				43C8FC8825D682EE00FC6EAF /* DetailViewEth.swift in Sources */,
 				43050605256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
 				43FB77D925C6B26400B8C5BE /* UserStatus.swift in Sources */,
-				4310FD6E25F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift in Sources */,
 				43C633E325D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */,
 				43A334E125E4D5100041C0EB /* CircleImage.swift in Sources */,
 				43C8FDF025DCB3D300FC6EAF /* DetailViewToken.swift in Sources */,
 				43B13F7525C6AFD80051165D /* EthplorerAPIService.swift in Sources */,
-				43F6AFF325E809AC00B8971A /* Helper.swift in Sources */,
+				43F6AFF325E809AC00B8971A /* DecodingUtil.swift in Sources */,
 				43A334C825E3930B0041C0EB /* LoadingAnimation.swift in Sources */,
 				43C8FDD025DABD0400FC6EAF /* EthereumSetting.swift in Sources */,
-				4310FD7125F2DE4C000A1BFC /* Prefs.swift in Sources */,
 				43050602256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
 				43AC49B925A305D700916709 /* Constants.swift in Sources */,
 				43A334BE25E339A20041C0EB /* AlertView.swift in Sources */,
@@ -671,32 +654,32 @@
 				43C633B925D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
 				43C8FDF125DCB3D300FC6EAF /* DetailViewToken.swift in Sources */,
 				43C633F825D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */,
+				434F47B325F42DA500D64DE5 /* PrefsView.swift in Sources */,
 				43C8FDC725D80C4E00FC6EAF /* EthereumUtil.swift in Sources */,
 				43C8FC8925D682EE00FC6EAF /* DetailViewEth.swift in Sources */,
-				4310FD6C25F2DE4C000A1BFC /* NSWindow+Utils.swift in Sources */,
 				43C8FD7C25D6D40E00FC6EAF /* WindowViewController.swift in Sources */,
 				43FB77DA25C6B26400B8C5BE /* UserStatus.swift in Sources */,
 				43FB77E425C6B49900B8C5BE /* PriceService.swift in Sources */,
 				43F94EF02577F82F0042D646 /* RegisterService.swift in Sources */,
 				43C633C325D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
-				43F6AFF425E809AC00B8971A /* Helper.swift in Sources */,
+				434F47BA25F42DB700D64DE5 /* Prefs.swift in Sources */,
+				43F6AFF425E809AC00B8971A /* DecodingUtil.swift in Sources */,
 				43A334C925E3930B0041C0EB /* LoadingAnimation.swift in Sources */,
 				43C633E425D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */,
 				4341953F25656BB300D600FB /* EyesOnEthTests.swift in Sources */,
 				43A3348825E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */,
 				43AE6AC4257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
-				4310FD6925F2DE4C000A1BFC /* PrefsView.swift in Sources */,
+				434F478625F4263A00D64DE5 /* ToolTipView.swift in Sources */,
 				43C633CD25D0612200F40C72 /* EthereumStatus.swift in Sources */,
-				4310FD7225F2DE4C000A1BFC /* Prefs.swift in Sources */,
 				43A334BF25E339A20041C0EB /* AlertView.swift in Sources */,
 				43C8FCD525D6920700FC6EAF /* TokenListView.swift in Sources */,
 				43C633A725CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
-				4310FD6F25F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift in Sources */,
 				43050606256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
 				43C8FDD125DABD0400FC6EAF /* EthereumSetting.swift in Sources */,
 				43050603256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
 				43C633EE25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
 				43C6338F25CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
+				434F47C725F4327000D64DE5 /* Notification.swift in Sources */,
 				4305060D256B62C8001F6D89 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,32 +692,32 @@
 				43C633BA25D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
 				43C8FDF225DCB3D300FC6EAF /* DetailViewToken.swift in Sources */,
 				43C633F925D62C0300F40C72 /* CoinGeckoAPIService.swift in Sources */,
+				434F47B425F42DA500D64DE5 /* PrefsView.swift in Sources */,
 				43C8FDC825D80C4E00FC6EAF /* EthereumUtil.swift in Sources */,
 				43C8FC8A25D682EE00FC6EAF /* DetailViewEth.swift in Sources */,
-				4310FD6D25F2DE4C000A1BFC /* NSWindow+Utils.swift in Sources */,
 				43C8FD7D25D6D40E00FC6EAF /* WindowViewController.swift in Sources */,
 				43FB77DB25C6B26400B8C5BE /* UserStatus.swift in Sources */,
 				43FB77E525C6B49900B8C5BE /* PriceService.swift in Sources */,
 				43F94EF12577F82F0042D646 /* RegisterService.swift in Sources */,
 				43C633C425D0606C00F40C72 /* EtherscanAPIService.swift in Sources */,
-				43F6AFF525E809AC00B8971A /* Helper.swift in Sources */,
+				434F47BB25F42DB700D64DE5 /* Prefs.swift in Sources */,
+				43F6AFF525E809AC00B8971A /* DecodingUtil.swift in Sources */,
 				43A334CA25E3930B0041C0EB /* LoadingAnimation.swift in Sources */,
 				43C633E525D2DEAB00F40C72 /* EthStatusMenuView.swift in Sources */,
 				4341954A25656BB300D600FB /* EyesOnEthUITests.swift in Sources */,
 				43A3348925E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */,
 				43AE6AC5257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
-				4310FD6A25F2DE4C000A1BFC /* PrefsView.swift in Sources */,
+				434F478725F4263A00D64DE5 /* ToolTipView.swift in Sources */,
 				43C633CE25D0612200F40C72 /* EthereumStatus.swift in Sources */,
-				4310FD7325F2DE4C000A1BFC /* Prefs.swift in Sources */,
 				43A334C025E339A20041C0EB /* AlertView.swift in Sources */,
 				43C8FCD625D6920700FC6EAF /* TokenListView.swift in Sources */,
 				43C633A825CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
-				4310FD7025F2DE4C000A1BFC /* UserDefaultsPropertyWrapper.swift in Sources */,
 				43050607256B5BE1001F6D89 /* StatusBarController.swift in Sources */,
 				43C8FDD225DABD0400FC6EAF /* EthereumSetting.swift in Sources */,
 				43050604256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
 				43C633EF25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
 				43C6339025CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
+				434F47C825F4327000D64DE5 /* Notification.swift in Sources */,
 				4305060E256B62C8001F6D89 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

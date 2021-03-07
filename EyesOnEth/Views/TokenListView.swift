@@ -98,6 +98,7 @@ struct Header: View {
     var body: some View {
         HStack(spacing: 5) {
             Text(EthereumUtil.getAbbreviateAddress(activeAddress!, (6,4)))
+                .toolTip("copy to clipboard")
                 .layoutPriority(1)
                 .onHover(perform: { hovering in
                     if hovering {

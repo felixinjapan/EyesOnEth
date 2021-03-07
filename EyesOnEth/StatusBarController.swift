@@ -28,14 +28,12 @@ class StatusBarController {
     private var eventMonitor: EventMonitor?
     
     var popover = NSPopover.init()
-    // Create the SwiftUI view that provides the window contents.
     lazy var bridge = RegisterAddressViewModel()
     var prefsView: PrefsView?
     
     var appMenu = NSMenu()
     
-    let registerNewAddress  = NSMenuItem(title: "Add new address",  action: #selector(StatusBarController.actionMenuAddNewAddress(_:)),  keyEquivalent: "")
-    let resetAddresses  = NSMenuItem(title: "reset",  action: #selector(StatusBarController.actionResetAddress(_:)),  keyEquivalent: "")
+    let registerNewAddress  = NSMenuItem(title: "Add new address",  action: #selector(StatusBarController.actionMenuAddNewAddress(_:)),  keyEquivalent: "a")
     let preference = NSMenuItem(title: "Preference", action: #selector(StatusBarController.actionPreference(_:)), keyEquivalent: "p")
     var priceUpdateTimer: Timer?
     
@@ -59,12 +57,19 @@ class StatusBarController {
     {
         let notificationCenter = NotificationCenter.default
         statusItem = NSStatusBar.system.statusItem(withLength : NSStatusItem.squareLength)
+        
         notificationCenter
             .addObserver(self,
                          selector:#selector(self.addNewAddressMenu),
                          name: .addNewAddressMenu,
                          object: nil)
-
+        
+        notificationCenter
+            .addObserver(self,
+                         selector:#selector(self.actionResetAddress),
+                         name: .resetAll,
+                         object: nil)
+        
         notificationCenter
             .addObserver(self,
                          selector:#selector(self.removeActiveAddress),
@@ -74,13 +79,12 @@ class StatusBarController {
         bridge.closeAction = {
             self.popover.close()
         }
-        // Set the SwiftUI's ContentView to the Popover's ContentViewController
         popover.contentViewController = MainViewController()
         popover.contentSize = NSSize(width: 500, height: 100)
         
         showImageStatusBar()
         updateData()
-        priceUpdateTimer = Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
+        priceUpdateTimer = Timer.scheduledTimer(timeInterval: Constants.tickerInterval, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
         
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown], handler: mouseEventHandler)
         constructMenu()
@@ -162,7 +166,7 @@ class StatusBarController {
         addressDetailView.showWindow(sender)
         NSApplication.shared.activate(ignoringOtherApps: true)
     }
-   
+    
     @objc func actionCopyToClipboard(_ sender: SubMenuItem){
         if let address = sender.setting?.address {
             let board = NSPasteboard.general
@@ -177,6 +181,7 @@ class StatusBarController {
         } else {
             prefsView = PrefsView(prefs: UserStatus.shared.prefs)
         }
+        NSApp.activate(ignoringOtherApps: true)
     }
     
     @objc func actionResetAddress(_ sender: NSMenuItem){
@@ -231,11 +236,11 @@ class StatusBarController {
     
     func constructMenu() {
         registerNewAddress.target = self
-        resetAddresses.target = self
+        //        resetAddresses.target = self
         preference.target = self
         
         self.appMenu.addItem(registerNewAddress)
-        self.appMenu.addItem(resetAddresses)
+        //        self.appMenu.addItem(resetAddresses)
         self.appMenu.addItem(NSMenuItem.separator())
         setAddressMenuItems()
         setViewMenu(menuitem: ethStatusMenuView, height: 50)
@@ -319,14 +324,5 @@ class StatusBarController {
         if let link = sender.link {
             NSWorkspace.shared.open(link)
         }
-    }
-}
-
-extension String {
-    func widthForButton() -> CGFloat {
-        let buttonMargin = CGFloat(22)
-        let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
-        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: nil, context: nil)
-        return ceil(boundingBox.width + buttonMargin)
     }
 }

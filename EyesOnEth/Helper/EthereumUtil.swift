@@ -79,3 +79,12 @@ class EthereumUtil: NSWindowController {
         return nil
     }
 }
+
+extension String {
+    func widthForButton() -> CGFloat {
+        let buttonMargin = CGFloat(22)
+        let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: nil, context: nil)
+        return ceil(boundingBox.width + buttonMargin)
+    }
+}

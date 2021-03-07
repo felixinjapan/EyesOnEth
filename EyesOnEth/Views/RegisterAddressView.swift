@@ -38,6 +38,14 @@ struct RegisterAddressView: View {
             }
             TextField("Enter your eth address", text: $enteredText)
                 .padding()
+                .onHover(perform: { hovering in
+                    if hovering {
+                        NSCursor.iBeam.push()
+                        
+                    } else {
+                        NSCursor.pop()
+                    }
+                })
             
             HStack {
                 Button("Register") {

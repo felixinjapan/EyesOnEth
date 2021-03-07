@@ -12,11 +12,7 @@ import SwiftUI
 class WindowViewController: NSWindowController {    
     init<T: View>(_ uiview:T) {
         // Create the window and set the content view.
-        let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-            styleMask: [.titled, .closable, .miniaturizable, .fullSizeContentView],
-            backing: .buffered, defer: false)
-        window.center()
+        let window = NSWindow.createStandardWindow(withTitle: "", width: 480, height: 300)
         window.titleVisibility = .hidden
         window.tabbingMode = .disallowed
         window.contentView = NSHostingView(rootView: uiview)
@@ -30,6 +26,21 @@ class WindowViewController: NSWindowController {
     
     deinit {
         
+    }
+    
+}
+
+extension NSWindow {
+    
+    static func createStandardWindow(withTitle title: String,
+                                     width: CGFloat = 800, height: CGFloat = 600) -> NSWindow {
+        let window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: width, height: height),
+            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+            backing: .buffered, defer: false)
+        window.center()
+        window.title = title
+        return window
     }
     
 }

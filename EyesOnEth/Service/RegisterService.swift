@@ -10,12 +10,6 @@ import os
 
 class RegisterService {
     
-    static func reset(){
-        let defaults = UserDefaults.standard
-        defaults.removeObject(forKey: Constants.ethAddressKey)
-        NotificationCenter.default.post(name: .resetMenu, object: nil)
-    }
-    
     static func registerAddress(_ newAddr: String){
 
         guard let eAddr = EthereumAddress(newAddr) else {
@@ -39,11 +33,4 @@ class RegisterService {
         }
         NotificationCenter.default.post(name: .addNewAddressMenu, object: nil)
     }
-}
-
-extension Notification.Name {
-    static let addNewAddressMenu = Notification.Name("addNewAddressMenu")
-    static let removeActiveAddress = Notification.Name("removeActiveAddress")
-    
-    static let resetMenu = Notification.Name("resetMenu")
 }
