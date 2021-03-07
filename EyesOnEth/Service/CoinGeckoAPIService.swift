@@ -21,7 +21,9 @@ class CoinGeckoAPIService {
             case .success(let value):
                 let json = JSON(value)
                 success(json)
+                EthereumStatus.shared.apiStatus.coinGecko = true
             case .failure(let error):
+                EthereumStatus.shared.apiStatus.coinGecko = false
                 os_log("%@", log: .default, type: .error, String(describing: error))
             }
         }
@@ -36,7 +38,9 @@ class CoinGeckoAPIService {
             switch response.result {
             case .success(let value):
                 success(value)
+                EthereumStatus.shared.apiStatus.coinGecko = true
             case .failure(let error):
+                EthereumStatus.shared.apiStatus.coinGecko = false
                 os_log("%@", log: .default, type: .error, String(describing: error))
             }
         }

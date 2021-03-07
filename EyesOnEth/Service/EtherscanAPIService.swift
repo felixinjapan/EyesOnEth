@@ -23,7 +23,9 @@ class EtherscanAPIService {
                 let etherStatus = EthereumStatus.shared
                 etherStatus.estherscanGastracker = EtherscanGastracker(gastracker: json)
                 success()
+                EthereumStatus.shared.apiStatus.etherscan = true
             case .failure(let error):
+                EthereumStatus.shared.apiStatus.etherscan = false
                 os_log("%@", log: .default, type: .error, String(describing: error))
             }
         }

@@ -31,7 +31,7 @@ struct GasIndicatorView: View {
             
             }
             HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
-                Spacer().frame(width:13)
+//                Spacer().frame(width:13)
                 VStack{
                     Image("turtle_mozilla")
                         .resizable()
@@ -43,7 +43,7 @@ struct GasIndicatorView: View {
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.green)
                 }
-                Spacer().frame(width:15)
+                Spacer().frame(width:18)
                 VStack{
                     Image("rabbit_samsung")
                         .resizable()
@@ -55,7 +55,7 @@ struct GasIndicatorView: View {
                         .aspectRatio(contentMode: .fit)
                         .foregroundColor(.blue)
                 }
-                Spacer().frame(width:15)
+                Spacer().frame(width:18)
                 VStack{
                     Image("dove_apple")
                         .resizable()
@@ -77,7 +77,7 @@ struct GasIndicatorView: View {
                     self.updateGasPrice()
                 }
             } else {
-                UserStatus.shared.gasPriceViewIntervalChecker = EthereumUtil.getIntervalChecker(forInterval: Constants.gasPriceViewInterval)
+                UserStatus.shared.gasPriceViewIntervalChecker = EthereumUtil.getIntervalChecker(forInterval: Constants.gasPriceViewInterval.1)
                 self.updateGasPrice()
             }
         }

@@ -19,17 +19,14 @@ struct EthStatusMenuView: View {
     var body: some View {
         VStack {
             HStack(alignment:.center) {
+                Text("Ether price")
+                    .font(.system(size: 9, weight: .light, design: .default))
                 Image("ethereum2")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 14)
-                Text("Ether price")
-                    .font(.system(size: 9, weight: .light, design: .default))
             }
             HStack(alignment:.center) {
-                VStack{
-                    Spacer().frame(width:10)
-                }
                 VStack{
                     Text(self.ethPrice)
                         .foregroundColor(.primary)
@@ -52,7 +49,7 @@ struct EthStatusMenuView: View {
                     self.updateEthereumPrice()
                 }
             } else {
-                UserStatus.shared.ethPriceViewIntervalChecker = EthereumUtil.getIntervalChecker(forInterval: Constants.ethPriceViewInterval)
+                UserStatus.shared.ethPriceViewIntervalChecker = EthereumUtil.getIntervalChecker(forInterval: Constants.ethPriceViewInterval.1)
                 self.updateEthereumPrice()
             }
         }

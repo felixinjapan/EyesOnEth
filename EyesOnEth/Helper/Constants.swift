@@ -14,9 +14,9 @@ struct Constants {
     static let ethplorerApiKey = "ethplorerApiKey"
     static let activeAddress = "activeAddress"
     static let maxContractAddressCoinGecko = 116
-    static let gasPriceViewInterval = 15
-    static let ethPriceViewInterval = 10
-    static let tickerInterval:TimeInterval = 10
+    static let gasPriceViewInterval = ("gasPriceViewInterval", 12.0)
+    static let ethPriceViewInterval = ("ethPriceViewInterval", 12.0)
+    static let tickerInterval:(String, TimeInterval) = ("tickerInterval",12)
     
     static let externalEthUrl: Dictionary = [
         "coingecko": "https://www.coingecko.com/coins/ethereum",
@@ -38,9 +38,12 @@ struct Constants {
     ]
 }
 
-enum ExternalSiteSubmenu: String {
+enum ExternalSiteApi: String, CaseIterable, Identifiable {
+    var id: ExternalSiteApi{self}
+
     case etherscan = "etherscan"
     case ethplorer = "ethplorer"
+    case coingecko = "coingecko"
 }
 
 enum ExternalSite: String, CaseIterable {

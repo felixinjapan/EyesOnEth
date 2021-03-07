@@ -1,9 +1,3 @@
-//
-//  MainViewController.swift
-
-//  Copyright © 2019 Anagh Sharma. All rights reserved.
-//
-
 import AppKit
 import web3swift
 import os

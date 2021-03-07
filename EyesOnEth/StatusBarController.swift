@@ -79,12 +79,12 @@ class StatusBarController {
         bridge.closeAction = {
             self.popover.close()
         }
-        popover.contentViewController = MainViewController()
+        popover.contentViewController = NSViewController()
         popover.contentSize = NSSize(width: 500, height: 100)
         
         showImageStatusBar()
         updateData()
-        priceUpdateTimer = Timer.scheduledTimer(timeInterval: Constants.tickerInterval, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
+        priceUpdateTimer = Timer.scheduledTimer(timeInterval: Constants.tickerInterval.1, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
         
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown], handler: mouseEventHandler)
         constructMenu()
@@ -280,8 +280,8 @@ class StatusBarController {
                 subMenu.ethAddress = eth
                 subMenu = getDetailSubMenu(subMenu)
                 subMenu = getCopyClipboardSubMenu(subMenu)
-                menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteSubmenu.etherscan)
-                menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteSubmenu.ethplorer)
+                menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteApi.etherscan)
+                menu.submenu = getExternalLinkSubMenu(subMenu, type: ExternalSiteApi.ethplorer)
             }
             self.appMenu.addItem(NSMenuItem.separator())
         } else {
@@ -289,7 +289,7 @@ class StatusBarController {
         }
     }
     
-    func getExternalLinkSubMenu(_ subMenu: SubMenu, type: ExternalSiteSubmenu) -> SubMenu {
+    func getExternalLinkSubMenu(_ subMenu: SubMenu, type: ExternalSiteApi) -> SubMenu {
         let externalLinkMenu = SubMenuItem(title: "Check on \(type.rawValue)",  action: #selector(StatusBarController.openUrl(_:)),  keyEquivalent: "")
         if let format = Constants.externalTokenUrl[type.rawValue] {
             let link = String(format: format, subMenu.ethAddress!)

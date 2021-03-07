@@ -13,9 +13,6 @@
 		43050605256B5BE1001F6D89 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43050601256B5BE1001F6D89 /* StatusBarController.swift */; };
 		43050606256B5BE1001F6D89 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43050601256B5BE1001F6D89 /* StatusBarController.swift */; };
 		43050607256B5BE1001F6D89 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43050601256B5BE1001F6D89 /* StatusBarController.swift */; };
-		4305060C256B62C8001F6D89 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305060B256B62C7001F6D89 /* MainViewController.swift */; };
-		4305060D256B62C8001F6D89 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305060B256B62C7001F6D89 /* MainViewController.swift */; };
-		4305060E256B62C8001F6D89 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4305060B256B62C7001F6D89 /* MainViewController.swift */; };
 		4341952625656BAF00D600FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341952525656BAF00D600FB /* AppDelegate.swift */; };
 		4341952B25656BAF00D600FB /* DefiTicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4341952925656BAF00D600FB /* DefiTicker.xcdatamodeld */; };
 		4341952D25656BB300D600FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4341952C25656BB300D600FB /* Assets.xcassets */; };
@@ -35,6 +32,15 @@
 		434F47C625F4327000D64DE5 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47C525F4326F00D64DE5 /* Notification.swift */; };
 		434F47C725F4327000D64DE5 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47C525F4326F00D64DE5 /* Notification.swift */; };
 		434F47C825F4327000D64DE5 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47C525F4326F00D64DE5 /* Notification.swift */; };
+		434F47CD25F5057800D64DE5 /* AddressControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47CC25F5057800D64DE5 /* AddressControlView.swift */; };
+		434F47CE25F5057800D64DE5 /* AddressControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47CC25F5057800D64DE5 /* AddressControlView.swift */; };
+		434F47CF25F5057800D64DE5 /* AddressControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47CC25F5057800D64DE5 /* AddressControlView.swift */; };
+		434F47D825F505C200D64DE5 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47D625F505C200D64DE5 /* CreditView.swift */; };
+		434F47D925F505C200D64DE5 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47D625F505C200D64DE5 /* CreditView.swift */; };
+		434F47DA25F505C200D64DE5 /* CreditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47D625F505C200D64DE5 /* CreditView.swift */; };
+		434F47DB25F505C200D64DE5 /* APISettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47D725F505C200D64DE5 /* APISettingsView.swift */; };
+		434F47DC25F505C200D64DE5 /* APISettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47D725F505C200D64DE5 /* APISettingsView.swift */; };
+		434F47DD25F505C200D64DE5 /* APISettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F47D725F505C200D64DE5 /* APISettingsView.swift */; };
 		43A3348725E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
 		43A3348825E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
 		43A3348925E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */; };
@@ -134,7 +140,6 @@
 		42A3F71B7A4F1CBB21A2CCE4 /* Pods-EyesOnEth-EyesOnEthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyesOnEth-EyesOnEthUITests.debug.xcconfig"; path = "Target Support Files/Pods-EyesOnEth-EyesOnEthUITests/Pods-EyesOnEth-EyesOnEthUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		43050600256B5BE1001F6D89 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		43050601256B5BE1001F6D89 /* StatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
-		4305060B256B62C7001F6D89 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4310FD5625F2D9A9000A1BFC /* EyesOnEth.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = EyesOnEth.entitlements; sourceTree = "<group>"; };
 		4341952225656BAF00D600FB /* EyesOnEth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyesOnEth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4341952525656BAF00D600FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +158,9 @@
 		434F47B125F42DA500D64DE5 /* PrefsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefsView.swift; sourceTree = "<group>"; };
 		434F47B825F42DB700D64DE5 /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 		434F47C525F4326F00D64DE5 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		434F47CC25F5057800D64DE5 /* AddressControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressControlView.swift; sourceTree = "<group>"; };
+		434F47D625F505C200D64DE5 /* CreditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditView.swift; sourceTree = "<group>"; };
+		434F47D725F505C200D64DE5 /* APISettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISettingsView.swift; sourceTree = "<group>"; };
 		43A3348625E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinGeckoSimpleTokenPrice.swift; sourceTree = "<group>"; };
 		43A334BD25E339A20041C0EB /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		43A334C725E3930B0041C0EB /* LoadingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
@@ -256,7 +264,6 @@
 			children = (
 				43C633A425CFFBB700F40C72 /* Model */,
 				43AE6AC1257D10BF00D1A55C /* Views */,
-				4305060B256B62C7001F6D89 /* MainViewController.swift */,
 				43FB77D725C6B26400B8C5BE /* Status */,
 				43F94EED2577F8210042D646 /* Service */,
 				430505FF256B5BBB001F6D89 /* Helper */,
@@ -298,20 +305,55 @@
 			path = EyesOnEthUITests;
 			sourceTree = "<group>";
 		};
-		43AE6AC1257D10BF00D1A55C /* Views */ = {
+		434F47E425F5061A00D64DE5 /* Preference */ = {
 			isa = PBXGroup;
 			children = (
-				43A334E025E4D50F0041C0EB /* CircleImage.swift */,
+				434F47D725F505C200D64DE5 /* APISettingsView.swift */,
+				434F47CC25F5057800D64DE5 /* AddressControlView.swift */,
 				434F47B125F42DA500D64DE5 /* PrefsView.swift */,
-				43C8FCD325D6920700FC6EAF /* TokenListView.swift */,
-				434F478425F4263900D64DE5 /* ToolTipView.swift */,
-				43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */,
-				43A334C725E3930B0041C0EB /* LoadingAnimation.swift */,
+				434F47D625F505C200D64DE5 /* CreditView.swift */,
+			);
+			path = Preference;
+			sourceTree = "<group>";
+		};
+		434F47E525F5065800D64DE5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				43A334BD25E339A20041C0EB /* AlertView.swift */,
+				43A334C725E3930B0041C0EB /* LoadingAnimation.swift */,
+				434F478425F4263900D64DE5 /* ToolTipView.swift */,
+				43A334E025E4D50F0041C0EB /* CircleImage.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		434F47E925F5069C00D64DE5 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				43C8FCD325D6920700FC6EAF /* TokenListView.swift */,
+				43C8FDEF25DCB3D300FC6EAF /* DetailViewToken.swift */,
 				43C8FC8625D682EE00FC6EAF /* DetailViewEth.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		434F47EA25F5070F00D64DE5 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
 				43C6338D25CF79A600F40C72 /* GasIndicatorMenuView.swift */,
 				43C633E225D2DEAA00F40C72 /* EthStatusMenuView.swift */,
 				43AE6AC2257D10BF00D1A55C /* RegisterAddressView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		43AE6AC1257D10BF00D1A55C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				434F47E425F5061A00D64DE5 /* Preference */,
+				434F47E525F5065800D64DE5 /* Resource */,
+				434F47EA25F5070F00D64DE5 /* Menu */,
+				434F47E925F5069C00D64DE5 /* Details */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -610,6 +652,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				434F47B925F42DB700D64DE5 /* Prefs.swift in Sources */,
+				434F47D825F505C200D64DE5 /* CreditView.swift in Sources */,
 				43C8FD7B25D6D40E00FC6EAF /* WindowViewController.swift in Sources */,
 				4341952B25656BAF00D600FB /* DefiTicker.xcdatamodeld in Sources */,
 				43C6338E25CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
@@ -624,7 +667,6 @@
 				43FB77E325C6B49900B8C5BE /* PriceService.swift in Sources */,
 				4341952625656BAF00D600FB /* AppDelegate.swift in Sources */,
 				43C633B825D05BD700F40C72 /* EtherscanGastracker.swift in Sources */,
-				4305060C256B62C8001F6D89 /* MainViewController.swift in Sources */,
 				434F47C625F4327000D64DE5 /* Notification.swift in Sources */,
 				43C633A625CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
 				434F478525F4263A00D64DE5 /* ToolTipView.swift in Sources */,
@@ -635,9 +677,11 @@
 				43A334E125E4D5100041C0EB /* CircleImage.swift in Sources */,
 				43C8FDF025DCB3D300FC6EAF /* DetailViewToken.swift in Sources */,
 				43B13F7525C6AFD80051165D /* EthplorerAPIService.swift in Sources */,
+				434F47DB25F505C200D64DE5 /* APISettingsView.swift in Sources */,
 				43F6AFF325E809AC00B8971A /* DecodingUtil.swift in Sources */,
 				43A334C825E3930B0041C0EB /* LoadingAnimation.swift in Sources */,
 				43C8FDD025DABD0400FC6EAF /* EthereumSetting.swift in Sources */,
+				434F47CD25F5057800D64DE5 /* AddressControlView.swift in Sources */,
 				43050602256B5BE1001F6D89 /* EventMonitor.swift in Sources */,
 				43AC49B925A305D700916709 /* Constants.swift in Sources */,
 				43A334BE25E339A20041C0EB /* AlertView.swift in Sources */,
@@ -668,9 +712,12 @@
 				43C633E425D2DEAA00F40C72 /* EthStatusMenuView.swift in Sources */,
 				4341953F25656BB300D600FB /* EyesOnEthTests.swift in Sources */,
 				43A3348825E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */,
+				434F47DC25F505C200D64DE5 /* APISettingsView.swift in Sources */,
 				43AE6AC4257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
 				434F478625F4263A00D64DE5 /* ToolTipView.swift in Sources */,
 				43C633CD25D0612200F40C72 /* EthereumStatus.swift in Sources */,
+				434F47CE25F5057800D64DE5 /* AddressControlView.swift in Sources */,
+				434F47D925F505C200D64DE5 /* CreditView.swift in Sources */,
 				43A334BF25E339A20041C0EB /* AlertView.swift in Sources */,
 				43C8FCD525D6920700FC6EAF /* TokenListView.swift in Sources */,
 				43C633A725CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
@@ -680,7 +727,6 @@
 				43C633EE25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
 				43C6338F25CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
 				434F47C725F4327000D64DE5 /* Notification.swift in Sources */,
-				4305060D256B62C8001F6D89 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,9 +752,12 @@
 				43C633E525D2DEAB00F40C72 /* EthStatusMenuView.swift in Sources */,
 				4341954A25656BB300D600FB /* EyesOnEthUITests.swift in Sources */,
 				43A3348925E111E60041C0EB /* CoinGeckoSimpleTokenPrice.swift in Sources */,
+				434F47DD25F505C200D64DE5 /* APISettingsView.swift in Sources */,
 				43AE6AC5257D10BF00D1A55C /* RegisterAddressView.swift in Sources */,
 				434F478725F4263A00D64DE5 /* ToolTipView.swift in Sources */,
 				43C633CE25D0612200F40C72 /* EthereumStatus.swift in Sources */,
+				434F47CF25F5057800D64DE5 /* AddressControlView.swift in Sources */,
+				434F47DA25F505C200D64DE5 /* CreditView.swift in Sources */,
 				43A334C025E339A20041C0EB /* AlertView.swift in Sources */,
 				43C8FCD625D6920700FC6EAF /* TokenListView.swift in Sources */,
 				43C633A825CFFBD300F40C72 /* EthplorerGetAddressInfo.swift in Sources */,
@@ -718,7 +767,6 @@
 				43C633EF25D62A8200F40C72 /* CoinGeckoSimplePrice.swift in Sources */,
 				43C6339025CF79A600F40C72 /* GasIndicatorMenuView.swift in Sources */,
 				434F47C825F4327000D64DE5 /* Notification.swift in Sources */,
-				4305060E256B62C8001F6D89 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
