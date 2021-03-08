@@ -1,8 +1,8 @@
 //
 //  Constants.swift
-//  DefiTicker
+//  
 //
-//  Created by Chon, Felix | Felix | DCMS on 2021/01/04.
+//  Created by Chon, Felix  on 2021/01/04.
 //
 
 import Foundation
@@ -13,7 +13,7 @@ struct Constants {
     static let ethAddressKey = "ethAddressKey"
     static let ethplorerApiKey = "ethplorerApiKey"
     static let activeAddress = "activeAddress"
-    static let maxContractAddressCoinGecko = 116
+    static let maxContractAddressCoinGecko = 11
     static let gasPriceViewInterval = ("gasPriceViewInterval", 12.0)
     static let ethPriceViewInterval = ("ethPriceViewInterval", 12.0)
     static let tickerInterval:(String, TimeInterval) = ("tickerInterval",12)

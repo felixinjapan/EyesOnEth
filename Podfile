@@ -5,7 +5,7 @@ target 'EyesOnEth' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for DefiTicker
+  # Pods for 
   pod 'Alamofire', '~> 5.2'
   pod 'SwiftyJSON', '~> 5.0.0'
   pod 'web3swift', '~> 2.3.0'

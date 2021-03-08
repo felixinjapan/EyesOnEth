@@ -1,61 +1,61 @@
 {
   "images" : [
     {
-      "filename" : "Ambar16.png",
+      "filename" : "16x16.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "Ambar16@2x.png",
+      "filename" : "32x32.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
-      "filename" : "Ambar32.png",
+      "filename" : "32x32-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "Ambar32@2x.png",
+      "filename" : "64x64.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
-      "filename" : "Ambar128.png",
+      "filename" : "128x128.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
-      "filename" : "Ambar128@2x.png",
+      "filename" : "256x256.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
-      "filename" : "Ambar256.png",
+      "filename" : "256x256-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "Ambar256@2x.png",
+      "filename" : "512x512.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "Ambar512.png",
+      "filename" : "512x512-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "Ambar512@2x.png",
+      "filename" : "1024x1024.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"

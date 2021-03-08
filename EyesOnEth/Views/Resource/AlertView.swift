@@ -19,6 +19,8 @@ struct AlertView: View {
             Alert(title: Text("Alert"),
                   message: Text(self.msg),
                   dismissButton: .default(Text("OK")))
+        }.onAppear(){
+            self.alertIsShowing = false
         }
     }
 }

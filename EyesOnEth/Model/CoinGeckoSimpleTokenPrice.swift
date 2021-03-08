@@ -1,8 +1,8 @@
 //
 //  Constants.swift
-//  DefiTicker
+//  
 //  https://www.coingecko.com/api/documentations/v3#/
-//  Created by Chon, Felix | Felix | DCMS on 2021/01/04.
+//  Created by Chon, Felix  on 2021/01/04.
 //
 import Foundation
 import Cocoa

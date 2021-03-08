@@ -1,7 +1,7 @@
 //
 //  Constants.swift
-//  DefiTicker
-//  Created by Chon, Felix | Felix | DCMS on 2021/01/04.
+//  
+//  Created by Chon, Felix  on 2021/01/04.
 //
 import Foundation
 import SwiftyJSON

@@ -1,8 +1,8 @@
 //
 //  StatusBarController.swift
-//  DefiTicker
+//  
 //
-//  Created by Chon, Felix | Felix | DCMS on 2020/11/18.
+//  Created by Chon, Felix  on 2020/11/18.
 //
 
 import AppKit
@@ -100,6 +100,7 @@ class StatusBarController {
     
     @objc fileprivate func removeActiveAddress() {
         UserStatus.shared.activeAddress = nil
+        UserStatus.shared.ethplorerGetAddressInfo = nil
         UserDefaults.standard.removeObject(forKey: Constants.activeAddress)
         self.showImageStatusBar()
     }
@@ -236,11 +237,9 @@ class StatusBarController {
     
     func constructMenu() {
         registerNewAddress.target = self
-        //        resetAddresses.target = self
         preference.target = self
         
         self.appMenu.addItem(registerNewAddress)
-        //        self.appMenu.addItem(resetAddresses)
         self.appMenu.addItem(NSMenuItem.separator())
         setAddressMenuItems()
         setViewMenu(menuitem: ethStatusMenuView, height: 50)

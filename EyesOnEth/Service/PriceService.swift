@@ -1,8 +1,8 @@
 //
 //  PriceService.swift
-//  DefiTicker
+//  
 //
-//  Created by Chon, Felix | Felix | DCMS on 2021/01/31.
+//  Created by Chon, Felix  on 2021/01/31.
 //
 
 import Foundation

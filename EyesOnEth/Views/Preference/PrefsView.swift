@@ -8,6 +8,7 @@ struct PrefsView: View {
         case api
         case credit
     }
+    
     var body: some View {
         TabView {
             AddressControlView().environmentObject(prefs)

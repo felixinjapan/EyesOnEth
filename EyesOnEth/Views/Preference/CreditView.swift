@@ -8,7 +8,7 @@ struct CreditView: View {
         VStack {
             HStack{
                 Text("EyesOnEth").font(.title)
-                Image("ethereum2").resizable().scaledToFit()
+                Image("logo").resizable().scaledToFit()
             }
             Spacer().frame(height: 60)
             HStack{
