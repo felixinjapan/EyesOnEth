@@ -84,7 +84,8 @@ class StatusBarController {
         
         showImageStatusBar()
         updateData()
-        priceUpdateTimer = Timer.scheduledTimer(timeInterval: Constants.tickerInterval.1, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
+        let time = RemoteConfigHandler.shared.getRemoteConfigValueDouble(.priceTickerInterval)
+        priceUpdateTimer = Timer.scheduledTimer(timeInterval: time, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
         
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown], handler: mouseEventHandler)
         constructMenu()
@@ -110,8 +111,9 @@ class StatusBarController {
             UserStatus.shared.ethplorerGetAddressInfo = EthplorerGetAddressInfo(getAddressInfo: json)
             var missingTotal:Double = 0
             if let dict = UserStatus.shared.ethplorerGetAddressInfo?.priceFalseKV, dict.count > 0 {
-                os_log("some coins price were missing. count: %d", dict.count)
-                if dict.count > Constants.maxContractAddressCoinGecko {
+                let limit = RemoteConfigHandler.shared.getRemoteConfigValueInt(.maxContractAddressCoinGecko)
+                os_log("some coins price were missing. count: %d, limit: %d", dict.count, limit)
+                if dict.count > limit {
                     self.removeActiveAddress()
                     let alertViewUnsupportedAddress =  WindowViewController(AlertView(msg: "This address has too many\n tokens that has no price data"))
                     alertViewUnsupportedAddress.showWindow(self)

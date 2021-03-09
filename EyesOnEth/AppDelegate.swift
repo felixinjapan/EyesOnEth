@@ -7,6 +7,7 @@
 
 import Cocoa
 import SwiftUI
+import FirebaseCore
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -17,7 +18,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let activeAddress = UserDefaults.standard.string(forKey: Constants.activeAddress) {
             UserStatus.shared.activeAddress = activeAddress
         }
+        UserDefaults.standard.register(
+          defaults: ["NSApplicationCrashOnExceptions" : true]
+        )
+        FirebaseApp.configure()
+        Timer.scheduledTimer(timeInterval: 300, target: self, selector: #selector(self.updateData), userInfo: nil, repeats: true)
         statusBar = StatusBarController.init()
+    }
+    
+    @objc func updateData(){
+        RemoteConfigHandler.shared.update()
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {

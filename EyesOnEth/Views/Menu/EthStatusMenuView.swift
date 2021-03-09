@@ -49,7 +49,8 @@ struct EthStatusMenuView: View {
                     self.updateEthereumPrice()
                 }
             } else {
-                UserStatus.shared.ethPriceViewIntervalChecker = EthereumUtil.getIntervalChecker(forInterval: Constants.ethPriceViewInterval.1)
+                let time = RemoteConfigHandler.shared.getRemoteConfigValueDouble(.ethPriceViewInterval)
+                UserStatus.shared.ethPriceViewIntervalChecker = EthereumUtil.getIntervalChecker(forInterval: time)
                 self.updateEthereumPrice()
             }
         }

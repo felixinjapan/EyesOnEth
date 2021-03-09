@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CircleImage: View {
     var image: NSImage?
-    var shadowRadius: CGFloat = 10
+    var shadowRadius: CGFloat = 5
 
     var body: some View {
         if let img = self.image{

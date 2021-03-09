@@ -29,8 +29,6 @@ struct PrefsView: View {
         }
         .padding(20)
         .frame(width: 375, height: 300)
-        //        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        
         
     }
     

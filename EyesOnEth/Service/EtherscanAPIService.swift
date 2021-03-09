@@ -13,7 +13,10 @@ import os
 class EtherscanAPIService {
     
     func gastracker(_ success: @escaping () -> Void) {
-        let param = ["apiKey": "3W48V8G4WTQ9FDVISF1TNIHWTHWB8H7I76", "action": "gasoracle"]
+        guard let key = RemoteConfigHandler.shared.getRemoteConfigValueString(.etherscanKey) else {
+            return
+        }
+        let param = ["apiKey": key, "action": "gasoracle"]
         let host = "https://api.etherscan.io/api?module=gastracker"
         AF.request(host, parameters: param).responseJSON {
             response in

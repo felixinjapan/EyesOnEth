@@ -10,13 +10,10 @@ import Foundation
 struct Constants {
     
     static let baseImageUrlEthPlorer = "https://ethplorer.io/"
+    // user default keys
+    static let activeAddress = "activeAddress"
     static let ethAddressKey = "ethAddressKey"
     static let ethplorerApiKey = "ethplorerApiKey"
-    static let activeAddress = "activeAddress"
-    static let maxContractAddressCoinGecko = 11
-    static let gasPriceViewInterval = ("gasPriceViewInterval", 12.0)
-    static let ethPriceViewInterval = ("ethPriceViewInterval", 12.0)
-    static let tickerInterval:(String, TimeInterval) = ("tickerInterval",12)
     
     static let externalEthUrl: Dictionary = [
         "coingecko": "https://www.coingecko.com/coins/ethereum",

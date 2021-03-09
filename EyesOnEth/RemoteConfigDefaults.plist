@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>priceTickerInterval</key>
+	<integer>30</integer>
+	<key>gasPriceViewInterval</key>
+	<integer>30</integer>
+	<key>ethPriceViewInterval</key>
+	<integer>30</integer>
+	<key>maxContractAddressCoinGecko</key>
+	<integer>160</integer>
+	<key>etherscanKey</key>
+	<string>3W48V8G4WTQ9FDVISF1TNIHWTHWB8H7I76</string>
+	<key>ethplorerApiKey</key>
+	<string>EK-aYF35-py3TUdh-ydqEm</string>
+</dict>
+</plist>

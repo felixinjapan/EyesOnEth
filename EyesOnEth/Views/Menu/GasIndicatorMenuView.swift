@@ -31,7 +31,6 @@ struct GasIndicatorView: View {
             
             }
             HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
-//                Spacer().frame(width:13)
                 VStack{
                     Image("turtle_mozilla")
                         .resizable()
@@ -77,7 +76,8 @@ struct GasIndicatorView: View {
                     self.updateGasPrice()
                 }
             } else {
-                UserStatus.shared.gasPriceViewIntervalChecker = EthereumUtil.getIntervalChecker(forInterval: Constants.gasPriceViewInterval.1)
+                let time = RemoteConfigHandler.shared.getRemoteConfigValueDouble(.gasPriceViewInterval)
+                UserStatus.shared.gasPriceViewIntervalChecker = EthereumUtil.getIntervalChecker(forInterval: time)
                 self.updateGasPrice()
             }
         }
