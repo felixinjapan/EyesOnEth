@@ -15,6 +15,7 @@ class WindowViewController: NSWindowController {
         let window = NSWindow.createStandardWindow(withTitle: "", width: 480, height: 300)
         window.titleVisibility = .hidden
         window.tabbingMode = .disallowed
+        window.styleMask.remove(.resizable)
         window.contentView = NSHostingView(rootView: uiview)
         window.makeKeyAndOrderFront(nil)
         super.init(window: window)

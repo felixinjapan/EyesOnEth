@@ -11,4 +11,5 @@ extension Notification.Name {
     static let addNewAddressMenu = Notification.Name("addNewAddressMenu")
     static let removeActiveAddress = Notification.Name("removeActiveAddress")
     static let resetAll = Notification.Name("resetAll")
+    static let initTickerTimer = Notification.Name("initTickerTimer")
 }

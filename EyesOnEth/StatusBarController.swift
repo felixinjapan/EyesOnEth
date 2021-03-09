@@ -35,7 +35,7 @@ class StatusBarController {
     
     let registerNewAddress  = NSMenuItem(title: "Add new address",  action: #selector(StatusBarController.actionMenuAddNewAddress(_:)),  keyEquivalent: "a")
     let preference = NSMenuItem(title: "Preference", action: #selector(StatusBarController.actionPreference(_:)), keyEquivalent: "p")
-    var priceUpdateTimer: Timer?
+    weak var priceUpdateTimer: Timer?
     
     var gasIndicatorMenuView:GasIndicatorView = GasIndicatorView()
     var ethStatusMenuView:EthStatusMenuView = EthStatusMenuView()
@@ -76,6 +76,12 @@ class StatusBarController {
                          name: .removeActiveAddress,
                          object: nil)
         
+        notificationCenter
+            .addObserver(self,
+                         selector:#selector(self.initTickerTimer),
+                         name: .initTickerTimer,
+                         object: nil)
+        
         bridge.closeAction = {
             self.popover.close()
         }
@@ -84,9 +90,7 @@ class StatusBarController {
         
         showImageStatusBar()
         updateData()
-        let time = RemoteConfigHandler.shared.getRemoteConfigValueDouble(.priceTickerInterval)
-        priceUpdateTimer = Timer.scheduledTimer(timeInterval: time, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
-        
+        initTickerTimer()
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown], handler: mouseEventHandler)
         constructMenu()
     }
@@ -97,6 +101,15 @@ class StatusBarController {
             button.title = "$\(totalValue)"
             self.statusItem.length = button.title.widthForButton()
         }
+    }
+    
+    @objc func initTickerTimer(){
+        if self.priceUpdateTimer != nil {
+            self.priceUpdateTimer?.invalidate()
+            self.priceUpdateTimer = nil
+        }
+        let time = RemoteConfigHandler.shared.getRemoteConfigValueDouble(.priceTickerInterval)
+        self.priceUpdateTimer = Timer.scheduledTimer(timeInterval: time, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
     }
     
     @objc fileprivate func removeActiveAddress() {
@@ -148,6 +161,7 @@ class StatusBarController {
         if let addr = sender.ethAddress {
             UserDefaults.standard.setValue(addr, forKey: Constants.activeAddress)
             UserStatus.shared.activeAddress = addr
+            self.updateData()
         }
         os_log("%@", log: .default, type: .debug, UserStatus.shared.activeAddress!)
         sender.state = NSControl.StateValue.on

@@ -8,6 +8,7 @@
 import Cocoa
 import SwiftUI
 import FirebaseCore
+import os
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -27,7 +28,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func updateData(){
+        os_log("update remote config values")
         RemoteConfigHandler.shared.update()
+        NotificationCenter.default.post(name: .initTickerTimer, object: nil)
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
