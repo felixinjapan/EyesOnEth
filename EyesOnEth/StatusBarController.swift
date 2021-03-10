@@ -40,6 +40,7 @@ class StatusBarController {
     var gasIndicatorMenuView:GasIndicatorView = GasIndicatorView()
     var ethStatusMenuView:EthStatusMenuView = EthStatusMenuView()
     
+    let clickFiringChecker = EthereumUtil.getIntervalChecker(forInterval: 2)
     
     
     fileprivate func showImageStatusBar() {
@@ -150,6 +151,14 @@ class StatusBarController {
     }
     
     func changeState(_ sender: AppMenuItem) {
+        if let current = UserStatus.shared.activeAddress, let addr = sender.ethAddress, current == addr {
+            os_log("No need to call api to update the price...", log: .default, type: .debug)
+            return
+        }
+        if !clickFiringChecker() {
+            os_log("Too many firing...", log: .default, type: .debug)
+            return
+        }
         // Loops over the array of menu items
         for menuItem in appMenu.items {
             // Switches off the first (and unique) 'on' item
@@ -159,9 +168,17 @@ class StatusBarController {
             }
         }
         if let addr = sender.ethAddress {
+            self.initTickerTimer()
             UserDefaults.standard.setValue(addr, forKey: Constants.activeAddress)
             UserStatus.shared.activeAddress = addr
             self.updateData()
+        }
+        // To prevent massive api calls
+        if let statusBarButton = statusItem.button {
+            statusBarButton.isEnabled = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+                statusBarButton.isEnabled = true
+            }
         }
         os_log("%@", log: .default, type: .debug, UserStatus.shared.activeAddress!)
         sender.state = NSControl.StateValue.on

@@ -22,9 +22,16 @@ class EthplorerAPIService {
             response in
             switch response.result {
             case .success(let value):
-                let json = JSON(value)
-                success(json)
                 EthereumStatus.shared.apiStatus.ethplorer = true
+                let json = JSON(value)
+                let err = json["error"]["code"].intValue
+                if err > 0 {
+                    os_log("Error during the ethplorer calls. error code: %d", log: .default, type: .error, err)
+                    EthereumStatus.shared.apiStatus.ethplorer = false
+                } else {
+                    success(json)
+                    EthereumStatus.shared.apiStatus.ethplorer = true
+                }
             case .failure(let error):
                 EthereumStatus.shared.apiStatus.ethplorer = false
                 os_log("%@", log: .default, type: .error, String(describing: error))
