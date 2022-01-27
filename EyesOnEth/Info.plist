@@ -26,6 +26,11 @@
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>LSUIElement</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Felix Chon 2020</string>
 	<key>NSMainStoryboardFile</key>
@@ -36,10 +41,5 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<false/>
-	</dict>
 </dict>
 </plist>

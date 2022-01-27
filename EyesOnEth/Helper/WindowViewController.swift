@@ -10,10 +10,9 @@ import AppKit
 import SwiftUI
 
 class WindowViewController: NSWindowController {    
-    init<T: View>(_ uiview:T) {
+    init<T: View>(title:String = "" ,_ uiview:T) {
         // Create the window and set the content view.
-        let window = NSWindow.createStandardWindow(withTitle: "", width: 480, height: 300)
-        window.titleVisibility = .hidden
+        let window = NSWindow.createStandardWindow(withTitle: title, width: 480, height: 300)
         window.tabbingMode = .disallowed
         window.styleMask.remove(.resizable)
         window.contentView = NSHostingView(rootView: uiview)

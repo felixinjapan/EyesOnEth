@@ -12,7 +12,7 @@ struct CreditView: View {
             }
             Spacer().frame(height: 60)
             HStack{
-                Text("Ver 1.0.0").font(.subheadline)
+                Text("Ver 1.0.3").font(.subheadline)
                 Spacer().frame(height: 30)
                 VStack(alignment: .trailing){
                     Text("Felix Chon").font(.subheadline)

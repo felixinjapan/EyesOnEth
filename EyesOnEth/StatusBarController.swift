@@ -196,7 +196,10 @@ class StatusBarController {
     }
     
     @objc func actionAddressDetail(_ sender: SubMenuItem){
-        let addressDetailView = WindowViewController(TokenListView().environmentObject(sender.setting!))
+        let f = DateFormatter()
+        f.dateFormat = "yyyy/MM/dd HH:mm"
+        let now = Date()
+        let addressDetailView = WindowViewController(title:f.string(from: now) ,TokenListView().environmentObject(sender.setting!))
         addressDetailView.showWindow(sender)
         NSApplication.shared.activate(ignoringOtherApps: true)
     }
@@ -269,12 +272,17 @@ class StatusBarController {
     }
     
     func constructMenu() {
+        if let currentVer = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String, let prodVer = RemoteConfigHandler.shared.getRemoteConfigValueString(.serviceVersion) {
+            // for the apple reviewer mode
+            if currentVer.compare(prodVer, options: .numeric) == .orderedDescending {
+                return constructReviewerModeMenu()
+            }
+        }
         registerNewAddress.target = self
-        preference.target = self
-        
         self.appMenu.addItem(registerNewAddress)
         self.appMenu.addItem(NSMenuItem.separator())
         setAddressMenuItems()
+        preference.target = self
         setViewMenu(menuitem: ethStatusMenuView, height: 50)
         self.appMenu.addItem(NSMenuItem.separator())
         setViewMenu(menuitem: gasIndicatorMenuView, height: 80)
@@ -284,16 +292,33 @@ class StatusBarController {
         statusItem.menu = appMenu
     }
     
+    func constructReviewerModeMenu(){
+//        let prefs = UserStatus.shared.prefs
+//        let array = ["0x3dfd23a6c5e8bbcfc9581d2e864a68feb6a076d3", "0x4ddc2d193948926d02f9b1fe9e1daa0718270ed5"]
+//        prefs.ethAddresses = array
+//        
+//        setAddressMenuItems()
+        setViewMenu(menuitem: ethStatusMenuView, height: 50)
+        self.appMenu.addItem(NSMenuItem.separator())
+        setViewMenu(menuitem: gasIndicatorMenuView, height: 80)
+        self.appMenu.addItem(NSMenuItem.separator())
+        self.appMenu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        statusItem.menu = appMenu
+    }
+    
     private func setViewMenu<T: View>(menuitem view:T, height:UInt){
-        let gasMenuItem = NSMenuItem()
+        let menuItem = NSMenuItem()
         let view = NSHostingView(rootView: view)
-        let menuSize = self.appMenu.size
+        var menuSize = self.appMenu.size
+        if menuSize.width == 0 {
+            menuSize.width = 185
+        }
         let x = (menuSize.width) * 0.5
         let y = (menuSize.height) * 0.5
         os_log("Coordinate x: %f, y: %f, width: %f", x,y,menuSize.width)
         view.frame = NSRect(x: x, y: y, width: menuSize.width, height: CGFloat(height))
-        gasMenuItem.view = view
-        self.appMenu.addItem(gasMenuItem)
+        menuItem.view = view
+        self.appMenu.addItem(menuItem)
     }
     
     func setAddressMenuItems() {

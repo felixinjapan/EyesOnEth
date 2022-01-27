@@ -13,6 +13,7 @@ class RemoteConfigHandler {
 
         case etherscanKey = "etherscanKey"
         case ethplorerApiKey = "ethplorerApiKey"
+        case serviceVersion = "serviceVersion"
         case maxContractAddressCoinGecko = "maxContractAddressCoinGecko"
     }
 

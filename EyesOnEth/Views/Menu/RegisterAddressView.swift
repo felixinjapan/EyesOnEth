@@ -31,12 +31,12 @@ struct RegisterAddressView: View {
                 Image("ethereum")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                Text("Register new wallet address")
+                Text("The Ethereum Blockchain Explorer")
                     .font(.body)
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                     .multilineTextAlignment(.center)
             }
-            TextField("Enter your eth address", text: $enteredText)
+            TextField("Type address here", text: $enteredText)
                 .padding()
                 .onHover(perform: { hovering in
                     if hovering {
@@ -48,7 +48,7 @@ struct RegisterAddressView: View {
                 })
             
             HStack {
-                Button("Register") {
+                Button("Ok") {
                     // sheet dismissed using Binding
                     // self.isVisible = false
                     

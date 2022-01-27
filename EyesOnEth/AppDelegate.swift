@@ -24,6 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         )
         FirebaseApp.configure()
         Timer.scheduledTimer(timeInterval: 300, target: self, selector: #selector(self.updateData), userInfo: nil, repeats: true)
+        RemoteConfigHandler.shared.update()
         statusBar = StatusBarController.init()
     }
     
