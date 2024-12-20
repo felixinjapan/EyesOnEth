@@ -26,6 +26,6 @@ This app utilizes APIs from
 - Ethplorer
 
 ## Install
-
+ 
 [EyesOnEth-1.0.2.dmg](https://github.com/felixinjapan/EyesOnEth/raw/main/EyesOnEth-1.0.2.dmg)
 
