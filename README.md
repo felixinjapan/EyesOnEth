@@ -3,7 +3,6 @@
 # EyesOnEth
 
 > Essential Ethereum Tool for MacOS [Web](https://eyesonethweb.gtsb.io/about)  
- 
 Simple and Light!
 Essential macOS menu bar app for your Ethereum wallets! 
 
