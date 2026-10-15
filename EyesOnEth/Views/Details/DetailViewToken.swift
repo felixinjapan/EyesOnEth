@@ -73,88 +73,106 @@ struct DetailViewToken: View {
             Divider()
             HStack {
                 if let url = EthereumUtil.getExternalLink(target: token.website, type: ExternalSite.website) {
-                    CircleImage(image: NSImage(imageLiteralResourceName: "website"))
-                        .frame(width: 50, height: 50, alignment: .center)
-                        .onTapGesture {
-                            NSWorkspace.shared.open(url)
+                    Button {
+                        NSWorkspace.shared.open(url)
+                    } label: {
+                        CircleImage(image: NSImage(imageLiteralResourceName: "website"))
+                            .frame(width: 50, height: 50, alignment: .center)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .accessibilityLabel(Text("Open \(token.name) website"))
+                    .onHover(perform: { hovering in
+                        if hovering {
+                            NSCursor.pointingHand.push()
+                        } else {
+                            NSCursor.pop()
                         }
-                        .onHover(perform: { hovering in
-                            if hovering {
-                                NSCursor.pointingHand.push()
-                            } else {
-                                NSCursor.pop()
-                            }
-                        })
+                    })
                 }
                 if let url = EthereumUtil.getExternalLink(target: token.coingecko, type: ExternalSite.coingecko) {
-                    CircleImage(image: NSImage(imageLiteralResourceName: "coingecko"))
-                        .frame(width: 50, height: 50, alignment: .center)
-                        .onTapGesture {
-                            NSWorkspace.shared.open(url)
+                    Button {
+                        NSWorkspace.shared.open(url)
+                    } label: {
+                        CircleImage(image: NSImage(imageLiteralResourceName: "coingecko"))
+                            .frame(width: 50, height: 50, alignment: .center)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .accessibilityLabel(Text("Open \(token.name) on CoinGecko"))
+                    .onHover(perform: { hovering in
+                        if hovering {
+                            NSCursor.pointingHand.push()
+                        } else {
+                            NSCursor.pop()
                         }
-                        .onHover(perform: { hovering in
-                            if hovering {
-                                NSCursor.pointingHand.push()
-                            } else {
-                                NSCursor.pop()
-                            }
-                        })
+                    })
                 }
                 if let url = EthereumUtil.getExternalLink(target: token.facebook, type: ExternalSite.facebook) {
-                    CircleImage(image: NSImage(imageLiteralResourceName: "facebook"))
-                        .frame(width: 50, height: 50, alignment: .center)
-                        .onTapGesture {
-                            NSWorkspace.shared.open(url)
+                    Button {
+                        NSWorkspace.shared.open(url)
+                    } label: {
+                        CircleImage(image: NSImage(imageLiteralResourceName: "facebook"))
+                            .frame(width: 50, height: 50, alignment: .center)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .accessibilityLabel(Text("Open \(token.name) on Facebook"))
+                    .onHover(perform: { hovering in
+                        if hovering {
+                            NSCursor.pointingHand.push()
+                        } else {
+                            NSCursor.pop()
                         }
-                        .onHover(perform: { hovering in
-                            if hovering {
-                                NSCursor.pointingHand.push()
-                            } else {
-                                NSCursor.pop()
-                            }
-                        })
+                    })
                 }
                 if let url = EthereumUtil.getExternalLink(target: token.twitter, type: ExternalSite.twitter) {
-                    CircleImage(image: NSImage(imageLiteralResourceName: "twitter"))
-                        .frame(width: 50, height: 50, alignment: .center)
-                        .onTapGesture {
-                            NSWorkspace.shared.open(url)
+                    Button {
+                        NSWorkspace.shared.open(url)
+                    } label: {
+                        CircleImage(image: NSImage(imageLiteralResourceName: "twitter"))
+                            .frame(width: 50, height: 50, alignment: .center)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .accessibilityLabel(Text("Open \(token.name) on Twitter"))
+                    .onHover(perform: { hovering in
+                        if hovering {
+                            NSCursor.pointingHand.push()
+                        } else {
+                            NSCursor.pop()
                         }
-                        .onHover(perform: { hovering in
-                            if hovering {
-                                NSCursor.pointingHand.push()
-                            } else {
-                                NSCursor.pop()
-                            }
-                        })
+                    })
                 }
                 if let url = EthereumUtil.getExternalLink(target: token.reddit, type: ExternalSite.reddit) {
-                    CircleImage(image: NSImage(imageLiteralResourceName: "reddit"))
-                        .frame(width: 50, height: 50, alignment: .center)
-                        .onTapGesture {
-                            NSWorkspace.shared.open(url)
+                    Button {
+                        NSWorkspace.shared.open(url)
+                    } label: {
+                        CircleImage(image: NSImage(imageLiteralResourceName: "reddit"))
+                            .frame(width: 50, height: 50, alignment: .center)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .accessibilityLabel(Text("Open \(token.name) on Reddit"))
+                    .onHover(perform: { hovering in
+                        if hovering {
+                            NSCursor.pointingHand.push()
+                        } else {
+                            NSCursor.pop()
                         }
-                        .onHover(perform: { hovering in
-                            if hovering {
-                                NSCursor.pointingHand.push()
-                            } else {
-                                NSCursor.pop()
-                            }
-                        })
+                    })
                 }
                 if let url = EthereumUtil.getExternalLink(target: token.telegram, type: ExternalSite.telegram) {
-                    CircleImage(image: NSImage(imageLiteralResourceName: "telegram"))
-                        .frame(width: 50, height: 50, alignment: .center)
-                        .onTapGesture {
-                            NSWorkspace.shared.open(url)
+                    Button {
+                        NSWorkspace.shared.open(url)
+                    } label: {
+                        CircleImage(image: NSImage(imageLiteralResourceName: "telegram"))
+                            .frame(width: 50, height: 50, alignment: .center)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .accessibilityLabel(Text("Open \(token.name) on Telegram"))
+                    .onHover(perform: { hovering in
+                        if hovering {
+                            NSCursor.pointingHand.push()
+                        } else {
+                            NSCursor.pop()
                         }
-                        .onHover(perform: { hovering in
-                            if hovering {
-                                NSCursor.pointingHand.push()
-                            } else {
-                                NSCursor.pop()
-                            }
-                        })
+                    })
                 }
             }.padding()
             Spacer()
