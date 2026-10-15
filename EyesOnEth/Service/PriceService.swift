@@ -10,10 +10,13 @@ import SwiftyJSON
 
 class PriceService {
     
-    static func updateActiveAddressPrice(_ success: @escaping (JSON) -> Void) -> Void {
-        let currentAddr = UserStatus.shared.activeAddress
-        if let addr = currentAddr {
-            EthplorerAPIService().getAddressInfo(addr, success)
+    static func updateActiveAddressPrice(_ success: @escaping (String, JSON) -> Void) -> Void {
+        guard let address = UserStatus.shared.activeAddress else { return }
+        EthplorerAPIService().getAddressInfo(address) { json in
+            DispatchQueue.main.async {
+                guard UserStatus.shared.activeAddress == address else { return }
+                success(address, json)
+            }
         }
     }
     
