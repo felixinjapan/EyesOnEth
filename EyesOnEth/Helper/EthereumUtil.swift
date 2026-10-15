@@ -38,29 +38,56 @@ class EthereumUtil: NSWindowController {
     }
     
     static func tokenPriceForDetailView(_ doubleValue: Double) -> String {
+        tokenPriceForDetailView(doubleValue, formattingLocale: nil)
+    }
+
+    static func tokenPriceForDetailView(_ doubleValue: Double, locale: Locale) -> String {
+        tokenPriceForDetailView(doubleValue, formattingLocale: locale)
+    }
+
+    private static func tokenPriceForDetailView(_ doubleValue: Double, formattingLocale: Locale?) -> String {
         if doubleValue >= 1.0 {
             let rt = Double(round(100*doubleValue)/100)
-            return formattedWithSeparator(rt) ?? "N/A"
+            let formattedPrice: String?
+            if let formattingLocale = formattingLocale {
+                formattedPrice = formattedWithSeparator(rt, locale: formattingLocale)
+            } else {
+                formattedPrice = formattedWithSeparator(rt)
+            }
+            return formattedPrice ?? "N/A"
         } else {
             let rt = Double(round(1000000*doubleValue)/1000000)
-            return String(format: "%f", rt)
+            return String(format: "%f", locale: formattingLocale, arguments: [rt])
         }
     }
     
     static func tokenPriceDiffString(_ priceDiff: Float) -> String {
+        tokenPriceDiffString(priceDiff, formattingLocale: nil)
+    }
+
+    static func tokenPriceDiffString(_ priceDiff: Float, locale: Locale) -> String {
+        tokenPriceDiffString(priceDiff, formattingLocale: locale)
+    }
+
+    private static func tokenPriceDiffString(_ priceDiff: Float, formattingLocale: Locale?) -> String {
         if priceDiff == 0 {
             return ""
         }
         if(priceDiff > 0){
-            return "+" + String(format: "%.2f", priceDiff) + "%"
+            return "+" + String(format: "%.2f", locale: formattingLocale, arguments: [priceDiff]) + "%"
         } else {
-            return String(format: "%.2f", priceDiff) + "%"
+            return String(format: "%.2f", locale: formattingLocale, arguments: [priceDiff]) + "%"
         }
     }
     
     static func formattedWithSeparator(_ double: Double) -> String? {
+        formattedWithSeparator(double, locale: .current)
+    }
+
+    static func formattedWithSeparator(_ double: Double, locale: Locale) -> String? {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
+        formatter.locale = locale
         formatter.groupingSeparator = ","
         return formatter.string(for: double)
     }
