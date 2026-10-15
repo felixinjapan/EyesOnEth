@@ -9,11 +9,11 @@ import SwiftUI
 
 class RegisterAddressViewModel {
     var closeAction: () -> Void
-    var registerAction: (String) -> Void
+    var registerAction: (String) -> RegisterAddressResult
     init() {
         print("init")
         self.closeAction = {}
-        self.registerAction = {_ in}
+        self.registerAction = { _ in .invalidAddress }
     }
 }
 
@@ -24,6 +24,8 @@ struct RegisterAddressView: View {
     @Environment(\.presentationMode) var presentationMode
     // without private it does not work
     @State private var enteredText: String = ""
+    @State private var registrationFeedback = ""
+    @State private var isShowingRegistrationFeedback = false
 
     var body: some View {
         VStack {
@@ -49,12 +51,16 @@ struct RegisterAddressView: View {
             
             HStack {
                 Button("Register") {
-                    // sheet dismissed using Binding
-                    // self.isVisible = false
-                    
-                    self.vm.registerAction(enteredText)
-                    // sheet dismissed using Environment presentation mode
-                    self.presentationMode.wrappedValue.dismiss()
+                    switch self.vm.registerAction(enteredText) {
+                    case .success:
+                        self.presentationMode.wrappedValue.dismiss()
+                    case .invalidAddress:
+                        self.registrationFeedback = "Enter a valid Ethereum address."
+                        self.isShowingRegistrationFeedback = true
+                    case .duplicateAddress:
+                        self.registrationFeedback = "This Ethereum address is already registered."
+                        self.isShowingRegistrationFeedback = true
+                    }
                 }
                 Spacer()
                 Button("Cancel") {
@@ -69,6 +75,13 @@ struct RegisterAddressView: View {
         }
         .frame(width: 400, height: 150)
         .padding()
+        .alert(isPresented: $isShowingRegistrationFeedback) {
+            Alert(
+                title: Text("Unable to Register Wallet"),
+                message: Text(registrationFeedback),
+                dismissButton: .default(Text("OK"))
+            )
+        }
     }
 }
 
