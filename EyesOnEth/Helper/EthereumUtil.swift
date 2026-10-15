@@ -11,9 +11,15 @@ import SwiftUI
 
 class EthereumUtil: NSWindowController {
     
-    static func getIntervalChecker(forInterval time: Double) -> () -> Bool {
+    static func getIntervalChecker(forInterval time: Double, allowFirstCall: Bool = false) -> () -> Bool {
         var startTime = Date()
+        var isFirstCall = allowFirstCall
         func isTime() -> Bool {
+            if isFirstCall {
+                isFirstCall = false
+                startTime = Date()
+                return true
+            }
             let now = Date()
             let timePast = now.timeIntervalSince(startTime)
             if timePast > time {

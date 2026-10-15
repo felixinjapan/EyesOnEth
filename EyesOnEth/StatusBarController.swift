@@ -40,7 +40,7 @@ class StatusBarController {
     var gasIndicatorMenuView:GasIndicatorView = GasIndicatorView()
     var ethStatusMenuView:EthStatusMenuView = EthStatusMenuView()
     
-    let clickFiringChecker = EthereumUtil.getIntervalChecker(forInterval: 2)
+    let clickFiringChecker = EthereumUtil.getIntervalChecker(forInterval: 2, allowFirstCall: true)
     
     
     fileprivate func showImageStatusBar() {
