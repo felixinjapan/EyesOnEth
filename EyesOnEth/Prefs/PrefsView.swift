@@ -58,7 +58,7 @@ struct SettingsView: View {
                     Text("Address")
                 }
                 .tag(Tabs.general)
-            GeneralSettingsView()
+            APISettingsView()
                 .tabItem {
                     Text("API")
                 }
