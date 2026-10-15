@@ -29,7 +29,11 @@ class CoinGeckoAPIService {
         }
     }
     
-    func getSimpleTokenPrice(_ success: @escaping (Data) -> Void, _ contracts: [String]) {
+    func getSimpleTokenPrice(
+        _ success: @escaping (Data) -> Void,
+        _ contracts: [String],
+        failure: @escaping (String) -> Void = { _ in }
+    ) {
         var param = ["vs_currencies":"usd"]
         param["contract_addresses"] = contracts.joined(separator: ",")
         let host = "https://api.coingecko.com/api/v3/simple/token_price/ethereum"
@@ -42,6 +46,7 @@ class CoinGeckoAPIService {
             case .failure(let error):
                 EthereumStatus.shared.apiStatus.coinGecko = false
                 os_log("%@", log: .default, type: .error, String(describing: error))
+                failure("CoinGecko price lookup failed: \(error.localizedDescription)")
             }
         }
     }

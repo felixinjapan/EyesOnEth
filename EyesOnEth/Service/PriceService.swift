@@ -17,12 +17,20 @@ class PriceService {
         }
     }
     
-    static func updateAddressInfoFromEthplorer(_ address:String, _ success: @escaping (JSON) -> Void) -> Void {
-        EthplorerAPIService().getAddressInfo(address, success)
+    static func updateAddressInfoFromEthplorer(
+        _ address: String,
+        _ success: @escaping (JSON) -> Void,
+        failure: @escaping (String) -> Void = { _ in }
+    ) -> Void {
+        EthplorerAPIService().getAddressInfo(address, success, failure: failure)
     }
     
-    static func updateTokenPriceFromCoinGecko(_ contracts:[String], _ success: @escaping (Data) -> Void) -> Void {
-        CoinGeckoAPIService().getSimpleTokenPrice(success, contracts)
+    static func updateTokenPriceFromCoinGecko(
+        _ contracts: [String],
+        _ success: @escaping (Data) -> Void,
+        failure: @escaping (String) -> Void = { _ in }
+    ) -> Void {
+        CoinGeckoAPIService().getSimpleTokenPrice(success, contracts, failure: failure)
     }
     
     static func getEthereumPrice(_ success: @escaping (JSON) -> Void) -> Void {
