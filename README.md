@@ -17,7 +17,7 @@ Features :
 - Track Ethereum and ERC-20 coin price and balance 
 - Display essential information only for crypto investors
 - Quick access to useful links for each coins in the address
-- Store wallet address data only in the local storage
+- Store wallet addresses locally; send them to Ethplorer for balance and token lookups
 - Minimum cpu and memory usage
 
 This app utilizes APIs from
