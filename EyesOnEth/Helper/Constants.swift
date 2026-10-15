@@ -44,7 +44,7 @@ enum ExternalSiteApi: String, CaseIterable, Identifiable {
 }
 
 enum ExternalSite: String, CaseIterable {
-    case twitter = "twtitter"
+    case twitter = "twitter"
     case reddit = "reddit"
     case coingecko = "coingecko"
     case facebook = "facebook"
