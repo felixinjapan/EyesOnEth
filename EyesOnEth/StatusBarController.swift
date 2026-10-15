@@ -185,9 +185,12 @@ class StatusBarController {
     }
     
     @objc func actionMenuAddNewAddress(_ sender: AppMenuItem){
-        bridge.registerAction = { (ethAddr: String) -> Void in
-            RegisterService.registerAddress(ethAddr)
-            self.togglePopover(sender)
+        bridge.registerAction = { (ethAddr: String) -> RegisterAddressResult in
+            let result = RegisterService.registerAddress(ethAddr)
+            if case .success = result {
+                self.togglePopover(sender)
+            }
+            return result
         }
         let contentView = RegisterAddressView(vm: bridge)
         let vc = NSHostingView(rootView: contentView)
