@@ -11,8 +11,6 @@ class RemoteConfigHandler {
         case gasPriceViewInterval = "gasPriceViewInterval"
         case ethPriceViewInterval = "ethPriceViewInterval"
 
-        case etherscanKey = "etherscanKey"
-        case ethplorerApiKey = "ethplorerApiKey"
         case maxContractAddressCoinGecko = "maxContractAddressCoinGecko"
     }
 
@@ -38,8 +36,4 @@ class RemoteConfigHandler {
         return remoteConfig.configValue(forKey: key.rawValue).numberValue.doubleValue
     }
 
-    func getRemoteConfigValueString(_ key: RemoteConfigKey) -> String? {
-        return remoteConfig.configValue(forKey: key.rawValue).stringValue
-    }
-    
 }

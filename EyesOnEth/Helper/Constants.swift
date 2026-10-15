@@ -14,6 +14,7 @@ struct Constants {
     static let activeAddress = "activeAddress"
     static let ethAddressKey = "ethAddressKey"
     static let ethplorerApiKey = "ethplorerApiKey"
+    static let etherscanApiKey = "etherscanApiKey"
     
     static let externalEthUrl: Dictionary = [
         "coingecko": "https://www.coingecko.com/coins/ethereum",

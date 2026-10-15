@@ -22,10 +22,16 @@ class Prefs: ObservableObject {
         }
     }
     
-    @Published var ethplorerApiKey: String = UserDefaults.standard.string(forKey: Constants.ethplorerApiKey) ?? "freekey" {
+    @Published var ethplorerApiKey: String = UserDefaults.standard.string(forKey: Constants.ethplorerApiKey) ?? "" {
         didSet {
             UserDefaults.standard.set(self.ethplorerApiKey, forKey: Constants.ethplorerApiKey)
         }
     }
     
+
+    @Published var etherscanApiKey: String = UserDefaults.standard.string(forKey: Constants.etherscanApiKey) ?? "" {
+        didSet {
+            UserDefaults.standard.set(self.etherscanApiKey, forKey: Constants.etherscanApiKey)
+        }
+    }
 }

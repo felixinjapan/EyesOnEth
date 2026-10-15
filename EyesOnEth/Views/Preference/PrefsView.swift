@@ -16,7 +16,7 @@ struct PrefsView: View {
                     Text("Address")
                 }
                 .tag(Tabs.address)
-            APISettingsView()
+            APISettingsView(prefs: prefs)
                 .tabItem {
                     Text("API")
                 }
@@ -28,7 +28,7 @@ struct PrefsView: View {
                 .tag(Tabs.credit)
         }
         .padding(20)
-        .frame(width: 375, height: 300)
+        .frame(width: 480, height: 450)
         
     }
     
@@ -37,8 +37,8 @@ struct PrefsView: View {
         self.prefs = prefs
         
         window = NSWindow.createStandardWindow(withTitle: "Preferences",
-                                               width: 300,
-                                               height: 100)
+                                               width: 480,
+                                               height: 450)
         window.contentView = NSHostingView(rootView: self)
         window.delegate = prefsWindowDelegate
         window.center()
