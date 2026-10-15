@@ -16,14 +16,14 @@ class RegisterService {
             if !addresses.contains(eAddr.address){
                 addresses.append(eAddr.address)
                 prefs.ethAddresses = addresses
-                os_log("add new address: %@", log: OSLog.default, type: .debug, eAddr.address)
+                os_log("Added wallet address", log: OSLog.default, type: .debug)
             } else {
                 return
             }
         } else {
             let array = [newAddr]
             prefs.ethAddresses = array
-            os_log("initialize addresses list with the address, %@", log: OSLog.default, type: .debug, eAddr.address)
+            os_log("Initialized wallet address list", log: OSLog.default, type: .debug)
         }
         NotificationCenter.default.post(name: .addNewAddressMenu, object: nil)
     }

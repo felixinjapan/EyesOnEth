@@ -46,6 +46,10 @@ struct RegisterAddressView: View {
                         NSCursor.pop()
                     }
                 })
+
+            Text("For balance and token lookups, this wallet address is sent to Ethplorer.")
+                .font(.footnote)
+                .fixedSize(horizontal: false, vertical: true)
             
             HStack {
                 Button("Register") {
@@ -67,7 +71,7 @@ struct RegisterAddressView: View {
                 }
             }
         }
-        .frame(width: 400, height: 150)
+        .frame(width: 400, minHeight: 200)
         .padding()
     }
 }

@@ -180,7 +180,7 @@ class StatusBarController {
                 statusBarButton.isEnabled = true
             }
         }
-        os_log("%@", log: .default, type: .debug, UserStatus.shared.activeAddress!)
+        os_log("Selected wallet address", log: .default, type: .debug)
         sender.state = NSControl.StateValue.on
     }
     
