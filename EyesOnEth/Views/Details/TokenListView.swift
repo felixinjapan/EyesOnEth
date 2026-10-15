@@ -61,10 +61,10 @@ struct TokenListView: View {
     func readData() {
         let address = settings.address
         
-        let updateMenuPrice: (JSON) -> Void = { json in
-            self.info = EthplorerGetAddressInfo(getAddressInfo: json)
-            PriceService.updateTokenPriceFromCoinGecko(self.info!.contractAddressList){ data in
-                EthereumStatus.shared.coinGeckoSimpleTokenPrice = CoinGeckoSimpleTokenPrice(data: data)
+        let updateMenuPrice: (EthplorerGetAddressInfo) -> Void = { addressInfo in
+            self.info = addressInfo
+            PriceService.updateTokenPriceFromCoinGecko(addressInfo.contractAddressList){ tokenPriceInfo in
+                EthereumStatus.shared.coinGeckoSimpleTokenPrice = tokenPriceInfo
                 self.tokenPriceInfo = EthereumStatus.shared.coinGeckoSimpleTokenPrice
                 os_log("read Data complete")
             }

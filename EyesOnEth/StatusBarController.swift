@@ -121,10 +121,11 @@ class StatusBarController {
     }
     
     @objc func updateData(){
-        let updateMenuPrice: (JSON) -> Void = {json in
-            UserStatus.shared.ethplorerGetAddressInfo = EthplorerGetAddressInfo(getAddressInfo: json)
+        let updateMenuPrice: (EthplorerGetAddressInfo) -> Void = { addressInfo in
+            UserStatus.shared.ethplorerGetAddressInfo = addressInfo
             var missingTotal:Double = 0
-            if let dict = UserStatus.shared.ethplorerGetAddressInfo?.priceFalseKV, dict.count > 0 {
+            let dict = addressInfo.priceFalseKV
+            if dict.count > 0 {
                 let limit = RemoteConfigHandler.shared.getRemoteConfigValueInt(.maxContractAddressCoinGecko)
                 os_log("some coins price were missing. count: %d, limit: %d", dict.count, limit)
                 if dict.count > limit {
@@ -134,8 +135,7 @@ class StatusBarController {
                     return 
                 }
                 PriceService.updateTokenPriceFromCoinGecko(Array(dict.keys)){
-                    data in
-                    let simpleToken = CoinGeckoSimpleTokenPrice(data: data)
+                    simpleToken in
                     simpleToken.array.forEach { priceInfo in
                         if let bal = dict[priceInfo.key], bal > 0 {
                             missingTotal += priceInfo.value.usd * bal
