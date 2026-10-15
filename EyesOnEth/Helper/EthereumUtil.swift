@@ -72,7 +72,10 @@ class EthereumUtil: NSWindowController {
         if let format = Constants.externalTokenUrl[type.rawValue] {
             let link = String(format: format, target)
             
-            if let url = URL(string: link) {
+            if let url = URL(string: link),
+               url.scheme?.lowercased() == "https",
+               let host = url.host,
+               !host.isEmpty {
                 return url
             }
         }
