@@ -58,20 +58,19 @@ struct EthStatusMenuView: View {
     
     func updateEthereumPrice(){
         let updateGasPrice: (JSON) -> Void = { json in
-            EthereumStatus.shared.coinGeckoSimplePrice = CoinGeckoSimplePrice(simplePrice: json)
-            if let coinGeckoSimplePrice = EthereumStatus.shared.coinGeckoSimplePrice {
-                DispatchQueue.main.async {
-                    let ethPrice = EthereumUtil.roundUpTotal(coinGeckoSimplePrice.ethPriceInUSD)
-                    self.ethPrice = String("$ \(ethPrice)")
-                    if coinGeckoSimplePrice.eth24hrChange > 0 {
-                        self.priceDiffColor = Color.green
-                    } else {
-                        self.priceDiffColor = Color.red
-                    }
-                    self.priceDiff = Float(coinGeckoSimplePrice.eth24hrChange)
-                    self.priceDiffString = EthereumUtil.tokenPriceDiffString(self.priceDiff)
-                    os_log("eth price was %f, diff was %@", log: OSLog.default, type: .debug, self.ethPrice, self.priceDiff)
+            guard let coinGeckoSimplePrice = CoinGeckoSimplePrice(simplePrice: json) else { return }
+            EthereumStatus.shared.coinGeckoSimplePrice = coinGeckoSimplePrice
+            DispatchQueue.main.async {
+                let ethPrice = EthereumUtil.roundUpTotal(coinGeckoSimplePrice.ethPriceInUSD)
+                self.ethPrice = String("$ \(ethPrice)")
+                if coinGeckoSimplePrice.eth24hrChange > 0 {
+                    self.priceDiffColor = Color.green
+                } else {
+                    self.priceDiffColor = Color.red
                 }
+                self.priceDiff = Float(coinGeckoSimplePrice.eth24hrChange)
+                self.priceDiffString = EthereumUtil.tokenPriceDiffString(self.priceDiff)
+                os_log("eth price was %f, diff was %@", log: OSLog.default, type: .debug, self.ethPrice, self.priceDiff)
             }
         }
         PriceService.getEthereumPrice(updateGasPrice)

@@ -18,13 +18,18 @@ class EtherscanAPIService {
         }
         let param = ["apiKey": key, "action": "gasoracle"]
         let host = "https://api.etherscan.io/api?module=gastracker"
-        AF.request(host, parameters: param).responseJSON {
+        AF.request(host, parameters: param).validate(statusCode: 200..<300).responseJSON {
             response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
+                guard let gastracker = EtherscanGastracker(gastracker: json) else {
+                    EthereumStatus.shared.apiStatus.etherscan = false
+                    os_log("Invalid Etherscan gas tracker response", log: .default, type: .error)
+                    return
+                }
                 let etherStatus = EthereumStatus.shared
-                etherStatus.estherscanGastracker = EtherscanGastracker(gastracker: json)
+                etherStatus.estherscanGastracker = gastracker
                 success()
                 EthereumStatus.shared.apiStatus.etherscan = true
             case .failure(let error):
