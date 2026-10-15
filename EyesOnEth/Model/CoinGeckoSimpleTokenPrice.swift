@@ -15,16 +15,23 @@ class CoinGeckoSimpleTokenPrice {
     let array:[String : PriceInfo]
     
     init(data: Data?){
-        do {
-            let result = try Bundle.main.decode([String:PriceInfo].self, from: data!)
-            var temp = [String : PriceInfo]()
-            for (key, value) in result {
-                temp[key] = value
-            }
-            self.array = temp
-        } catch {
-            os_log("error during the decoding process %@", log: .default, type: .error, String(describing: error))
+        guard let data = data, let result = Self.decodedPrices(from: data) else {
+            os_log("error during the decoding process", log: .default, type: .error)
             self.array = [:]
+            return
         }
+        self.array = result
+    }
+
+    static func isValidResponse(_ data: Data) -> Bool {
+        return decodedPrices(from: data) != nil
+    }
+
+    private static func decodedPrices(from data: Data) -> [String: PriceInfo]? {
+        guard let result = try? JSONDecoder().decode([String: PriceInfo].self, from: data),
+              !result.isEmpty else {
+            return nil
+        }
+        return result
     }
 }

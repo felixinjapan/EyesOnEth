@@ -12,7 +12,7 @@ class CoinGeckoSimplePrice {
     private var _ethPriceInUSD:Double
     private var _eth24hrChange:Double
     private var _eth24hrVolume:Double
-    private var _ethMarketCap:Double
+    private var _ethMarketCap:Double?
     
     var ethPriceInUSD:Double {
         return _ethPriceInUSD
@@ -26,16 +26,23 @@ class CoinGeckoSimplePrice {
         return _eth24hrVolume
     }
     
-    var ethMarketCap:Double {
+    var ethMarketCap:Double? {
         return _ethMarketCap
     }
     
-    init(simplePrice: JSON) {
+    init?(simplePrice: JSON) {
         let eth = simplePrice["ethereum"]
-        self._ethPriceInUSD = eth["usd"].doubleValue
-        self._eth24hrChange = eth["usd_24h_change"].doubleValue
-        self._eth24hrVolume = eth["usd_24h_vol"].doubleValue
-        self._ethMarketCap = eth["usd_market_cap"].doubleValue
+        guard eth.type == .dictionary,
+              let ethPriceInUSD = eth["usd"].double,
+              let eth24hrChange = eth["usd_24h_change"].double,
+              let eth24hrVolume = eth["usd_24h_vol"].double else {
+            return nil
+        }
+
+        self._ethPriceInUSD = ethPriceInUSD
+        self._eth24hrChange = eth24hrChange
+        self._eth24hrVolume = eth24hrVolume
+        self._ethMarketCap = eth["usd_market_cap"].double
     }
     
 }
