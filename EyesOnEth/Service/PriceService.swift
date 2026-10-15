@@ -10,18 +10,18 @@ import SwiftyJSON
 
 class PriceService {
     
-    static func updateActiveAddressPrice(_ success: @escaping (JSON) -> Void) -> Void {
+    static func updateActiveAddressPrice(_ success: @escaping (EthplorerGetAddressInfo) -> Void) -> Void {
         let currentAddr = UserStatus.shared.activeAddress
         if let addr = currentAddr {
             EthplorerAPIService().getAddressInfo(addr, success)
         }
     }
     
-    static func updateAddressInfoFromEthplorer(_ address:String, _ success: @escaping (JSON) -> Void) -> Void {
+    static func updateAddressInfoFromEthplorer(_ address:String, _ success: @escaping (EthplorerGetAddressInfo) -> Void) -> Void {
         EthplorerAPIService().getAddressInfo(address, success)
     }
     
-    static func updateTokenPriceFromCoinGecko(_ contracts:[String], _ success: @escaping (Data) -> Void) -> Void {
+    static func updateTokenPriceFromCoinGecko(_ contracts:[String], _ success: @escaping (CoinGeckoSimpleTokenPrice) -> Void) -> Void {
         CoinGeckoAPIService().getSimpleTokenPrice(success, contracts)
     }
     
