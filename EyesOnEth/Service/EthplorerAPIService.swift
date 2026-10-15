@@ -13,7 +13,10 @@ import os
 class EthplorerAPIService {
     
     func getAddressInfo(_ address:String, _ success: @escaping (JSON) -> Void) {
-        guard let key = RemoteConfigHandler.shared.getRemoteConfigValueString(.ethplorerApiKey) else {
+        let key = (UserDefaults.standard.string(forKey: Constants.ethplorerApiKey) ?? "")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !key.isEmpty else {
+            EthereumStatus.shared.apiStatus.ethplorer = false
             return
         }
         let param = ["apiKey": key]

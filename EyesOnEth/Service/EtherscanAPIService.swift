@@ -13,7 +13,10 @@ import os
 class EtherscanAPIService {
     
     func gastracker(_ success: @escaping () -> Void) {
-        guard let key = RemoteConfigHandler.shared.getRemoteConfigValueString(.etherscanKey) else {
+        let key = (UserDefaults.standard.string(forKey: Constants.etherscanApiKey) ?? "")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !key.isEmpty else {
+            EthereumStatus.shared.apiStatus.etherscan = false
             return
         }
         let param = ["apiKey": key, "action": "gasoracle"]

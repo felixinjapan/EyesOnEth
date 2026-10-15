@@ -1,17 +1,27 @@
 import SwiftUI
 
 struct APISettingsView: View {
-        
+    @ObservedObject var prefs: Prefs
+
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Provider API Keys").font(.headline)
+            SecureField("Etherscan API key", text: $prefs.etherscanApiKey)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            SecureField("Ethplorer API key", text: $prefs.ethplorerApiKey)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            Text("Keys entered in a client app can be extracted from the app or this Mac. Use provider-side restrictions and grant only the access this app needs.")
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+            Divider()
             Text("API Status").font(.headline)
-            Spacer().frame(height: 70)
             ForEach(ExternalSiteApi.allCases) { type in
                 ApiStatusView(type: type)
             }
         }
         .padding(20)
-        .frame(width: 350, height: 100)
+        .frame(width: 420)
     }
 }
 enum StatusText: String {
