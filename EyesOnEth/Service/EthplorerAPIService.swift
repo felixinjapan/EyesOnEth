@@ -12,8 +12,15 @@ import os
 
 class EthplorerAPIService {
     
-    func getAddressInfo(_ address:String, _ success: @escaping (JSON) -> Void) {
-        guard let key = RemoteConfigHandler.shared.getRemoteConfigValueString(.ethplorerApiKey) else {
+    func getAddressInfo(
+        _ address: String,
+        _ success: @escaping (JSON) -> Void,
+        failure: @escaping (String) -> Void = { _ in }
+    ) {
+        guard let key = RemoteConfigHandler.shared.getRemoteConfigValueString(.ethplorerApiKey),
+              !key.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            EthereumStatus.shared.apiStatus.ethplorer = false
+            failure("Ethplorer API key is missing. Check the app configuration and retry.")
             return
         }
         let param = ["apiKey": key]
@@ -22,12 +29,14 @@ class EthplorerAPIService {
             response in
             switch response.result {
             case .success(let value):
-                EthereumStatus.shared.apiStatus.ethplorer = true
                 let json = JSON(value)
-                let err = json["error"]["code"].intValue
-                if err > 0 {
-                    os_log("Error during the ethplorer calls. error code: %d", log: .default, type: .error, err)
+                let errorCode = json["error"]["code"].intValue
+                if errorCode > 0 {
+                    os_log("Error during the ethplorer calls. error code: %d", log: .default, type: .error, errorCode)
                     EthereumStatus.shared.apiStatus.ethplorer = false
+                    let message = json["error"]["message"].stringValue
+                    let detail = message.isEmpty ? "Ethplorer returned error code \(errorCode)." : message
+                    failure("Ethplorer request failed: \(detail)")
                 } else {
                     success(json)
                     EthereumStatus.shared.apiStatus.ethplorer = true
@@ -35,6 +44,7 @@ class EthplorerAPIService {
             case .failure(let error):
                 EthereumStatus.shared.apiStatus.ethplorer = false
                 os_log("%@", log: .default, type: .error, String(describing: error))
+                failure("Couldn’t reach Ethplorer: \(error.localizedDescription)")
             }
         }
     }

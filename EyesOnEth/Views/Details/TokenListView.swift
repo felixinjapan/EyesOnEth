@@ -15,6 +15,7 @@ struct TokenListView: View {
     @EnvironmentObject var settings: EthereumSetting
     @State private var info: EthplorerGetAddressInfo?
     @State private var tokenPriceInfo: CoinGeckoSimpleTokenPrice?
+    @State private var loadError: String?
     
     fileprivate func isValidToken(_ tokenInfo: Token) -> Bool {
         if tokenInfo.symbol.isEmpty || tokenInfo.name.isEmpty {
@@ -45,6 +46,18 @@ struct TokenListView: View {
                             }
                         }
                     }.collapsible(false)
+                } else if let error = self.loadError {
+                    VStack(spacing: 8) {
+                        Text("Couldn’t load token data")
+                            .font(.headline)
+                        Text(error)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
+                        Button("Retry", action: readData)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding()
                 } else {
                     Text("Loading...")
                     LoadingAnimation()
@@ -59,17 +72,25 @@ struct TokenListView: View {
         }
     }
     func readData() {
+        self.info = nil
+        self.tokenPriceInfo = nil
+        self.loadError = nil
         let address = settings.address
         
         let updateMenuPrice: (JSON) -> Void = { json in
-            self.info = EthplorerGetAddressInfo(getAddressInfo: json)
-            PriceService.updateTokenPriceFromCoinGecko(self.info!.contractAddressList){ data in
+            let addressInfo = EthplorerGetAddressInfo(getAddressInfo: json)
+            self.info = addressInfo
+            PriceService.updateTokenPriceFromCoinGecko(addressInfo.contractAddressList, { data in
                 EthereumStatus.shared.coinGeckoSimpleTokenPrice = CoinGeckoSimpleTokenPrice(data: data)
                 self.tokenPriceInfo = EthereumStatus.shared.coinGeckoSimpleTokenPrice
                 os_log("read Data complete")
-            }
+            }, failure: { error in
+                self.loadError = error
+            })
         }
-        PriceService.updateAddressInfoFromEthplorer(address, updateMenuPrice)
+        PriceService.updateAddressInfoFromEthplorer(address, updateMenuPrice, failure: { error in
+            self.loadError = error
+        })
     }
     
     func getTotalBalance(_ balance:Double) -> Double {
