@@ -96,7 +96,8 @@ class StatusBarController {
         constructMenu()
     }
     
-    fileprivate func displayTotalValue(_ missingTotal:Double = 0) {
+    fileprivate func displayTotalValue(_ missingTotal:Double = 0, forAddress address: String) {
+        guard UserStatus.shared.activeAddress == address else { return }
         if let totalValue = UserStatus.shared.getTotalValue(missingTotal), let button = self.statusItem.button {
             button.image = nil
             button.title = "$\(totalValue)"
@@ -114,6 +115,17 @@ class StatusBarController {
     }
     
     @objc fileprivate func removeActiveAddress() {
+        clearActiveAddress()
+    }
+
+    @discardableResult
+    private func removeActiveAddress(for address: String) -> Bool {
+        guard UserStatus.shared.activeAddress == address else { return false }
+        clearActiveAddress()
+        return true
+    }
+
+    private func clearActiveAddress() {
         UserStatus.shared.activeAddress = nil
         UserStatus.shared.ethplorerGetAddressInfo = nil
         UserDefaults.standard.removeObject(forKey: Constants.activeAddress)
@@ -121,33 +133,39 @@ class StatusBarController {
     }
     
     @objc func updateData(){
-        let updateMenuPrice: (JSON) -> Void = {json in
-            UserStatus.shared.ethplorerGetAddressInfo = EthplorerGetAddressInfo(getAddressInfo: json)
+        PriceService.updateActiveAddressPrice { address, json in
+            guard UserStatus.shared.activeAddress == address else { return }
+
+            let addressInfo = EthplorerGetAddressInfo(getAddressInfo: json)
+            guard UserStatus.shared.activeAddress == address else { return }
+            UserStatus.shared.ethplorerGetAddressInfo = addressInfo
             var missingTotal:Double = 0
-            if let dict = UserStatus.shared.ethplorerGetAddressInfo?.priceFalseKV, dict.count > 0 {
+            if let dict = addressInfo.priceFalseKV, dict.count > 0 {
                 let limit = RemoteConfigHandler.shared.getRemoteConfigValueInt(.maxContractAddressCoinGecko)
                 os_log("some coins price were missing. count: %d, limit: %d", dict.count, limit)
                 if dict.count > limit {
-                    self.removeActiveAddress()
+                    guard self.removeActiveAddress(for: address) else { return }
                     let alertViewUnsupportedAddress =  WindowViewController(AlertView(msg: "This address has too many\n tokens that has no price data"))
                     alertViewUnsupportedAddress.showWindow(self)
                     return 
                 }
                 PriceService.updateTokenPriceFromCoinGecko(Array(dict.keys)){
                     data in
-                    let simpleToken = CoinGeckoSimpleTokenPrice(data: data)
-                    simpleToken.array.forEach { priceInfo in
-                        if let bal = dict[priceInfo.key], bal > 0 {
-                            missingTotal += priceInfo.value.usd * bal
+                    DispatchQueue.main.async {
+                        guard UserStatus.shared.activeAddress == address else { return }
+                        let simpleToken = CoinGeckoSimpleTokenPrice(data: data)
+                        simpleToken.array.forEach { priceInfo in
+                            if let bal = dict[priceInfo.key], bal > 0 {
+                                missingTotal += priceInfo.value.usd * bal
+                            }
                         }
+                        self.displayTotalValue(missingTotal, forAddress: address)
                     }
-                    self.displayTotalValue(missingTotal)
                 }
             } else {
-                self.displayTotalValue()
+                self.displayTotalValue(forAddress: address)
             }
         }
-        PriceService.updateActiveAddressPrice(updateMenuPrice)
     }
     
     func changeState(_ sender: AppMenuItem) {
