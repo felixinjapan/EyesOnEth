@@ -6,13 +6,14 @@
 //
 
 import Cocoa
+import Combine
 
-class EthereumStatus {
+class EthereumStatus: ObservableObject {
     open var estherscanGastracker: EtherscanGastracker?
     open var coinGeckoSimplePrice: CoinGeckoSimplePrice?
     open var coinGeckoSimpleTokenPrice: CoinGeckoSimpleTokenPrice?
     static let shared:EthereumStatus = EthereumStatus()
-    open var apiStatus = ApiStatus()
+    @Published open var apiStatus = ApiStatus()
 }
 
 struct ApiStatus {
